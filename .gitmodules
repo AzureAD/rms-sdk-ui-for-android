@@ -1,0 +1,3 @@
+[submodule "adal"]
+	path = adal
+	url = https://github.com/MSOpenTech/azure-activedirectory-library-for-android
