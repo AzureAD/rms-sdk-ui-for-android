@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">ro-ro</string>-->
+<string name="select_templates">Selectare șabloane</string>
+<string name="select_template_title">Selectare șablon de protecție</string>
+<string name="protect">Protejare</string>
+<string name="protected_content">Conținut protejat</string>
+<string name="granted_by_string">Acordate de</string>
+<string name="use_rights_string">Drepturi de utilizare</string>
+<string name="ok">OK</string>
+<string name="close_string">Închidere</string>
+<string name="report">Trimitere e-mail</string>
+<string name="error_report_reporting_string">A apărut o eroare la raportarea mesajului</string>
+<string name="apply">Se aplică</string>
+<string name="protection">Protecție</string>
+<string name="permissions">Permisiuni</string>
+<string name="your_permissions">Permisiuni</string>
+<string name="error_report_message">Ați depistat o problemă în SDK Windows Azure AD Rights Management. Ajutați-ne să îmbunătățim produsul trimițându-ne acest mesaj de e-mail.</string>
+<string name="policy_viewer_non_owner_content">Pentru acest fișier aveți următoarele permisiuni:</string>
+<string name="policy_viewer_owner_content">Pentru acest fișier ați setat următoarele permisiuni:</string>
+<string name="viewer">Vizualizator</string>
+<string name="reviewer">Recenzent</string>
+<string name="co_author">Co-autor</string>
+<string name="co_owner">Co-proprietar</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Permisiuni particularizate...</string>
+<string name="edit_permissions">Editare permisiuni</string>
+<string name="edit">Editare</string>
+<string name="remove">Eliminare</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Control total</string>
+<string name="view_description_string">Vizualizare</string>
+<string name="edit_description_string">Editare</string>
+<string name="export_description_string">Salvare ca</string>
+<string name="extract_description_string">Copiere</string>
+<string name="print_description_string">Imprimare</string>
+<string name="reply_description_string">Răspuns</string>
+<string name="reply_all_description_string">Se răspunde tuturor</string>
+<string name="forward_description_string">Redirecționare</string>
+<string name="ad_hoc_policy_name_string">ACCES RESTRICȚIONAT</string>
+<string name="ad_hoc_policy_description_string">Permisiune restricționată momentan. Numai utilizatorii specificați pot accesa acest conținut</string>
+<string name="no_permissions_policy_name_string">Fără permisiuni</string>
+<string name="no_protection_policy_name_string">Fără protecție</string>
+<string name="no_protection_policy_name_string_description">Acest conținut nu este protejat.</string>
+<string name="error_reporting_consent_request_string">A apărut o eroare. Ne puteți trimite jurnalele de erori pentru a putea rezolva problema?</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Revocare</string>
+</resources>

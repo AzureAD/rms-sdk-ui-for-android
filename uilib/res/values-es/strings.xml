@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">es-es</string>-->
+<string name="select_templates">Seleccionar plantillas</string>
+<string name="select_template_title">Seleccionar una plantilla de protección</string>
+<string name="protect">Proteger</string>
+<string name="protected_content">Contenido protegido</string>
+<string name="granted_by_string">Concedido por</string>
+<string name="use_rights_string">Usar permisos</string>
+<string name="ok">Aceptar</string>
+<string name="close_string">Cerrar</string>
+<string name="report">Enviar correo electrónico</string>
+<string name="error_report_reporting_string">Se produjo un error al notificar el mensaje</string>
+<string name="apply">Aplicar</string>
+<string name="protection">Protección</string>
+<string name="permissions">Permisos</string>
+<string name="your_permissions">Sus permisos</string>
+<string name="error_report_message">Ha encontrado un problema con Windows Azure AD Rights Management SDK. Envíe este correo electrónico para ayudarnos a mejorar nuestro producto.</string>
+<string name="policy_viewer_non_owner_content">Tiene los siguientes permisos para este archivo:</string>
+<string name="policy_viewer_owner_content">Ha establecido los siguientes permisos en este archivo:</string>
+<string name="viewer">Visor</string>
+<string name="reviewer">Revisor</string>
+<string name="co_author">Coautor</string>
+<string name="co_owner">Copropietario</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Permisos personalizados...</string>
+<string name="edit_permissions">Editar permisos</string>
+<string name="edit">Editar</string>
+<string name="remove">Quitar</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Control total</string>
+<string name="view_description_string">Ver</string>
+<string name="edit_description_string">Editar</string>
+<string name="export_description_string">Guardar como</string>
+<string name="extract_description_string">Copiar</string>
+<string name="print_description_string">Imprimir</string>
+<string name="reply_description_string">Responder</string>
+<string name="reply_all_description_string">Responder a todos</string>
+<string name="forward_description_string">Reenviar</string>
+<string name="ad_hoc_policy_name_string">ACCESO RESTRINGIDO</string>
+<string name="ad_hoc_policy_description_string">El permiso está restringido actualmente. Solo los usuarios especificados pueden obtener acceso al contenido.</string>
+<string name="no_permissions_policy_name_string">Sin permisos</string>
+<string name="no_protection_policy_name_string">Sin protección</string>
+<string name="no_protection_policy_name_string_description">Este contenido no está protegido.</string>
+<string name="error_reporting_consent_request_string">Lo sentimos. Se ha producido un error. ¿Puede enviarnos los registros de errores para que podamos solucionar el problema?</string>
+<string name="error_reporting_consent_ok_button_string">Aceptar</string>
+<string name="error_reporting_consent_cancel_button_string">Cancelar</string>
+</resources>

@@ -1,0 +1,77 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/upper_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="fill"
+        android:orientation="vertical"
+        tools:context=".TextView" >
+
+        <EditText
+            android:id="@+id/edit_text_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fadingEdge="vertical"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:textIsSelectable="false" >
+        </EditText>
+    </ScrollView>
+
+    <RadioGroup
+        android:id="@+id/protection_type_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/dark_grey"
+        android:checkedButton="@+id/pfile_button"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/pfile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/pfile" />
+
+        <RadioButton
+            android:id="@+id/cbc_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_cbc" 
+            android:enabled="false"/>
+
+        <RadioButton
+            android:id="@+id/ecb_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_dep_ecb"
+            android:enabled="false"/>
+    </RadioGroup>
+
+</RelativeLayout>

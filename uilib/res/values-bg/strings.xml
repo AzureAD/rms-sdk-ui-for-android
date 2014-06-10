@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">bg-bg</string>-->
+<string name="select_templates">Избор на шаблони</string>
+<string name="select_template_title">Избор на шаблон за защита</string>
+<string name="protect">Защита</string>
+<string name="protected_content">Защитено съдържание</string>
+<string name="granted_by_string">Предоставени от</string>
+<string name="use_rights_string">Права за ползване</string>
+<string name="ok">OK</string>
+<string name="close_string">Затвори</string>
+<string name="report">Изпрати имейл</string>
+<string name="error_report_reporting_string">Възникна грешка при докладването за това съобщение</string>
+<string name="apply">Приложи</string>
+<string name="protection">Защита</string>
+<string name="permissions">Разрешения</string>
+<string name="your_permissions">Вашите разрешения</string>
+<string name="error_report_message">Открили сте проблем в Windows Azure AD Rights Management SDK. Помогнете ни да подобрим продукта си, като ни изпратите този имейл.</string>
+<string name="policy_viewer_non_owner_content">Имате следните разрешения за този файл:</string>
+<string name="policy_viewer_owner_content">Задали сте следните разрешения за този файл:</string>
+<string name="viewer">Разглеждащ</string>
+<string name="reviewer">Рецензент</string>
+<string name="co_author">Съавтор</string>
+<string name="co_owner">Съсобственик</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Персонализирани разрешения...</string>
+<string name="edit_permissions">Редактиране на разрешенията</string>
+<string name="edit">Редактиране</string>
+<string name="remove">Премахни</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Пълен контрол</string>
+<string name="view_description_string">Преглед</string>
+<string name="edit_description_string">Редактиране</string>
+<string name="export_description_string">Записване като</string>
+<string name="extract_description_string">Копиране</string>
+<string name="print_description_string">Печат</string>
+<string name="reply_description_string">Отговаряне</string>
+<string name="reply_all_description_string">Отговаряне на всички</string>
+<string name="forward_description_string">Препращане</string>
+<string name="ad_hoc_policy_name_string">ОГРАНИЧЕН ДОСТЪП</string>
+<string name="ad_hoc_policy_description_string">Понастоящем достъпът е ограничен. Само определени потребители имат достъп до това съдържание</string>
+<string name="no_permissions_policy_name_string">Без разрешения</string>
+<string name="no_protection_policy_name_string">Без защита</string>
+<string name="no_protection_policy_name_string_description">Това съдържание не е защитено.</string>
+<string name="error_reporting_consent_request_string">Извиняваме се! Възникна грешка. Бихте ли ни изпратили регистрите на грешките, за да разрешим проблема?</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Отказ</string>
+</resources>

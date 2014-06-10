@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">ko-kr</string>-->
+<string name="select_templates">템플릿 선택</string>
+<string name="select_template_title">보호 템플릿 선택</string>
+<string name="protect">보호</string>
+<string name="protected_content">사용권 계약에 따라 보호하는 콘텐츠</string>
+<string name="granted_by_string">권한 부여자</string>
+<string name="use_rights_string">사용자 권한</string>
+<string name="ok">확인</string>
+<string name="close_string">닫기</string>
+<string name="report">전자 메일 보내기</string>
+<string name="error_report_reporting_string">메시지를 보고하는 동안 오류가 발생했습니다.</string>
+<string name="apply">적용</string>
+<string name="protection">보호</string>
+<string name="permissions">사용 권한</string>
+<string name="your_permissions">사용자의 권한</string>
+<string name="error_report_message">Windows Azure AD Rights Management SDK에서 문제가 발생했습니다. 이 전자 메일을 보내면 Microsoft에서 제품을 개선하는 데 많은 도움이 됩니다.</string>
+<string name="policy_viewer_non_owner_content">이 파일에 대한 사용자의 권한:</string>
+<string name="policy_viewer_owner_content">이 파일에 대해 사용자가 설정한 권한:</string>
+<string name="viewer">보기 권한자</string>
+<string name="reviewer">검토자</string>
+<string name="co_author">공동 저자</string>
+<string name="co_owner">공동 소유자</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">사용자 지정 권한...</string>
+<string name="edit_permissions">권한 편집</string>
+<string name="edit">편집</string>
+<string name="remove">제거</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">모든 권한</string>
+<string name="view_description_string">보기</string>
+<string name="edit_description_string">편집</string>
+<string name="export_description_string">다른 이름으로 저장</string>
+<string name="extract_description_string">복사</string>
+<string name="print_description_string">인쇄</string>
+<string name="reply_description_string">회신</string>
+<string name="reply_all_description_string">전체 회신</string>
+<string name="forward_description_string">전달</string>
+<string name="ad_hoc_policy_name_string">제한된 권한</string>
+<string name="ad_hoc_policy_description_string">사용 권한이 현재 제한되어 있습니다. 지정된 사용자만 이 콘텐츠에 액세스할 수 있습니다.</string>
+<string name="no_permissions_policy_name_string">권한 없음</string>
+<string name="no_protection_policy_name_string">보호 안 함</string>
+<string name="no_protection_policy_name_string_description">콘텐츠가 보호되지 않습니다.</string>
+<string name="error_reporting_consent_request_string">죄송합니다. 오류가 발생했습니다. 문제를 수정할 수 있도록 오류 로그를 보내주시겠습니까?</string>
+<string name="error_reporting_consent_ok_button_string">확인</string>
+<string name="error_reporting_consent_cancel_button_string">취소</string>
+</resources>

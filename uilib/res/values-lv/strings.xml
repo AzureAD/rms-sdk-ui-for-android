@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">lv-lv</string>-->
+<string name="select_templates">Atlasīt veidnes</string>
+<string name="select_template_title">Atlasīt aizsardzības veidni</string>
+<string name="protect">Aizsargāt</string>
+<string name="protected_content">Aizsargāts saturs</string>
+<string name="granted_by_string">Piešķīra</string>
+<string name="use_rights_string">Lietošanas tiesības</string>
+<string name="ok">Labi</string>
+<string name="close_string">Aizvērt</string>
+<string name="report">Sūtīt e-pasta ziņojumu</string>
+<string name="error_report_reporting_string">Ziņojot par ziņojumu, radās kļūda</string>
+<string name="apply">Lietot</string>
+<string name="protection">Aizsardzība</string>
+<string name="permissions">Atļaujas</string>
+<string name="your_permissions">Jūsu atļaujas</string>
+<string name="error_report_message">Esat atradis problēmu saistībā ar Windows Azure AD Rights Management SDK. Lūdzu, palīdziet uzlabot produktu, nosūtot šo e-pasta ziņojumu.</string>
+<string name="policy_viewer_non_owner_content">Jums ir piešķirtas tālāk norādītās atļaujas šim failam:</string>
+<string name="policy_viewer_owner_content">Jūs esat iestatījis tālāk norādītās atļaujas šim failam:</string>
+<string name="viewer">Skatītājs</string>
+<string name="reviewer">Recenzents</string>
+<string name="co_author">Līdzautors</string>
+<string name="co_owner">Līdzīpašnieks</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Pielāgot atļaujas...</string>
+<string name="edit_permissions">Rediģēt atļaujas</string>
+<string name="edit">Rediģēt</string>
+<string name="remove">Noņemt</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Pilnīga kontrole</string>
+<string name="view_description_string">Skatīt</string>
+<string name="edit_description_string">Rediģēt</string>
+<string name="export_description_string">Saglabāt kā</string>
+<string name="extract_description_string">Kopēt</string>
+<string name="print_description_string">Drukāt</string>
+<string name="reply_description_string">Atbildēt</string>
+<string name="reply_all_description_string">Atbildēt visiem</string>
+<string name="forward_description_string">Pārsūtīt</string>
+<string name="ad_hoc_policy_name_string">IEROBEŽOTA PIEKĻUVE</string>
+<string name="ad_hoc_policy_description_string">Pašlaik atļauja ir ierobežota. Šim saturam var piekļūt tikai norādītie lietotāji.</string>
+<string name="no_permissions_policy_name_string">Nav atļauju</string>
+<string name="no_protection_policy_name_string">Nav aizsardzības</string>
+<string name="no_protection_policy_name_string_description">Šis saturs nav aizsargāts.</string>
+<string name="error_reporting_consent_request_string">Diemžēl radās kļūda. Lūdzu, nosūtiet mums kļūdu žurnālus, lai mēs novērstu problēmu.</string>
+<string name="error_reporting_consent_ok_button_string">Labi</string>
+<string name="error_reporting_consent_cancel_button_string">Atcelt</string>
+</resources>

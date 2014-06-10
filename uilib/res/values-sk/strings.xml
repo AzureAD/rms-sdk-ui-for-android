@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">sk-sk</string>-->
+<string name="select_templates">Vybrať šablóny</string>
+<string name="select_template_title">Vybrať šablónu ochrany</string>
+<string name="protect">Chrániť</string>
+<string name="protected_content">Chránený obsah</string>
+<string name="granted_by_string">Udelil/-a:</string>
+<string name="use_rights_string">Používateľské práva</string>
+<string name="ok">OK</string>
+<string name="close_string">Zavrieť</string>
+<string name="report">Odoslať e-mail</string>
+<string name="error_report_reporting_string">Pri zobrazení hlásenia sa vyskytla chyba</string>
+<string name="apply">Použiť</string>
+<string name="protection">Ochrana</string>
+<string name="permissions">Povolenia</string>
+<string name="your_permissions">Vaše povolenia</string>
+<string name="error_report_message">Našli ste problém súvisiaci so súpravou SDK pre službu Windows Azure AD Rights Management. Pomôžte nám vylepšiť náš produkt a odošlite tento e-mail.</string>
+<string name="policy_viewer_non_owner_content">Pre tento súbor máte nasledujúce povolenia:</string>
+<string name="policy_viewer_owner_content">Pre tento súbor ste nastavili nasledujúce povolenia:</string>
+<string name="viewer">Pozorovateľ</string>
+<string name="reviewer">Recenzent</string>
+<string name="co_author">Spoluautor</string>
+<string name="co_owner">Spoluvlastník</string>
+<string name="adrms">AD RMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Vlastné povolenia...</string>
+<string name="edit_permissions">Upraviť povolenia</string>
+<string name="edit">Upraviť</string>
+<string name="remove">Odstrániť</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Úplný prístup</string>
+<string name="view_description_string">Zobraziť</string>
+<string name="edit_description_string">Upraviť</string>
+<string name="export_description_string">Uložiť ako</string>
+<string name="extract_description_string">Kopírovať</string>
+<string name="print_description_string">Tlačiť</string>
+<string name="reply_description_string">Odpovedať</string>
+<string name="reply_all_description_string">Odpovedať všetkým</string>
+<string name="forward_description_string">Poslať ďalej</string>
+<string name="ad_hoc_policy_name_string">OBMEDZENÝ PRÍSTUP</string>
+<string name="ad_hoc_policy_description_string">Povolenie je momentálne obmedzené. K tomuto obsahu majú prístup len stanovení používatelia</string>
+<string name="no_permissions_policy_name_string">Bez povolení</string>
+<string name="no_protection_policy_name_string">Bez ochrany</string>
+<string name="no_protection_policy_name_string_description">Tento obsah nie je chránený.</string>
+<string name="error_reporting_consent_request_string">Ľutujeme, vyskytla sa chyba. Môžete nám poslať denníky chýb, aby sme mohli problém opraviť?</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Zrušiť</string>
+</resources>

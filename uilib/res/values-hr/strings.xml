@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">hr-hr</string>-->
+<string name="select_templates">Odaberite predloške</string>
+<string name="select_template_title">Odaberite predložak zaštite</string>
+<string name="protect">Zaštiti</string>
+<string name="protected_content">Zaštićeni sadržaj</string>
+<string name="granted_by_string">Odobrio</string>
+<string name="use_rights_string">Prava upotrebe</string>
+<string name="ok">U redu</string>
+<string name="close_string">Zatvori</string>
+<string name="report">Pošalji poruku e-pošte</string>
+<string name="error_report_reporting_string">Dogodila se pogreška prilikom prijave poruke</string>
+<string name="apply">Primijeni</string>
+<string name="protection">Zaštita</string>
+<string name="permissions">Dozvole</string>
+<string name="your_permissions">Vaše dozvole</string>
+<string name="error_report_message">Pronašli ste problem u SDK-u usluge Windows Azure AD Rights Management. Pomozite nam unaprijediti naš proizvod slanjem ove poruke e-pošte.</string>
+<string name="policy_viewer_non_owner_content">Imate sljedeće dozvole za tu datoteku:</string>
+<string name="policy_viewer_owner_content">Postavili ste sljedeće dozvole za tu datoteku:</string>
+<string name="viewer">Gledatelj</string>
+<string name="reviewer">Pregledavatelj</string>
+<string name="co_author">Koautor</string>
+<string name="co_owner">Suvlasnik</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Prilagođene dozvole...</string>
+<string name="edit_permissions">Uredi dozvole</string>
+<string name="edit">Uredi</string>
+<string name="remove">Ukloni</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Puni nadzor</string>
+<string name="view_description_string">Prikaži</string>
+<string name="edit_description_string">Uredi</string>
+<string name="export_description_string">Spremi kao</string>
+<string name="extract_description_string">Kopiraj</string>
+<string name="print_description_string">Ispiši</string>
+<string name="reply_description_string">Odgovor</string>
+<string name="reply_all_description_string">Odgovor svima</string>
+<string name="forward_description_string">Proslijedi</string>
+<string name="ad_hoc_policy_name_string">OGRANIČENI PRISTUP</string>
+<string name="ad_hoc_policy_description_string">Dozvola trenutačno ima ograničena ovlaštenja. Samo određeni korisnici mogu pristupiti sadržaju</string>
+<string name="no_permissions_policy_name_string">Nema dozvola</string>
+<string name="no_protection_policy_name_string">Nema zaštite</string>
+<string name="no_protection_policy_name_string_description">Ovaj sadržaj nije zaštićen.</string>
+<string name="error_reporting_consent_request_string">Žao nam je. Dogodila se pogreška. Možete li nam poslati zapisnike pogreške da možemo ispraviti problem?</string>
+<string name="error_reporting_consent_ok_button_string">U redu</string>
+<string name="error_reporting_consent_cancel_button_string">Odustani</string>
+</resources>

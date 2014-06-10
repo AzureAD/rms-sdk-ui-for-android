@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">en-us</string>-->
+<string name="select_templates">[xdS2m]థ్క§élëçt témplªtêsథ్క</string>
+<string name="select_template_title">[gt41P]థ్క§ëlëçt æ prótëçtìôñ tëmplætéథ్క</string>
+<string name="protect">[gcMkS]థ్కPrõtê¢tథ్క</string>
+<string name="protected_content">[vYc8B]థ్కPrøtë¢têð çòñtêñtథ్క</string>
+<string name="granted_by_string">[GfSPU]థ్కGrªñtëð þýథ్క</string>
+<string name="use_rights_string">[P1tKX]థ్కÚsë Rìghtsథ్క</string>
+<string name="ok">[yr0gn]థ్కÓKథ్క</string>
+<string name="close_string">[GtWU6]థ్కÇlôsèథ్క</string>
+<string name="report">[SgFTW]థ్క§éñð ê-máïlథ్క</string>
+<string name="error_report_reporting_string">[h1jc8]థ్కÀñ ërròr õç¢úrrêð whéñ rèpørtíñg méssägéథ్క</string>
+<string name="apply">[Z7Pmi]థ్కÅpplýథ్క</string>
+<string name="protection">[smbkm]థ్కPrøtèçtîøñథ్క</string>
+<string name="permissions">[BjzXF]థ్కPërmíssîóñsథ్క</string>
+<string name="your_permissions">[2SDrU]థ్కÝòúr pèrmïssîøñsథ్క</string>
+<string name="error_report_message">[yw209]థ్క¥óú\'vê fõúñð å prõþlëm wìth thê Wîñðöws Âzüré ÅÐ Rïghts Mãñãgëmêñt §ÐK. Plêæsê hëlp ûs ímprövé õúr pròðùçt þÿ sêñðìñg thís è-màíl.థ్క</string>
+<string name="policy_viewer_non_owner_content">[x0y15]థ్కÝòµ håvé thë fõlløwîñg pèrmïssîöñs fòr thìs fïlè:థ్క</string>
+<string name="policy_viewer_owner_content">[jZY9x]థ్క¥òµ hávé sêt thé fôllöwíñg pérmïssîöñs óñ thís fílê:థ్క</string>
+<string name="viewer">[OzWjR]థ్కVîëwérథ్క</string>
+<string name="reviewer">[BjbED]థ్కRèvíèwërథ్క</string>
+<string name="co_author">[c4BxD]థ్కÇô-àùthôrథ్క</string>
+<string name="co_owner">[cDRHv]థ్కÇô-ówñërథ్క</string>
+<string name="adrms">[RmpPn]థ్కÃÐRM§థ్క</string>
+<string name="sdk_ver">[5GvI4]థ్క3.0థ్క</string>
+<string name="custom_permissions">[y2ziq]థ్కÇµstóm Pérmíssìöñs...థ్క</string>
+<string name="edit_permissions">[kXqNS]థ్కÉðît Pérmíssíòñsథ్క</string>
+<string name="edit">[1kHRp]థ్కÉðìtథ్క</string>
+<string name="remove">[GKMaa]థ్కRëmövèథ్క</string>
+<string name="version_code">[Ru06n]థ్క1థ్క</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">[5bb15]థ్కFüll Çòñtrõlథ్క</string>
+<string name="view_description_string">[jSdbR]థ్కVîèwథ్క</string>
+<string name="edit_description_string">[jN1Ji]థ్కÈðîtథ్క</string>
+<string name="export_description_string">[vZ2Jp]థ్క§âvé ãsథ్క</string>
+<string name="extract_description_string">[eLE4U]థ్కÇòpÿథ్క</string>
+<string name="print_description_string">[3XlSG]థ్కPrïñtథ్క</string>
+<string name="reply_description_string">[qrepf]థ్కRèplýథ్క</string>
+<string name="reply_all_description_string">[QaH8r]థ్కRèplý Ållథ్క</string>
+<string name="forward_description_string">[dibj5]థ్కFórwárðథ్క</string>
+<string name="ad_hoc_policy_name_string">[siGLc]థ్కRÉ§TRÌÇTÈÐ ÃÇÇÉ§§థ్క</string>
+<string name="ad_hoc_policy_description_string">[cmmHq]థ్కPérmïssíõñ ïs ¢µrrêñtlý rêstríçtëð. Öñlý spéçìfïéð ûsérs ¢æñ à¢¢éss thís çòñtèñtథ్క</string>
+<string name="no_permissions_policy_name_string">[HKNFt]థ్కÑô Përmíssíôñsథ్క</string>
+<string name="no_protection_policy_name_string">[14rWE]థ్కÑò Prøté¢tìõñథ్క</string>
+<string name="no_protection_policy_name_string_description">[kJWWM]థ్కThìs çøñtêñt ísñ\'t prótëçtèð.థ్క</string>
+<string name="error_reporting_consent_request_string">[FR5jy]థ్కWè\'rê sôrrý. Áñ èrrør hàs ôççµrrêð. Çæñ ÿòù sèñð µs thê érròr lôgs sö wé ¢áñ fîx thé prôþlëm?థ్క</string>
+<string name="error_reporting_consent_ok_button_string">[m9Noo]థ్కÖKథ్క</string>
+<string name="error_reporting_consent_cancel_button_string">[cS4mZ]థ్కÇáñ¢ëlథ్క</string>
+</resources>

@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">nl-nl</string>-->
+<string name="select_templates">Sjablonen selecteren</string>
+<string name="select_template_title">Beveiligingssjabloon selecteren</string>
+<string name="protect">Beveiligen</string>
+<string name="protected_content">Beveiligde inhoud</string>
+<string name="granted_by_string">Verleend door</string>
+<string name="use_rights_string">Gebruiksrechten</string>
+<string name="ok">OK</string>
+<string name="close_string">Sluiten</string>
+<string name="report">E-mail verzenden</string>
+<string name="error_report_reporting_string">Er is een fout opgetreden tijdens het rapporteren van het bericht</string>
+<string name="apply">Toepassen</string>
+<string name="protection">Beveiliging</string>
+<string name="permissions">Machtigingen</string>
+<string name="your_permissions">Uw machtigingen</string>
+<string name="error_report_message">Er is een probleem met de SDK voor Windows Azure AD Rights Management. Help ons dit product te verbeteren door dit e-mailbericht te verzenden.</string>
+<string name="policy_viewer_non_owner_content">U hebt de volgende machtigingen voor dit bestand:</string>
+<string name="policy_viewer_owner_content">U hebt de volgende machtigingen ingesteld op dit bestand:</string>
+<string name="viewer">Lezer</string>
+<string name="reviewer">Revisor</string>
+<string name="co_author">Co-auteur</string>
+<string name="co_owner">Mede-eigenaar</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Aangepaste machtigingen...</string>
+<string name="edit_permissions">Machtigingen bewerken</string>
+<string name="edit">Bewerken</string>
+<string name="remove">Verwijderen</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Volledig beheer</string>
+<string name="view_description_string">Weergeven</string>
+<string name="edit_description_string">Bewerken</string>
+<string name="export_description_string">Opslaan als</string>
+<string name="extract_description_string">Kopiëren</string>
+<string name="print_description_string">Afdrukken</string>
+<string name="reply_description_string">Beantwoorden</string>
+<string name="reply_all_description_string">Allen beantwoorden</string>
+<string name="forward_description_string">Doorsturen</string>
+<string name="ad_hoc_policy_name_string">BEPERKTE TOEGANG</string>
+<string name="ad_hoc_policy_description_string">De toegang is momenteel beperkt. Alleen bepaalde gebruikers krijgen toegang tot deze inhoud</string>
+<string name="no_permissions_policy_name_string">Geen machtigingen</string>
+<string name="no_protection_policy_name_string">Geen beveiliging</string>
+<string name="no_protection_policy_name_string_description">Deze inhoud is niet beveiligd.</string>
+<string name="error_reporting_consent_request_string">Excuses, er is een fout opgetreden. Kunt u ons de foutenlogboeken opsturen, zodat we het probleem kunnen oplossen?</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Annuleren</string>
+</resources>

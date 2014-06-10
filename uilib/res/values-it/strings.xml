@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">it-it</string>-->
+<string name="select_templates">Seleziona modelli</string>
+<string name="select_template_title">Selezionare un modello di protezione</string>
+<string name="protect">Proteggi</string>
+<string name="protected_content">Contenuto protetto</string>
+<string name="granted_by_string">Concesse da</string>
+<string name="use_rights_string">Diritti d\'uso</string>
+<string name="ok">OK</string>
+<string name="close_string">Chiudi</string>
+<string name="report">Invia messaggio di posta elettronica</string>
+<string name="error_report_reporting_string">Si è verificato un errore durante la segnalazione del messaggio</string>
+<string name="apply">Applica</string>
+<string name="protection">Protezione</string>
+<string name="permissions">Autorizzazioni</string>
+<string name="your_permissions">Autorizzazioni utente</string>
+<string name="error_report_message">È stato individuato un problema relativo a Windows Azure AD Rights Management SDK. Inviando questo messaggio è possibile contribuire al miglioramento del prodotto.</string>
+<string name="policy_viewer_non_owner_content">Per questo sono disponibili le autorizzazioni seguenti:</string>
+<string name="policy_viewer_owner_content">Per questo file sono state impostate le autorizzazioni seguenti:</string>
+<string name="viewer">Visualizzatore</string>
+<string name="reviewer">Revisore</string>
+<string name="co_author">Coautore</string>
+<string name="co_owner">Comproprietario</string>
+<string name="adrms">AD RMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Autorizzazioni personalizzate...</string>
+<string name="edit_permissions">Modifica autorizzazioni</string>
+<string name="edit">Modifica</string>
+<string name="remove">Rimuovi</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Controllo completo</string>
+<string name="view_description_string">Visualizza</string>
+<string name="edit_description_string">Modifica</string>
+<string name="export_description_string">Salva con nome</string>
+<string name="extract_description_string">Copia</string>
+<string name="print_description_string">Stampa</string>
+<string name="reply_description_string">Rispondi</string>
+<string name="reply_all_description_string">Rispondi a tutti</string>
+<string name="forward_description_string">Inoltra</string>
+<string name="ad_hoc_policy_name_string">ACCESSO SOGGETTO A RESTRIZIONI</string>
+<string name="ad_hoc_policy_description_string">L\'autorizzazione è attualmente soggetta a restrizioni. Il contenuto è accessibile solo a utenti specificati</string>
+<string name="no_permissions_policy_name_string">Nessuna autorizzazione</string>
+<string name="no_protection_policy_name_string">Nessuna protezione</string>
+<string name="no_protection_policy_name_string_description">Il contenuto non è protetto.</string>
+<string name="error_reporting_consent_request_string">Si è verificato un errore. Inviare i registri errori per consentire a Microsoft di risolvere il problema.</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Annulla</string>
+</resources>

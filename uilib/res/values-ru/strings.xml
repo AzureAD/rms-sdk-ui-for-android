@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">ru-ru</string>-->
+<string name="select_templates">Выбрать шаблоны</string>
+<string name="select_template_title">Выбор шаблона защиты</string>
+<string name="protect">Защита</string>
+<string name="protected_content">Защищенное содержимое</string>
+<string name="granted_by_string">Предоставлено</string>
+<string name="use_rights_string">Права на использование</string>
+<string name="ok">ОК</string>
+<string name="close_string">Закрыть</string>
+<string name="report">Отправить сообщение электронной почты</string>
+<string name="error_report_reporting_string">При представлении сообщения возникла ошибка</string>
+<string name="apply">Применить</string>
+<string name="protection">Защита</string>
+<string name="permissions">Разрешения</string>
+<string name="your_permissions">Ваши разрешения</string>
+<string name="error_report_message">Вы обнаружили проблему при работе с набором SDK Windows Azure AD Rights Management. Отправьте данное сообщение электронной почты, чтобы помочь нам улучшить этот продукт.</string>
+<string name="policy_viewer_non_owner_content">У вас есть следующие разрешения для работы с этим файлом:</string>
+<string name="policy_viewer_owner_content">Вы указали следующие разрешения для работы с этим файлом:</string>
+<string name="viewer">читатель</string>
+<string name="reviewer">редактор</string>
+<string name="co_author">соавтор</string>
+<string name="co_owner">совладелец</string>
+<string name="adrms">Служба управления правами Active Directory</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Настраиваемые разрешения...</string>
+<string name="edit_permissions">Изменить разрешения</string>
+<string name="edit">Изменить</string>
+<string name="remove">Удалить</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Полный доступ</string>
+<string name="view_description_string">Просмотр</string>
+<string name="edit_description_string">Изменение</string>
+<string name="export_description_string">Сохранить как</string>
+<string name="extract_description_string">Копировать</string>
+<string name="print_description_string">Печать</string>
+<string name="reply_description_string">Ответить</string>
+<string name="reply_all_description_string">Ответить всем</string>
+<string name="forward_description_string">Переслать</string>
+<string name="ad_hoc_policy_name_string">ОГРАНИЧЕННЫЙ ДОСТУП</string>
+<string name="ad_hoc_policy_description_string">Разрешения в данный момент ограничены. Доступ к этому содержимому разрешен только указанным пользователям</string>
+<string name="no_permissions_policy_name_string">Нет разрешений</string>
+<string name="no_protection_policy_name_string">Без защиты</string>
+<string name="no_protection_policy_name_string_description">Это содержимое не защищено.</string>
+<string name="error_reporting_consent_request_string">К сожалению, произошла ошибка. Отправьте нам журналы ошибок, чтобы мы могли исправить проблему.</string>
+<string name="error_reporting_consent_ok_button_string">ОК</string>
+<string name="error_reporting_consent_cancel_button_string">Отмена</string>
+</resources>

@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">uk-ua</string>-->
+<string name="select_templates">Вибрати шаблони</string>
+<string name="select_template_title">Вибрати шаблон захисту</string>
+<string name="protect">Захистити</string>
+<string name="protected_content">Захищений вміст</string>
+<string name="granted_by_string">Надано</string>
+<string name="use_rights_string">Права на використання</string>
+<string name="ok">ОК</string>
+<string name="close_string">Закрити</string>
+<string name="report">Надіслати повідомлення електронної пошти</string>
+<string name="error_report_reporting_string">Під час звітування про повідомлення сталася помилка</string>
+<string name="apply">Застосувати</string>
+<string name="protection">Захист</string>
+<string name="permissions">Дозволи</string>
+<string name="your_permissions">Ваші дозволи</string>
+<string name="error_report_message">Ви виявили проблему у Windows Azure AD Rights Management SDK. Допоможіть нам удосконалити наш продукт, надіславши це повідомлення електронної пошти</string>
+<string name="policy_viewer_non_owner_content">Ви маєте такі дозволи доступу до цього файлу:</string>
+<string name="policy_viewer_owner_content">Ви вказали такі дозволи для роботи з цим файлом:</string>
+<string name="viewer">читач</string>
+<string name="reviewer">рецензент</string>
+<string name="co_author">співавтор</string>
+<string name="co_owner">співвласник</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Користувацькі дозволи...</string>
+<string name="edit_permissions">Змінити дозволи</string>
+<string name="edit">Змінити</string>
+<string name="remove">Видалити</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Повні права</string>
+<string name="view_description_string">Перегляд</string>
+<string name="edit_description_string">Змінити</string>
+<string name="export_description_string">Зберегти як</string>
+<string name="extract_description_string">Копіювати</string>
+<string name="print_description_string">Друк</string>
+<string name="reply_description_string">Відповісти</string>
+<string name="reply_all_description_string">Відповісти всім</string>
+<string name="forward_description_string">Переслати</string>
+<string name="ad_hoc_policy_name_string">ОБМЕЖЕНИЙ ДОСТУП</string>
+<string name="ad_hoc_policy_description_string">Дозволи зараз обмежені. Доступ до цього вмісту дозволений лише зазначеним користувачам</string>
+<string name="no_permissions_policy_name_string">Немає дозволів</string>
+<string name="no_protection_policy_name_string">Без захисту</string>
+<string name="no_protection_policy_name_string_description">Цей вміст не захищений.</string>
+<string name="error_reporting_consent_request_string">На жаль, сталася помилка. Надішліть нам журнали помилок, щоб ми могли усунути проблему.</string>
+<string name="error_reporting_consent_ok_button_string">ОК</string>
+<string name="error_reporting_consent_cancel_button_string">Скасувати</string>
+</resources>

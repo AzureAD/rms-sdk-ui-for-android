@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">ja-jp</string>-->
+<string name="select_templates">テンプレートの選択</string>
+<string name="select_template_title">保護テンプレートの選択</string>
+<string name="protect">保護</string>
+<string name="protected_content">保護されたコンテンツ</string>
+<string name="granted_by_string">許可元</string>
+<string name="use_rights_string">使用権限</string>
+<string name="ok">OK</string>
+<string name="close_string">閉じる</string>
+<string name="report">電子メールの送信</string>
+<string name="error_report_reporting_string">メッセージの報告中にエラーが発生しました</string>
+<string name="apply">適用</string>
+<string name="protection">保護</string>
+<string name="permissions">アクセス許可</string>
+<string name="your_permissions">アクセス許可</string>
+<string name="error_report_message">Windows Azure AD Rights Management SDK に問題が見つかりました。この電子メールを送信して製品の改善にご協力ください。</string>
+<string name="policy_viewer_non_owner_content">このファイルに対して次のアクセス許可があります:</string>
+<string name="policy_viewer_owner_content">このファイルに対して次のアクセス許可を設定しました:</string>
+<string name="viewer">表示者</string>
+<string name="reviewer">校閲者</string>
+<string name="co_author">共同作成者</string>
+<string name="co_owner">共同所有者</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">ユーザー定義のアクセス許可...</string>
+<string name="edit_permissions">アクセス許可の編集</string>
+<string name="edit">編集</string>
+<string name="remove">削除</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">フル コントロール</string>
+<string name="view_description_string">表示</string>
+<string name="edit_description_string">編集</string>
+<string name="export_description_string">名前を付けて保存</string>
+<string name="extract_description_string">コピー</string>
+<string name="print_description_string">印刷</string>
+<string name="reply_description_string">返信</string>
+<string name="reply_all_description_string">すべて返信</string>
+<string name="forward_description_string">転送</string>
+<string name="ad_hoc_policy_name_string">制限されたアクセス</string>
+<string name="ad_hoc_policy_description_string">アクセス許可は現在制限されています。指定されたユーザーのみがこのコンテンツにアクセスできます。</string>
+<string name="no_permissions_policy_name_string">アクセス許可なし</string>
+<string name="no_protection_policy_name_string">保護なし</string>
+<string name="no_protection_policy_name_string_description">このコンテンツは保護されていません。</string>
+<string name="error_reporting_consent_request_string">申し訳ございません。エラーが発生しました。問題の解決に役立てるためにエラー ログを送信してください。</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">キャンセル</string>
+</resources>

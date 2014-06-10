@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">pl-pl</string>-->
+<string name="select_templates">Wybierz szablony</string>
+<string name="select_template_title">Wybierz szablon ochrony</string>
+<string name="protect">Chroń</string>
+<string name="protected_content">Zawartość chroniona</string>
+<string name="granted_by_string">Udzielone przez</string>
+<string name="use_rights_string">Użyj uprawnień</string>
+<string name="ok">OK</string>
+<string name="close_string">Zamknij</string>
+<string name="report">Wyślij wiadomość e-mail</string>
+<string name="error_report_reporting_string">Wystąpił błąd podczas raportowania komunikatu</string>
+<string name="apply">Zastosuj</string>
+<string name="protection">Ochrona</string>
+<string name="permissions">Uprawnienia</string>
+<string name="your_permissions">Twoje uprawnienia</string>
+<string name="error_report_message">Wykryto problem z zestawem Windows Azure AD Rights Management SDK. Wyślij tę wiadomość e-mail, aby pomóc nam w ulepszaniu tego produktu.</string>
+<string name="policy_viewer_non_owner_content">Masz następujące uprawnienia do tego pliku:</string>
+<string name="policy_viewer_owner_content">Ustawiono następujące uprawnienia do tego pliku:</string>
+<string name="viewer">Przeglądający</string>
+<string name="reviewer">Recenzent</string>
+<string name="co_author">Współautor</string>
+<string name="co_owner">Współwłaściciel</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Uprawnienia niestandardowe...</string>
+<string name="edit_permissions">Edytuj uprawnienia</string>
+<string name="edit">Edytuj</string>
+<string name="remove">Usuń</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Pełna kontrola</string>
+<string name="view_description_string">Wyświetl</string>
+<string name="edit_description_string">Edytuj</string>
+<string name="export_description_string">Zapisz jako</string>
+<string name="extract_description_string">Kopiuj</string>
+<string name="print_description_string">Drukuj</string>
+<string name="reply_description_string">Odpowiedz</string>
+<string name="reply_all_description_string">Odpowiedz wszystkim</string>
+<string name="forward_description_string">Prześlij dalej</string>
+<string name="ad_hoc_policy_name_string">DOSTĘP OGRANICZONY</string>
+<string name="ad_hoc_policy_description_string">Uprawnienie jest obecnie ograniczone. Tylko określeni użytkownicy mogą uzyskiwać dostęp do tej zawartości</string>
+<string name="no_permissions_policy_name_string">Brak uprawnień</string>
+<string name="no_protection_policy_name_string">Brak ochrony</string>
+<string name="no_protection_policy_name_string_description">Ta zawartość nie jest chroniona.</string>
+<string name="error_reporting_consent_request_string">Niestety, wystąpił błąd. Czy możemy otrzymać dzienniki błędów, aby można było rozwiązać ten problem?</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Anuluj</string>
+</resources>

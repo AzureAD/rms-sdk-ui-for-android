@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">el-gr</string>-->
+<string name="select_templates">Επιλογή προτύπων</string>
+<string name="select_template_title">Επιλογή προτύπου προστασίας</string>
+<string name="protect">Προστασία</string>
+<string name="protected_content">Προστατευμένο περιεχόμενο</string>
+<string name="granted_by_string">Εκχώρηση από</string>
+<string name="use_rights_string">Δικαιώματα χρήσης</string>
+<string name="ok">OK</string>
+<string name="close_string">Κλείσιμο</string>
+<string name="report">Αποστ. ηλ. ταχυδρ.</string>
+<string name="error_report_reporting_string">Παρουσιάστηκε σφάλμα κατά την αναφορά μηνύματος</string>
+<string name="apply">Εφαρμογή</string>
+<string name="protection">Προστασία</string>
+<string name="permissions">Δικαιώματα</string>
+<string name="your_permissions">Τα δικαιώματά σας</string>
+<string name="error_report_message">Εντοπίσατε ένα πρόβλημα με το Windows Azure AD Rights Management SDK. Βοηθήστε μας να βελτιώσουμε το προϊόν μας αποστέλλοντας αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου.</string>
+<string name="policy_viewer_non_owner_content">Έχετε τα εξής δικαιώματα για αυτό το αρχείο:</string>
+<string name="policy_viewer_owner_content">Έχετε ορίσει τα εξής δικαιώματα για αυτό το αρχείο:</string>
+<string name="viewer">Αναγνώστης</string>
+<string name="reviewer">Αναθεωρητής</string>
+<string name="co_author">Συντάκτης από κοινού</string>
+<string name="co_owner">Συγκάτοχος</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Προσαρμοσμένα δικαιώματα...</string>
+<string name="edit_permissions">Επεξεργασία δικαιωμάτων</string>
+<string name="edit">Επεξεργασία</string>
+<string name="remove">Κατάργηση</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Πλήρης έλεγχος</string>
+<string name="view_description_string">Προβολή</string>
+<string name="edit_description_string">Επεξεργασία</string>
+<string name="export_description_string">Αποθήκευση ως</string>
+<string name="extract_description_string">Αντιγραφή</string>
+<string name="print_description_string">Εκτύπωση</string>
+<string name="reply_description_string">Απάντηση</string>
+<string name="reply_all_description_string">Απάντηση σε όλους</string>
+<string name="forward_description_string">Προώθηση</string>
+<string name="ad_hoc_policy_name_string">ΠΕΡΙΟΡΙΣΜΕΝΗ ΠΡΟΣΒΑΣΗ</string>
+<string name="ad_hoc_policy_description_string">Αυτήν τη στιγμή η πρόσβαση είναι περιορισμένη. Μόνο καθορισμένοι χρήστες μπορούν να έχουν πρόσβαση σε αυτό το περιεχόμενο</string>
+<string name="no_permissions_policy_name_string">Χωρίς δικαιώματα</string>
+<string name="no_protection_policy_name_string">Χωρίς προστασία</string>
+<string name="no_protection_policy_name_string_description">Αυτό το περιεχόμενο δεν είναι προστατευμένο.</string>
+<string name="error_reporting_consent_request_string">Δυστυχώς, παρουσιάστηκε σφάλμα. Μπορείτε να μας στείλετε τα αρχεία καταγραφής σφαλμάτων, ώστε να διορθώσουμε το πρόβλημα;</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Άκυρο</string>
+</resources>

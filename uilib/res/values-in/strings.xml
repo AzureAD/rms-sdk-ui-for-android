@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">id-id</string>-->
+<string name="select_templates">Pilih tempat</string>
+<string name="select_template_title">Pilih tempat perlindungan</string>
+<string name="protect">Lindungi</string>
+<string name="protected_content">Konten yang dilindungi</string>
+<string name="granted_by_string">Diberikan oleh</string>
+<string name="use_rights_string">Gunakan Hak</string>
+<string name="ok">OK</string>
+<string name="close_string">Tutup</string>
+<string name="report">Kirim e-mail</string>
+<string name="error_report_reporting_string">Terjadi kesalahan saat melaporkan pesan</string>
+<string name="apply">Terapkan</string>
+<string name="protection">Perlindungan</string>
+<string name="permissions">Izin</string>
+<string name="your_permissions">Izin Anda</string>
+<string name="error_report_message">Anda telah mengalami masalah dengan SDK Windows Azure AD Rights Management. Bantu kami memperbaiki produk kami dengan mengirimkan e-mail ini.</string>
+<string name="policy_viewer_non_owner_content">Anda memiliki izin berikut untuk file ini:</string>
+<string name="policy_viewer_owner_content">Anda telah menetapkan izin berikut pada file ini:</string>
+<string name="viewer">Pengamat</string>
+<string name="reviewer">Pengkaji</string>
+<string name="co_author">Rekan-Penulis</string>
+<string name="co_owner">Rekan-Pemilik</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3</string>
+<string name="custom_permissions">Izin Suai...</string>
+<string name="edit_permissions">Edit Izin</string>
+<string name="edit">Edit</string>
+<string name="remove">Hapus</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Kontrol Penuh</string>
+<string name="view_description_string">Lihat</string>
+<string name="edit_description_string">Edit</string>
+<string name="export_description_string">Simpan sebagai</string>
+<string name="extract_description_string">Salin</string>
+<string name="print_description_string">Cetak</string>
+<string name="reply_description_string">Balas</string>
+<string name="reply_all_description_string">Balas Semua</string>
+<string name="forward_description_string">Teruskan</string>
+<string name="ad_hoc_policy_name_string">AKSES TERBATAS</string>
+<string name="ad_hoc_policy_description_string">Saat ini izin dibatasi. Hanya pengguna tertentu yang dapat mengakses konten ini</string>
+<string name="no_permissions_policy_name_string">Tidak Ada Izin</string>
+<string name="no_protection_policy_name_string">Tidak ada perlindungan</string>
+<string name="no_protection_policy_name_string_description">Konten ini dilindungi.</string>
+<string name="error_reporting_consent_request_string">Mohon maaf. Ada masalah. Bisakah Anda mengirimkan log kesalahannya agar kami dapat memperbaiki masalah tersebut?</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Batal</string>
+</resources>

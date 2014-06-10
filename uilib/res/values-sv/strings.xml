@@ -1,0 +1,65 @@
+﻿<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<resources>
+<!--<string name="sdk_locale_string">sv-se</string>-->
+<string name="select_templates">Välj mallar</string>
+<string name="select_template_title">Välj en skyddsmall</string>
+<string name="protect">Skydda</string>
+<string name="protected_content">Skyddat innehåll</string>
+<string name="granted_by_string">Beviljat av</string>
+<string name="use_rights_string">Användningsrättigheter</string>
+<string name="ok">OK</string>
+<string name="close_string">Stäng</string>
+<string name="report">Skicka e-post</string>
+<string name="error_report_reporting_string">Ett fel uppstod när felet rapporterades</string>
+<string name="apply">Använd</string>
+<string name="protection">Skydd</string>
+<string name="permissions">Behörigheter</string>
+<string name="your_permissions">Dina behörigheter</string>
+<string name="error_report_message">Du har hittat ett problem i Windows Azure AD Rights Management SDK. Hjälp oss att förbättra vår produkt genom att skicka det här e-postmeddelandet.</string>
+<string name="policy_viewer_non_owner_content">Du har följande behörigheter för den här filen:</string>
+<string name="policy_viewer_owner_content">Du har angett följande behörigheter för den här filen:</string>
+<string name="viewer">Läsare</string>
+<string name="reviewer">Granskare</string>
+<string name="co_author">Medförfattare</string>
+<string name="co_owner">Medägare</string>
+<string name="adrms">ADRMS</string>
+<string name="sdk_ver">3.0</string>
+<string name="custom_permissions">Anpassade behörigheter ...</string>
+<string name="edit_permissions">Redigera behörigheter</string>
+<string name="edit">Redigera</string>
+<string name="remove">Ta bort</string>
+<string name="version_code">1</string>
+<string name="version_name">1.0.0.51970</string>
+<string name="owner_description_string">Fullständig behörighet</string>
+<string name="view_description_string">Visa</string>
+<string name="edit_description_string">Redigera</string>
+<string name="export_description_string">Spara som</string>
+<string name="extract_description_string">Kopiera</string>
+<string name="print_description_string">Skriv ut</string>
+<string name="reply_description_string">Svara</string>
+<string name="reply_all_description_string">Svara alla</string>
+<string name="forward_description_string">Framåt</string>
+<string name="ad_hoc_policy_name_string">BEGRÄNSAD ÅTKOMST</string>
+<string name="ad_hoc_policy_description_string">Behörigheten är för tillfället begränsad. Endast särskilda användare har åtkomst till innehållet</string>
+<string name="no_permissions_policy_name_string">Inga behörigheter</string>
+<string name="no_protection_policy_name_string">Inget skydd</string>
+<string name="no_protection_policy_name_string_description">Det här innehållet är inte skyddat.</string>
+<string name="error_reporting_consent_request_string">Tyvärr har ett fel uppstått. Om du skickar oss felloggarna kan vi lösa problemet.</string>
+<string name="error_reporting_consent_ok_button_string">OK</string>
+<string name="error_reporting_consent_cancel_button_string">Avbryt</string>
+</resources>
