@@ -17,33 +17,23 @@
 
 package com.microsoft.rightsmanagement.ui;
 
-import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Parcelable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.view.View.OnClickListener;
-
 import com.microsoft.rightsmanagement.ui.R;
 import com.microsoft.rightsmanagement.UserPolicy;
 import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.model.UserPolicyModel;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
-import com.microsoft.rightsmanagement.ui.utils.Helpers;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 import com.microsoft.rightsmanagement.ui.widget.UserPolicyViewerFragment;
 
 /**
  * An Activity to control User Policy Viewer UI.
  */
-public class UserPolicyViewerActivity extends FragmentActivity implements
+public class UserPolicyViewerActivity extends BaseActivity implements
         UserPolicyViewerFragment.UserPolicyViewerFragmentEventListener, UserPolicyViewerFragment.UserPolicyDataProvider
 {
     /**
@@ -73,18 +63,13 @@ public class UserPolicyViewerActivity extends FragmentActivity implements
         public static final int NONE = 0;
     }
     protected static final String RESULT_POLICY_VIEWER = "RESULT_POLICY_VIEWER";
-    private static final String REQUEST_CALLBACK_ID = "REQUEST_CALLBACK_ID";
     private static final String REQUEST_RESULT_POLICY_VIEWER_OPTIONS = "REQUEST_RESULT_POLICY_VIEWER_OPTIONS";
     private static final String REQUEST_RESULT_USER_POLICY_MODEL = "REQUEST_RESULT_USER_POLICY_MODEL";
     private static CallbackManager<Integer, Void> sCallbackManager = new CallbackManager<Integer, Void>();
-    private static String TAG = "UserPolicyViewerActivity";
-    private int mRequestCallbackId;
-    private UserPolicyModel mUserPolicyModel;
-    private int mUserPolicyViewerActivityRequestOption;
-    private UserPolicyViewerFragment mUserPolicyViewerFragment;
-    View mBaseContainerView;
-    ValueAnimator mBgColorAnimationAtActivityEnd;
-    ValueAnimator mBgColorAnimationAtActivityStart;
+    static
+    {
+        setTAG("UserPolicyViewerActivity");
+    }
 
     /**
      * Processes the result of TemplateDescriptorPickerActivity started via startActivityForResult from the parent
@@ -125,21 +110,6 @@ public class UserPolicyViewerActivity extends FragmentActivity implements
             }
         }
     }
-    
-    /* (non-Javadoc)
-     * @see android.app.Activity#onWindowFocusChanged(boolean)
-     */
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus)
-    {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && mBaseContainerView != null && mBgColorAnimationAtActivityStart != null)
-        {
-            int animationDuration = this.getResources().getInteger(R.integer.fragment_slide_duration);
-            mBgColorAnimationAtActivityStart.setDuration(animationDuration);
-            mBgColorAnimationAtActivityStart.start();
-        }
-    }    
 
     /**
      * Show UI.
@@ -171,48 +141,10 @@ public class UserPolicyViewerActivity extends FragmentActivity implements
         intent.putExtra(REQUEST_CALLBACK_ID, requestCallbackId);
         intent.putExtra(REQUEST_RESULT_POLICY_VIEWER_OPTIONS, policyViewerActivityRequestOption);
         intent.putExtra(REQUEST_RESULT_USER_POLICY_MODEL,
-                (Parcelable)(new UserPolicyModel(userPolicy, activity.getApplicationContext())));
+                (new UserPolicyModel(userPolicy, activity.getApplicationContext())));
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         activity.startActivityForResult(intent, requestCode);
         Logger.me(TAG, "show");
-    }
-
-    /**
-     * Validate activity input parameter.
-     * 
-     * @param activity the activity
-     * @return the activity
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static Activity validateActivityInputParameter(Activity activity) throws InvalidParameterException
-    {
-        if (activity == null)
-        {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter activity", "", exception);
-            throw exception;
-        }
-        return activity;
-    }
-
-    /**
-     * Validate completion callback input parameter.
-     * 
-     * @param <T> the generic type
-     * @param completionCallback the completion callback
-     * @return the completion callback
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static <T> CompletionCallback<T> validateCompletionCallbackInputParameter(CompletionCallback<T> completionCallback)
-            throws InvalidParameterException
-    {
-        if (completionCallback == null)
-        {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter completionCallback", "", exception);
-            throw exception;
-        }
-        return completionCallback;
     }
 
     /**
@@ -252,6 +184,9 @@ public class UserPolicyViewerActivity extends FragmentActivity implements
         }
         return userPolicy;
     }
+    private UserPolicyModel mUserPolicyModel;
+    private int mUserPolicyViewerActivityRequestOption;
+    private UserPolicyViewerFragment mUserPolicyViewerFragment;
 
     /*
      * (non-Javadoc)
@@ -275,20 +210,6 @@ public class UserPolicyViewerActivity extends FragmentActivity implements
     {
         // TODO update logic later
         return (mUserPolicyViewerActivityRequestOption & UserPolicyViewerActivityRequestOption.EDIT_ALLOWED) == UserPolicyViewerActivityRequestOption.EDIT_ALLOWED;
-    }
-
-    /*
-     * (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onBackPressed()
-     */
-    @Override
-    public void onBackPressed()
-    {
-        Logger.ms(TAG, "onBackPressed");
-        Intent data = new Intent();
-        data.putExtra(REQUEST_CALLBACK_ID, mRequestCallbackId);
-        returnToCaller(RESULT_CANCELED, data);
-        Logger.me(TAG, "onBackPressed");
     }
 
     /*
@@ -331,59 +252,35 @@ public class UserPolicyViewerActivity extends FragmentActivity implements
         {
             Logger.ie(TAG, ex.getMessage());
         }
-        
         addUserPolicyViewerFragment();
         addTransparentPartDismissListener(R.id.user_policy_viewer_transparent_part);
-        //create fader animators
-        mBaseContainerView = findViewById(R.id.user_policy_viewer_base_container);
-        if (mBaseContainerView != null)
-        {
-            int originalBackgroundColor = Color.TRANSPARENT;
-            Drawable background = mBaseContainerView.getBackground();
-            if (background instanceof ColorDrawable)
-            {
-                originalBackgroundColor = ((ColorDrawable) background).getColor();
-            }
-            
-            int overlayBackgroundColor = getResources().getColor(R.color.overlayed);
-            if (savedInstanceState == null)
-            {
-                mBgColorAnimationAtActivityStart = Helpers.createBackgroundColorFaderAnimation(mBaseContainerView,
-                        originalBackgroundColor, overlayBackgroundColor);
-            }
-            else //on configuration change (e.g. rotation) don't animate from original color 
-            {
-                mBaseContainerView.setBackgroundColor(overlayBackgroundColor);
-            }
-            
-            mBgColorAnimationAtActivityEnd = Helpers.createBackgroundColorFaderAnimation(mBaseContainerView,
-                    overlayBackgroundColor, originalBackgroundColor);
-        }        
+        // create fader animators
+        createBgAnimators(R.id.user_policy_viewer_base_container, savedInstanceState);
         Logger.me(TAG, "onCreate");
     }
 
     /**
-     * This methods sets up finishing activity when transparent parts are clicked.
+     * activity sets result to go back to the caller.
      * 
-     * @param viewId view id of transparent view
+     * @param resultCode the result code
+     * @param data the data
      */
-    private void addTransparentPartDismissListener(int viewId)
+    @Override
+    protected void returnToCaller(int resultCode, Intent data)
     {
-        View view = findViewById(viewId);
-        if (view != null)
+        Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
+        setResult(resultCode, data);
+        if (mUserPolicyViewerFragment == null)
         {
-            view.setOnClickListener(new OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    Logger.ms(TAG, "onClick - for dismissing activity");
-                    Intent data = new Intent();
-                    data.putExtra(REQUEST_CALLBACK_ID, mRequestCallbackId);
-                    returnToCaller(RESULT_CANCELED, data);
-                    Logger.me(TAG, "onClick - for dismissing activity");
-                }
-            });
+            this.finish();
+        }
+        else
+        {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(0, R.animator.slide_animation_out);
+            ft.remove(mUserPolicyViewerFragment).commit();
+            mUserPolicyViewerFragment = null;
+            startActivityEndAnimationAndFinishActivity();
         }
     }
 
@@ -408,44 +305,4 @@ public class UserPolicyViewerActivity extends FragmentActivity implements
             Logger.d(TAG, "addUserPolicyViewerFragment - mUserPolicyViewerFragment is not null");
         }
     }
-    
-    /**
-     * activity sets result to go back to the caller.
-     * 
-     * @param resultCode the result code
-     * @param data the data
-     */
-    private void returnToCaller(int resultCode, Intent data)
-    {
-        Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
-        setResult(resultCode, data);
-        if (mUserPolicyViewerFragment == null)
-        {
-            this.finish();
-        }
-        else
-        {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.setCustomAnimations(0, R.animator.slide_animation_out);
-            ft.remove(mUserPolicyViewerFragment).commit();
-            mUserPolicyViewerFragment = null;
-            int animationDuration = this.getResources().getInteger(R.integer.fragment_slide_duration);
-            // start the background color fader animation
-            if (mBaseContainerView != null)
-            {   
-                mBgColorAnimationAtActivityEnd.setDuration(animationDuration);
-                mBgColorAnimationAtActivityEnd.start();
-            }
-            // delay finish to allow animation
-            Handler handler = new Handler(this.getMainLooper());
-            handler.postDelayed(new Runnable()
-            {
-                @Override
-                public void run()
-                {
-                    finish();
-                }
-            }, animationDuration);
-        }
-    }    
 }

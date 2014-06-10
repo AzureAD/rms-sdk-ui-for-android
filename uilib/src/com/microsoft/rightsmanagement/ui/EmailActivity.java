@@ -20,19 +20,10 @@ package com.microsoft.rightsmanagement.ui;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-
 import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.CompletionCallback;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
@@ -40,23 +31,19 @@ import com.microsoft.rightsmanagement.ui.utils.Helpers;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 import com.microsoft.rightsmanagement.ui.widget.EmailFragment;
 
-// TODO: Auto-generated Javadoc
 /**
  * An Activity to control email UI.
  */
-public class EmailActivity extends FragmentActivity implements EmailFragment.EmailFragmentEventListener
+public class EmailActivity extends BaseActivity implements EmailFragment.EmailFragmentEventListener
 {
-    public static final String TAG = "EmailActivity";
-    private static final String REQUEST_CALLBACK_ID = "REQUEST_CALLBACK_ID";
     private static final String RESULT_EMAIL = "RESULT_EMAIL";
     private static CallbackManager<String, Void> sCallbackManager = new CallbackManager<String, Void>();
     private static Pattern sEmailPattern = Pattern
             .compile("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
-    private int mRequestCallbackId;
-    View mBaseContainerView;
-    ValueAnimator mBgColorAnimationAtActivityEnd;
-    ValueAnimator mBgColorAnimationAtActivityStart;
-    EmailFragment mEmailFragment;
+    static
+    {
+        setTAG("EmailActivity");
+    }
 
     /**
      * Processes the result of TemplateDescriptorPickerActivity started via startActivityForResult from the parent
@@ -135,58 +122,7 @@ public class EmailActivity extends FragmentActivity implements EmailFragment.Ema
         Matcher m = sEmailPattern.matcher(email);
         return m.matches();
     }
-
-    /**
-     * Validate activity input parameter.
-     * 
-     * @param activity the activity
-     * @return the activity
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static Activity validateActivityInputParameter(Activity activity) throws InvalidParameterException
-    {
-        if (activity == null)
-        {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter activity", "", exception);
-            throw exception;
-        }
-        return activity;
-    }
-
-    /**
-     * Validate completion callback input parameter.
-     * 
-     * @param <T> the generic type
-     * @param completionCallback the completion callback
-     * @return the completion callback
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static <T> CompletionCallback<T> validateCompletionCallbackInputParameter(CompletionCallback<T> completionCallback)
-            throws InvalidParameterException
-    {
-        if (completionCallback == null)
-        {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter completionCallback", "", exception);
-            throw exception;
-        }
-        return completionCallback;
-    }
-
-    /*
-     * (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onBackPressed()
-     */
-    @Override
-    public void onBackPressed()
-    {
-        Logger.ms(TAG, "onBackPressed");
-        Intent data = new Intent();
-        data.putExtra(REQUEST_CALLBACK_ID, mRequestCallbackId);
-        returnToCaller(RESULT_CANCELED, data);
-        Logger.me(TAG, "onBackPressed");
-    }
+    EmailFragment mEmailFragment;
 
     /*
      * (non-Javadoc)
@@ -220,21 +156,6 @@ public class EmailActivity extends FragmentActivity implements EmailFragment.Ema
         Logger.me(TAG, "onContinue");
     }
 
-    /* (non-Javadoc)
-     * @see android.app.Activity#onWindowFocusChanged(boolean)
-     */
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus)
-    {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && mBaseContainerView != null && mBgColorAnimationAtActivityStart != null)
-        {
-            int animationDuration = this.getResources().getInteger(R.integer.fragment_slide_duration);
-            mBgColorAnimationAtActivityStart.setDuration(animationDuration);
-            mBgColorAnimationAtActivityStart.start();
-        }
-    }
-
     /*
      * (non-Javadoc)
      * @see android.support.v4.app.FragmentActivity#onCreate(android.os.Bundle)
@@ -251,30 +172,34 @@ public class EmailActivity extends FragmentActivity implements EmailFragment.Ema
         addEmailFragment();
         addTransparentPartDismissListener(R.id.left_transparent_part);
         addTransparentPartDismissListener(R.id.right_transparent_part);
-        //create fader animators
-        mBaseContainerView = findViewById(R.id.email_page_base_container);
-        if (mBaseContainerView != null)
-        {
-            int originalBackgroundColor = Color.TRANSPARENT;
-            Drawable background = mBaseContainerView.getBackground();
-            if (background instanceof ColorDrawable)
-            {
-                originalBackgroundColor = ((ColorDrawable) background).getColor();
-            }
-            int overlayBackgroundColor = getResources().getColor(R.color.overlayed);
-            if (savedInstanceState == null)
-            {
-                mBgColorAnimationAtActivityStart = Helpers.createBackgroundColorFaderAnimation(mBaseContainerView,
-                        originalBackgroundColor, overlayBackgroundColor);
-            }
-            else //on configuration change (e.g. rotation) don't animate from original color 
-            {
-                mBaseContainerView.setBackgroundColor(overlayBackgroundColor);
-            }            
-            mBgColorAnimationAtActivityEnd = Helpers.createBackgroundColorFaderAnimation(mBaseContainerView,
-                    overlayBackgroundColor, originalBackgroundColor);
-        }
+        // create fader animators
+        createBgAnimators(R.id.email_page_base_container, savedInstanceState);
         Logger.me(TAG, "onCreate");
+    }
+
+    /**
+     * activity sets result to go back to the caller.
+     * 
+     * @param resultCode the result code
+     * @param data the data
+     */
+    @Override
+    protected void returnToCaller(int resultCode, Intent data)
+    {
+        Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
+        setResult(resultCode, data);
+        if (mEmailFragment == null)
+        {
+            this.finish();
+        }
+        else
+        {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(0, R.animator.slide_animation_out_to_down);
+            ft.remove(mEmailFragment).commit();
+            mEmailFragment = null;
+            startActivityEndAnimationAndFinishActivity();
+        }
     }
 
     /**
@@ -295,71 +220,6 @@ public class EmailActivity extends FragmentActivity implements EmailFragment.Ema
         else
         {
             Logger.d(TAG, "addEmailFragment() - mEmailFragment is not null");
-        }
-    }
-
-    /**
-     * This methods sets up finishing activity when transparent parts are clicked.
-     * 
-     * @param viewId view id of transparent view
-     */
-    private void addTransparentPartDismissListener(int viewId)
-    {
-        View view = findViewById(viewId);
-        if (view != null)
-        {
-            view.setOnClickListener(new OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    Logger.ms(TAG, "onClick - for dismissing activity");
-                    Intent data = new Intent();
-                    data.putExtra(REQUEST_CALLBACK_ID, mRequestCallbackId);
-                    returnToCaller(RESULT_CANCELED, data);
-                    Logger.me(TAG, "onClick - for dismissing activity");
-                }
-            });
-        }
-    }
-
-    /**
-     * activity sets result to go back to the caller.
-     * 
-     * @param resultCode the result code
-     * @param data the data
-     */
-    private void returnToCaller(int resultCode, Intent data)
-    {
-        Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
-        setResult(resultCode, data);
-        if (mEmailFragment == null)
-        {
-            this.finish();
-        }
-        else
-        {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.setCustomAnimations(0, R.animator.slide_animation_out_to_down);
-            ft.remove(mEmailFragment).commit();
-            mEmailFragment = null;
-            int animationDuration = this.getResources().getInteger(R.integer.fragment_slide_duration);
-            // start the background color fader animation
-            if (mBaseContainerView != null)
-            {   
-                mBgColorAnimationAtActivityEnd.setDuration(animationDuration);
-                mBgColorAnimationAtActivityEnd.start();
-            }
-            // delay finish to allow animation
-            Handler handler = new Handler(this.getMainLooper());
-            handler.postDelayed(new Runnable()
-            {
-                @Override
-                public void run()
-                {
-                    finish();
-                }
-            }, animationDuration);
         }
     }
 }

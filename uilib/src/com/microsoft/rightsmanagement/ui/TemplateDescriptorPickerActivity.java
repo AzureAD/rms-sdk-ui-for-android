@@ -20,27 +20,17 @@ package com.microsoft.rightsmanagement.ui;
 import java.util.Arrays;
 import java.util.List;
 
-import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Parcelable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.view.View.OnClickListener;
-
 import com.microsoft.rightsmanagement.ui.R;
 import com.microsoft.rightsmanagement.TemplateDescriptor;
 import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.TemplateDescriptorPickerActivityResult.TemplateDescriptorPickerActivityResultType;
 import com.microsoft.rightsmanagement.ui.model.TemplateDescriptorModel;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
-import com.microsoft.rightsmanagement.ui.utils.Helpers;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 import com.microsoft.rightsmanagement.ui.widget.TemplateDescriptorListFragment;
 import com.microsoft.rightsmanagement.ui.widget.TemplateDescriptorPickerFragment;
@@ -48,28 +38,20 @@ import com.microsoft.rightsmanagement.ui.widget.TemplateDescriptorPickerFragment
 /**
  * An Activity to control Template Descriptor Picker UI.
  */
-public class TemplateDescriptorPickerActivity extends FragmentActivity implements
+public class TemplateDescriptorPickerActivity extends BaseActivity implements
         TemplateDescriptorPickerFragment.ProtectionButtonEventListener,
         TemplateDescriptorListFragment.TemplateDescriptorDataProvider,
         TemplateDescriptorListFragment.TemplateDescriptorListEventListener
 {
-    public static final String TAG = "TemplateDescriptorPickerActivity";
     private static final String CURRENT_SELECTED_TEMPLATE_DESCRIPTOR_INDEX = "CURRENT_SELECTED_TEMPLATE_DESCRIPTOR_INDEX";
-    private static final String REQUEST_CALLBACK_ID = "REQUEST_CALLBACK_ID";
     private static final String REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM = "REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM";
     private static final String REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY = "REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY";
     private static final String RESULT_TEMPLATE_DESCRIPTOR_ITEM = "RESULT_TEMPLATE_DESCRIPTOR_ITEM";
     private static CallbackManager<TemplateDescriptorPickerActivityResult, TemplateDescriptor[]> sCallbackManager = new CallbackManager<TemplateDescriptorPickerActivityResult, TemplateDescriptor[]>();
-    private int mCurrentSelectedtemplateDescriptorItemIndex = -1;
-    private TemplateDescriptorModel mCustomPermissionDescriptorFakeItem;
-    private TemplateDescriptorModel mNoProtectionDescriptorFakeItem;
-    private TemplateDescriptorModel mOriginalTemplateDescriptorItem;
-    private int mRequestCallbackId;
-    private TemplateDescriptorModel[] mTemplateDescriptorItemArray;
-    private TemplateDescriptorPickerFragment mTemplateDescriptorPickerFragment;
-    View mBaseContainerView;
-    ValueAnimator mBgColorAnimationAtActivityEnd;
-    ValueAnimator mBgColorAnimationAtActivityStart;
+    static
+    {
+        setTAG("TemplateDescriptorPickerActivity");
+    }
 
     /**
      * Temporary fix to disable custom permissions item. This will be replaced by navigation link to Custom Permission
@@ -191,44 +173,6 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
     }
 
     /**
-     * Validate activity input parameter.
-     * 
-     * @param activity the activity
-     * @return the activity
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static Activity validateActivityInputParameter(Activity activity) throws InvalidParameterException
-    {
-        if (activity == null)
-        {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter activity", "", exception);
-            throw exception;
-        }
-        return activity;
-    }
-
-    /**
-     * Validate completion callback input parameter.
-     * 
-     * @param <T> the generic type
-     * @param completionCallback the completion callback
-     * @return the completion callback
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static <T> CompletionCallback<T> validateCompletionCallbackInputParameter(CompletionCallback<T> completionCallback)
-            throws InvalidParameterException
-    {
-        if (completionCallback == null)
-        {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter completionCallback", "", exception);
-            throw exception;
-        }
-        return completionCallback;
-    }
-
-    /**
      * Validate template descriptor list input parameter.
      * 
      * @param templateDescriptorList the template descriptor list
@@ -246,6 +190,12 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
         }
         return templateDescriptorList;
     }
+    private int mCurrentSelectedtemplateDescriptorItemIndex = -1;
+    private TemplateDescriptorModel mCustomPermissionDescriptorFakeItem;
+    private TemplateDescriptorModel mNoProtectionDescriptorFakeItem;
+    private TemplateDescriptorModel mOriginalTemplateDescriptorItem;
+    private TemplateDescriptorModel[] mTemplateDescriptorItemArray;
+    private TemplateDescriptorPickerFragment mTemplateDescriptorPickerFragment;
 
     /*
      * (non-Javadoc)
@@ -267,20 +217,6 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
     public TemplateDescriptorModel[] getTemplateDescriptorItems()
     {
         return mTemplateDescriptorItemArray;
-    }
-
-    /*
-     * (non-Javadoc)
-     * @see android.support.v4.app.FragmentActivity#onBackPressed()
-     */
-    @Override
-    public void onBackPressed()
-    {
-        Logger.ms(TAG, "onBackPressed");
-        Intent data = new Intent();
-        data.putExtra(REQUEST_CALLBACK_ID, mRequestCallbackId);
-        returnToCaller(RESULT_CANCELED, data);
-        Logger.me(TAG, "onBackPressed");
     }
 
     /*
@@ -330,22 +266,6 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
 
     /*
      * (non-Javadoc)
-     * @see android.app.Activity#onWindowFocusChanged(boolean)
-     */
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus)
-    {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && mBaseContainerView != null && mBgColorAnimationAtActivityStart != null)
-        {
-            int animationDuration = this.getResources().getInteger(R.integer.fragment_slide_duration);
-            mBgColorAnimationAtActivityStart.setDuration(animationDuration);
-            mBgColorAnimationAtActivityStart.start();
-        }
-    }
-
-    /*
-     * (non-Javadoc)
      * @see android.support.v4.app.FragmentActivity#onCreate(android.os.Bundle)
      */
     @Override
@@ -381,29 +301,7 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
         addTempalteDescriptorPickerFragment();
         addTransparentPartDismissListener(R.id.template_descriptor_picker_transparent_part);
         // create fader animators
-        mBaseContainerView = findViewById(R.id.template_descriptor_picker_base_container);
-        if (mBaseContainerView != null)
-        {
-            int originalBackgroundColor = Color.TRANSPARENT;
-            Drawable background = mBaseContainerView.getBackground();
-            if (background instanceof ColorDrawable)
-            {
-                originalBackgroundColor = ((ColorDrawable) background).getColor();
-            }
-            int overlayBackgroundColor = getResources().getColor(R.color.overlayed);
-            if (savedInstanceState == null)
-            {
-                mBgColorAnimationAtActivityStart = Helpers.createBackgroundColorFaderAnimation(mBaseContainerView,
-                        originalBackgroundColor, overlayBackgroundColor);
-            }
-            else //on configuration change (e.g. rotation) don't animate from original color 
-            {
-                mBaseContainerView.setBackgroundColor(overlayBackgroundColor);
-            }
-            mBgColorAnimationAtActivityEnd = Helpers.createBackgroundColorFaderAnimation(mBaseContainerView,
-                    overlayBackgroundColor, originalBackgroundColor);
-        }
-        Logger.me(TAG, "onCreate");
+        createBgAnimators(R.id.template_descriptor_picker_base_container, savedInstanceState);
     }
 
     /*
@@ -420,6 +318,32 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
         outState.putParcelable(REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM, mOriginalTemplateDescriptorItem);
         outState.putInt(CURRENT_SELECTED_TEMPLATE_DESCRIPTOR_INDEX, mCurrentSelectedtemplateDescriptorItemIndex);
         Logger.me(TAG, "onSaveInstanceState");
+    }
+
+    /**
+     * activity sets result to go back to the caller.
+     * 
+     * @param resultCode the result code
+     * @param data the data
+     */
+    @Override
+    protected void returnToCaller(int resultCode, Intent data)
+    {
+        Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
+        setResult(resultCode, data);
+        if (mTemplateDescriptorPickerFragment == null)
+        {
+            this.finish();
+        }
+        else
+        {
+            mTemplateDescriptorPickerFragment.removeChildFragments();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(0, R.animator.slide_animation_out);
+            ft.remove(mTemplateDescriptorPickerFragment).commit();
+            mTemplateDescriptorPickerFragment = null;
+            startActivityEndAnimationAndFinishActivity();
+        }
     }
 
     /**
@@ -442,31 +366,6 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
         else
         {
             Logger.d(TAG, "addTempalteDescriptorPickerFragment - mTemplateDescriptorPickerFragment is not null");
-        }
-    }
-
-    /**
-     * This methods sets up finishing activity when transparent parts are clicked.
-     * 
-     * @param viewId view id of transparent view
-     */
-    private void addTransparentPartDismissListener(int viewId)
-    {
-        View view = findViewById(viewId);
-        if (view != null)
-        {
-            view.setOnClickListener(new OnClickListener()
-            {
-                @Override
-                public void onClick(View v)
-                {
-                    Logger.ms(TAG, "onClick - for dismissing activity");
-                    Intent data = new Intent();
-                    data.putExtra(REQUEST_CALLBACK_ID, mRequestCallbackId);
-                    returnToCaller(RESULT_CANCELED, data);
-                    Logger.me(TAG, "onClick - for dismissing activity");
-                }
-            });
         }
     }
 
@@ -504,7 +403,7 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
                     .getParcelableArray(TemplateDescriptorPickerActivity.REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY);
             try
             {
-                Object[] requestObjectArray = (Object[])requestArray;
+                Object[] requestObjectArray = requestArray;
                 mTemplateDescriptorItemArray = Arrays.copyOf(requestObjectArray, requestObjectArray.length,
                         TemplateDescriptorModel[].class);
             }
@@ -523,47 +422,6 @@ public class TemplateDescriptorPickerActivity extends FragmentActivity implement
         {
             Logger.d(TAG, "parseBundleInput - parsing CurrentSelectedtemplateDescriptorItemIndex");
             mCurrentSelectedtemplateDescriptorItemIndex = bundle.getInt(CURRENT_SELECTED_TEMPLATE_DESCRIPTOR_INDEX);
-        }
-    }
-
-    /**
-     * activity sets result to go back to the caller.
-     * 
-     * @param resultCode the result code
-     * @param data the data
-     */
-    private void returnToCaller(int resultCode, Intent data)
-    {
-        Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
-        setResult(resultCode, data);
-        if (mTemplateDescriptorPickerFragment == null)
-        {
-            this.finish();
-        }
-        else
-        {
-            mTemplateDescriptorPickerFragment.removeChildFragments();
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.setCustomAnimations(0, R.animator.slide_animation_out);
-            ft.remove(mTemplateDescriptorPickerFragment).commit();
-            mTemplateDescriptorPickerFragment = null;
-            int animationDuration = this.getResources().getInteger(R.integer.fragment_slide_duration);
-            // start the background color fader animation
-            if (mBaseContainerView != null)
-            {
-                mBgColorAnimationAtActivityEnd.setDuration(animationDuration);
-                mBgColorAnimationAtActivityEnd.start();
-            }
-            // delay finish to allow animation
-            Handler handler = new Handler(this.getMainLooper());
-            handler.postDelayed(new Runnable()
-            {
-                @Override
-                public void run()
-                {
-                    finish();
-                }
-            }, animationDuration);
         }
     }
 
