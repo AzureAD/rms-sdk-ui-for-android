@@ -40,6 +40,7 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
     private static CallbackManager<String, Void> sCallbackManager = new CallbackManager<String, Void>();
     private static Pattern sEmailPattern = Pattern
             .compile("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+    EmailFragment mEmailFragment;
     static
     {
         setTAG("EmailActivity");
@@ -122,7 +123,6 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
         Matcher m = sEmailPattern.matcher(email);
         return m.matches();
     }
-    EmailFragment mEmailFragment;
 
     /*
      * (non-Javadoc)

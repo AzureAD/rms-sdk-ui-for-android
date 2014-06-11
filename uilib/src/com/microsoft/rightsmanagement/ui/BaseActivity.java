@@ -42,6 +42,12 @@ abstract class BaseActivity extends FragmentActivity
     protected static final String REQUEST_CALLBACK_ID = "REQUEST_CALLBACK_ID";
     protected static String TAG = "BaseAnimatedActivity";
 
+    protected View mBaseContainerView;
+
+    protected ValueAnimator mBgColorAnimationAtActivityEnd;
+
+    protected ValueAnimator mBgColorAnimationAtActivityStart;
+    protected int mRequestCallbackId;
     /**
      * Sets the tag.
      * 
@@ -51,7 +57,6 @@ abstract class BaseActivity extends FragmentActivity
     {
         TAG = tag;
     }
-
     /**
      * Validate activity input parameter.
      * 
@@ -69,7 +74,6 @@ abstract class BaseActivity extends FragmentActivity
         }
         return activity;
     }
-
     /**
      * Validate completion callback input parameter.
      * 
@@ -89,10 +93,6 @@ abstract class BaseActivity extends FragmentActivity
         }
         return completionCallback;
     }
-    protected View mBaseContainerView;
-    protected ValueAnimator mBgColorAnimationAtActivityEnd;
-    protected ValueAnimator mBgColorAnimationAtActivityStart;
-    protected int mRequestCallbackId;
 
     /*
      * (non-Javadoc)

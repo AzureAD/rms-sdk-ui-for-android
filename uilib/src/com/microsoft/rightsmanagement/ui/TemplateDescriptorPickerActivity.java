@@ -48,6 +48,12 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
     private static final String REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY = "REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY";
     private static final String RESULT_TEMPLATE_DESCRIPTOR_ITEM = "RESULT_TEMPLATE_DESCRIPTOR_ITEM";
     private static CallbackManager<TemplateDescriptorPickerActivityResult, TemplateDescriptor[]> sCallbackManager = new CallbackManager<TemplateDescriptorPickerActivityResult, TemplateDescriptor[]>();
+    private int mCurrentSelectedtemplateDescriptorItemIndex = -1;
+    private TemplateDescriptorModel mCustomPermissionDescriptorFakeItem;
+    private TemplateDescriptorModel mNoProtectionDescriptorFakeItem;
+    private TemplateDescriptorModel mOriginalTemplateDescriptorItem;
+    private TemplateDescriptorModel[] mTemplateDescriptorItemArray;
+    private TemplateDescriptorPickerFragment mTemplateDescriptorPickerFragment;
     static
     {
         setTAG("TemplateDescriptorPickerActivity");
@@ -190,12 +196,6 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
         }
         return templateDescriptorList;
     }
-    private int mCurrentSelectedtemplateDescriptorItemIndex = -1;
-    private TemplateDescriptorModel mCustomPermissionDescriptorFakeItem;
-    private TemplateDescriptorModel mNoProtectionDescriptorFakeItem;
-    private TemplateDescriptorModel mOriginalTemplateDescriptorItem;
-    private TemplateDescriptorModel[] mTemplateDescriptorItemArray;
-    private TemplateDescriptorPickerFragment mTemplateDescriptorPickerFragment;
 
     /*
      * (non-Javadoc)

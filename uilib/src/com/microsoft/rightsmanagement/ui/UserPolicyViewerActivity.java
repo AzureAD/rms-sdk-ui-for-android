@@ -66,6 +66,9 @@ public class UserPolicyViewerActivity extends BaseActivity implements
     private static final String REQUEST_RESULT_POLICY_VIEWER_OPTIONS = "REQUEST_RESULT_POLICY_VIEWER_OPTIONS";
     private static final String REQUEST_RESULT_USER_POLICY_MODEL = "REQUEST_RESULT_USER_POLICY_MODEL";
     private static CallbackManager<Integer, Void> sCallbackManager = new CallbackManager<Integer, Void>();
+    private UserPolicyModel mUserPolicyModel;
+    private int mUserPolicyViewerActivityRequestOption;
+    private UserPolicyViewerFragment mUserPolicyViewerFragment;
     static
     {
         setTAG("UserPolicyViewerActivity");
@@ -184,9 +187,6 @@ public class UserPolicyViewerActivity extends BaseActivity implements
         }
         return userPolicy;
     }
-    private UserPolicyModel mUserPolicyModel;
-    private int mUserPolicyViewerActivityRequestOption;
-    private UserPolicyViewerFragment mUserPolicyViewerFragment;
 
     /*
      * (non-Javadoc)
