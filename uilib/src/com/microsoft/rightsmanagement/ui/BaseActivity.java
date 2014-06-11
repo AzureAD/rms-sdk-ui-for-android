@@ -21,8 +21,6 @@ import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.utils.Helpers;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Intent;
@@ -30,6 +28,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -205,14 +204,17 @@ abstract class BaseActivity extends FragmentActivity
             mBgColorAnimationAtActivityEnd.setDuration(animationDuration);
             mBgColorAnimationAtActivityEnd.start();
         }
-        // finish activity on animation end
-        mBgColorAnimationAtActivityEnd.addListener(new AnimatorListenerAdapter()
+        
+        // delay finish to allow fragment animation to complete
+        //TODO: call finish on animation end
+        Handler handler = new Handler(this.getMainLooper());
+        handler.postDelayed(new Runnable()
         {
             @Override
-            public void onAnimationEnd(Animator animation)
+            public void run()
             {
                 finish();
             }
-        });
+        }, animationDuration);
     }
 }
