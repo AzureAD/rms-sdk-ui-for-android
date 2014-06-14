@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,17 +15,16 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">sk-sk</string>-->
 <string name="select_templates">Vybrať šablóny</string>
 <string name="select_template_title">Vybrať šablónu ochrany</string>
 <string name="protect">Chrániť</string>
 <string name="protected_content">Chránený obsah</string>
-<string name="granted_by_string">Udelil/-a:</string>
-<string name="use_rights_string">Používateľské práva</string>
+<string name="granted_by_string">Udelil používateľ</string>
+<string name="use_rights_string">Práva na používanie</string>
 <string name="ok">OK</string>
 <string name="close_string">Zavrieť</string>
 <string name="report">Odoslať e-mail</string>
-<string name="error_report_reporting_string">Pri zobrazení hlásenia sa vyskytla chyba</string>
+<string name="error_report_reporting_string">Pri hlásení správy sa vyskytla chyba</string>
 <string name="apply">Použiť</string>
 <string name="protection">Ochrana</string>
 <string name="permissions">Povolenia</string>
@@ -38,7 +37,7 @@
 <string name="co_author">Spoluautor</string>
 <string name="co_owner">Spoluvlastník</string>
 <string name="adrms">AD RMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Vlastné povolenia...</string>
 <string name="edit_permissions">Upraviť povolenia</string>
 <string name="edit">Upraviť</string>
@@ -53,13 +52,21 @@
 <string name="print_description_string">Tlačiť</string>
 <string name="reply_description_string">Odpovedať</string>
 <string name="reply_all_description_string">Odpovedať všetkým</string>
-<string name="forward_description_string">Poslať ďalej</string>
+<string name="forward_description_string">Preposlať</string>
+<string name="comment_description_string">Komentár</string>
 <string name="ad_hoc_policy_name_string">OBMEDZENÝ PRÍSTUP</string>
 <string name="ad_hoc_policy_description_string">Povolenie je momentálne obmedzené. K tomuto obsahu majú prístup len stanovení používatelia</string>
 <string name="no_permissions_policy_name_string">Bez povolení</string>
 <string name="no_protection_policy_name_string">Bez ochrany</string>
 <string name="no_protection_policy_name_string_description">Tento obsah nie je chránený.</string>
-<string name="error_reporting_consent_request_string">Ľutujeme, vyskytla sa chyba. Môžete nám poslať denníky chýb, aby sme mohli problém opraviť?</string>
+<string name="error_reporting_consent_request_string">Ľutujeme, vyskytla sa chyba. Môžete nám poslať denníky chýb, aby sme mohli problém vyriešiť?</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Zrušiť</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Ochrana osobných údajov&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Pomocník&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Neplatná e-mailová adresa</string>
+<string name="rms_logo_content_description">Správa prístupových práv</string>
+<string name="email_instruction_text">Zadajte e-mailovú adresu pridelenú vašou organizáciou</string>
+<string name="email_hint_text">meno@example.com</string>
+<string name="continue_button_text">Pokračovať</string>
 </resources>

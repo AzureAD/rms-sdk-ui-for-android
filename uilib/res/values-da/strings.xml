@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,13 +15,12 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">da-dk</string>-->
 <string name="select_templates">Vælg skabeloner</string>
 <string name="select_template_title">Vælg en beskyttelsesskabelon</string>
 <string name="protect">Beskyt</string>
 <string name="protected_content">Beskyttet indhold</string>
 <string name="granted_by_string">Tildelt af</string>
-<string name="use_rights_string">Brugsrettigheder</string>
+<string name="use_rights_string">Brugervilkår</string>
 <string name="ok">OK</string>
 <string name="close_string">Luk</string>
 <string name="report">Send mail</string>
@@ -30,7 +29,7 @@
 <string name="protection">Beskyttelse</string>
 <string name="permissions">Tilladelser</string>
 <string name="your_permissions">Dine tilladelser</string>
-<string name="error_report_message">Du har registreret et problem med Windows Azure AD Rights Management SDK. Hjælp os med at forbedre produktet ved at sende denne mail.</string>
+<string name="error_report_message">Du har registreret et problem med Microsoft Azure AD Rights Management SDK. Hjælp os med at forbedre produktet ved at sende denne mail.</string>
 <string name="policy_viewer_non_owner_content">Du har følgende tilladelser til denne fil:</string>
 <string name="policy_viewer_owner_content">Du har angivet følgende tilladelser for denne fil:</string>
 <string name="viewer">Læser</string>
@@ -38,7 +37,7 @@
 <string name="co_author">Medforfatter</string>
 <string name="co_owner">Medejer</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Brugerdefinerede tilladelser...</string>
 <string name="edit_permissions">Rediger tilladelser</string>
 <string name="edit">Rediger</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">Besvar</string>
 <string name="reply_all_description_string">Svar til alle</string>
 <string name="forward_description_string">Videresend</string>
+<string name="comment_description_string">Kommentar</string>
 <string name="ad_hoc_policy_name_string">BEGRÆNSET ADGANG</string>
 <string name="ad_hoc_policy_description_string">Tilladelsen er i øjeblikket begrænset. Det er kun de angivne brugere, der kan få adgang til indholdet</string>
 <string name="no_permissions_policy_name_string">Ingen tilladelser</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">Der er desværre opstået en fejl. Hvis du sender os fejlloggene, vil vi forsøge at løse problemet.</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Annuller</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Beskyttelse af personlige oplysninger&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Hjælp&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Mailadressen er ugyldig</string>
+<string name="rms_logo_content_description">Rights Management Services</string>
+<string name="email_instruction_text">Angiv din organisationsmailadresse</string>
+<string name="email_hint_text">nogen@example.com</string>
+<string name="continue_button_text">Fortsæt</string>
 </resources>

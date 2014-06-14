@@ -39,7 +39,6 @@ import com.microsoft.adal.AuthenticationSettings;
 import com.microsoft.adal.PromptBehavior;
 import com.microsoft.rightsmanagement.AuthenticationCompletionCallback;
 import com.microsoft.rightsmanagement.AuthenticationRequestCallback;
-import com.microsoft.rightsmanagement.ipcnotepadsample.R;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 
 /**
@@ -48,10 +47,10 @@ import com.microsoft.rightsmanagement.ui.utils.Logger;
 class MsipcAuthenticationCallback implements AuthenticationRequestCallback
 {
     public static final String TAG = "RmsAuthenticationCallback";
-    private String mClientId;
-    private Activity mParentActivity;;
+    private static final String mClientId = "com.microsoft.rightsmanagement.ipcnotepadsample";
+    private static final String mRedirectURI = "com.microsoft.rightsmanagement.ipcnotepadsample://authorize";;
+    private Activity mParentActivity;
     private PromptBehavior mPromptBehavior = PromptBehavior.Auto;
-    private String mRedirectURI;
 
     /**
      * Instantiates a new rms authentication callback.
@@ -61,18 +60,16 @@ class MsipcAuthenticationCallback implements AuthenticationRequestCallback
      * @throws InvalidKeySpecException the invalid key spec exception
      * @throws UnsupportedEncodingException the unsupported encoding exception
      */
-    public MsipcAuthenticationCallback(Activity parentActivity) throws NoSuchAlgorithmException, InvalidKeySpecException,
-            UnsupportedEncodingException
+    public MsipcAuthenticationCallback(Activity parentActivity) throws NoSuchAlgorithmException,
+            InvalidKeySpecException, UnsupportedEncodingException
     {
         mParentActivity = parentActivity;
         setADALKeyStore();
-        mClientId = parentActivity.getResources().getString(R.string.client_id);
-        mRedirectURI = parentActivity.getResources().getString(R.string.redirect_uri);
     }
 
     /*
      * (non-Javadoc)
-     * @see com.microsoft.rightsmanagement.AuthenticationRequestCallback#getToken(java.util.Map,
+     * @see com.microsoft.rightsmanagement.AuthenticationRequestCallback#getToken (java.util.Map,
      * com.microsoft.rightsmanagement.AuthenticationCompletionCallback)
      */
     @Override
@@ -82,7 +79,7 @@ class MsipcAuthenticationCallback implements AuthenticationRequestCallback
         String authority = authenticationParametersMap.get("oauth2.authority");
         String resource = authenticationParametersMap.get("oauth2.resource");
         String userId = authenticationParametersMap.get("userId");
-        if(userId == null)
+        if (userId == null)
         {
             userId = "";
         }
@@ -165,8 +162,7 @@ class MsipcAuthenticationCallback implements AuthenticationRequestCallback
         // Allow ADAL to cache token
         if (Build.VERSION.SDK_INT < 18 && AuthenticationSettings.INSTANCE.getSecretKeyData() == null)
         {
-            // use same key for tests
-            // TODO
+            // TODO improve security
             SecretKeyFactory keyFactory = SecretKeyFactory.getInstance("PBEWithSHA256And256BitAES-CBC-BC");
             SecretKey tempkey = keyFactory.generateSecret(new PBEKeySpec("test".toCharArray(), "abcdedfdfd"
                     .getBytes("UTF-8"), 100, 256));

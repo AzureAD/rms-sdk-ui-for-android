@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">en-us</string>-->
 <string name="select_templates">Select templates</string>
 <string name="select_template_title">Select a protection template</string>
 <string name="protect">Protect</string>

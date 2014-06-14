@@ -24,6 +24,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
 import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.CompletionCallback;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
@@ -58,6 +59,11 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
     {
         Logger.ms(TAG, "onActivityResult");
         int requestCallbackId = 0;
+        if (data == null)
+        {
+            Logger.i(TAG, "System closed the activity", "");
+            return;
+        }
         try
         {
             final Bundle extras = data.getExtras();
@@ -176,6 +182,20 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
         createBgAnimators(R.id.email_page_base_container, savedInstanceState);
         Logger.me(TAG, "onCreate");
     }
+    
+    
+    /* (non-Javadoc)
+     * @see android.support.v4.app.FragmentActivity#onDestroy()
+     */
+    @Override
+    protected void onDestroy()
+    {
+        if ((isFinishing() == true) && (mActivityFinishedWithResult == false))
+        {
+            sCallbackManager.removeWaitingRequest(mRequestCallbackId);
+        }
+        super.onDestroy();
+    }
 
     /**
      * activity sets result to go back to the caller.
@@ -186,6 +206,7 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
     @Override
     protected void returnToCaller(int resultCode, Intent data)
     {
+        super.returnToCaller(resultCode, data);
         Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
         setResult(resultCode, data);
         if (mEmailFragment == null)

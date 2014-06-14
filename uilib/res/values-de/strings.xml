@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,9 +15,8 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">de-de</string>-->
 <string name="select_templates">Vorlagen auswählen</string>
-<string name="select_template_title">Wählen Sie eine Schutzvorlage aus</string>
+<string name="select_template_title">Wählen Sie eine Schutzvorlage aus.</string>
 <string name="protect">Schützen</string>
 <string name="protected_content">Geschützter Inhalt</string>
 <string name="granted_by_string">Gewährt von</string>
@@ -25,7 +24,7 @@
 <string name="ok">OK</string>
 <string name="close_string">Schließen</string>
 <string name="report">E-Mail senden</string>
-<string name="error_report_reporting_string">Fehler beim Berichten der Meldung.</string>
+<string name="error_report_reporting_string">Fehler beim Berichten der Meldung</string>
 <string name="apply">Anwenden</string>
 <string name="protection">Schutz</string>
 <string name="permissions">Berechtigungen</string>
@@ -33,12 +32,12 @@
 <string name="error_report_message">Sie haben ein Problem beim Windows Azure AD Rights Management-SDK gefunden. Unterstützen Sie uns beim Verbessern unseres Produkts, indem Sie diese E-Mail senden.</string>
 <string name="policy_viewer_non_owner_content">Sie verfügen über die folgenden Berechtigungen für diese Datei:</string>
 <string name="policy_viewer_owner_content">Sie haben für diese Datei die folgenden Berechtigungen festgelegt:</string>
-<string name="viewer">anzeigender Benutzer</string>
+<string name="viewer">Anzeigender Benutzer</string>
 <string name="reviewer">Prüfer</string>
 <string name="co_author">Mitautor</string>
 <string name="co_owner">Mitbesitzer</string>
 <string name="adrms">AD RMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Benutzerdefinierte Berechtigungen...</string>
 <string name="edit_permissions">Berechtigungen bearbeiten</string>
 <string name="edit">Bearbeiten</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">Antworten</string>
 <string name="reply_all_description_string">Allen antworten</string>
 <string name="forward_description_string">Weiterleiten</string>
+<string name="comment_description_string">Kommentar</string>
 <string name="ad_hoc_policy_name_string">EINGESCHRÄNKTER ZUGRIFF</string>
 <string name="ad_hoc_policy_description_string">Die Berechtigung ist zurzeit eingeschränkt. Nur angegebene Benutzer können auf diesen Inhalt zugreifen.</string>
 <string name="no_permissions_policy_name_string">Keine Berechtigungen</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">Fehler. Senden Sie uns die Fehlerprotokolle, damit das Problem behoben werden kann.</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Abbrechen</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacy&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Help&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Ungültige E-Mail-Adresse</string>
+<string name="rms_logo_content_description">Rechteverwaltungsdienste</string>
+<string name="email_instruction_text">Geben Sie Ihre geschäftliche E-Mail-Adresse ein.</string>
+<string name="email_hint_text">jemand@example.com</string>
+<string name="continue_button_text">Weiter</string>
 </resources>

@@ -56,38 +56,21 @@ public class UserPolicyModel implements Parcelable
     };
     public static final String TAG = "UserPolicyModel";
     private static HashMap<String, Integer> sRightIDToResourceIDMap = Helpers.createHashMap(String.class, Integer.class,
-        "OWNER", R.string.owner_description_string,
-        "VIEW", R.string.view_description_string,
-        "EDIT", R.string.edit_description_string,
-        "EXPORT", R.string.export_description_string,
-        "EXTRACT", R.string.extract_description_string,
-        "PRINT", R.string.print_description_string,
-        "REPLY", R.string.reply_description_string,
-        "REPLYALL", R.string.reply_all_description_string,
-        "FORWARD", R.string.forward_description_string,
-        "COMMENT", R.string.comment_description_string);
+            "OWNER", R.string.owner_description_string,
+            "VIEW", R.string.view_description_string,
+            "EDIT", R.string.edit_description_string,
+            "EXPORT", R.string.export_description_string,
+            "EXTRACT", R.string.extract_description_string,
+            "PRINT", R.string.print_description_string,
+            "REPLY", R.string.reply_description_string,
+            "REPLYALL", R.string.reply_all_description_string,
+            "FORWARD", R.string.forward_description_string,
+            "COMMENT", R.string.comment_description_string);
     private String mDescription;
     private List<RightAccessCheckModel> mEffectiveViewableRights;
     private Boolean mIsIssuedToOwner;
     private String mName;
     private String mOwner;
-
-    /**
-     * Gets the supported rights.
-     * 
-     * @param applicationContext the application context
-     * @return the supported rights
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static String[] getSupportedRights(Context applicationContext) throws InvalidParameterException
-    {
-        HashSet<String> supportedRightsList = new HashSet<String>();
-        supportedRightsList.addAll(EditableDocumentRights.ALL);
-        supportedRightsList.addAll(CommonRights.ALL);
-        String[] supportedRightsArray = new String[supportedRightsList.size()];
-        supportedRightsList.toArray(supportedRightsArray);
-        return supportedRightsArray;
-    }
 
     /**
      * Instantiates a new user policy model.
@@ -104,6 +87,53 @@ public class UserPolicyModel implements Parcelable
         mOwner = userPolicy.getOwner();
         mIsIssuedToOwner = userPolicy.isIssuedToOwner();
         makeEffectiveRights(userPolicy, applicationContext);
+    }
+
+    /**
+     * Gets the rights display name.
+     * 
+     * @param applicationContext the context
+     * @param right the right string ID
+     * @return the rights display name if found else the right ID
+     */
+    public static String getRightsDisplayName(Context applicationContext, String right)
+    {
+        String rightsDisplayName = right;
+        if (sRightIDToResourceIDMap.containsKey(right))
+        {
+            try
+            {
+                rightsDisplayName = applicationContext.getResources().getString(sRightIDToResourceIDMap.get(right));
+            }
+            catch (NotFoundException ex)
+            {
+                Logger.ie(TAG, String.format(
+                        "Resource id for Right: %s was not found in resources. Exception Message: %s", right,
+                        ex.getMessage()));
+            }
+        }
+        else
+        {
+            Logger.i(TAG, String.format("Right: %s - resource id was not found", right), "");
+        }
+        return rightsDisplayName;
+    }
+
+    /**
+     * Gets the supported rights.
+     * 
+     * @param applicationContext the application context
+     * @return the supported rights
+     * @throws InvalidParameterException the invalid parameter exception
+     */
+    private static String[] getSupportedRights(Context applicationContext) throws InvalidParameterException
+    {
+        HashSet<String> supportedRightsList = new HashSet<String>();
+        supportedRightsList.addAll(EditableDocumentRights.ALL);
+        supportedRightsList.addAll(CommonRights.ALL);
+        String[] supportedRightsArray = new String[supportedRightsList.size()];
+        supportedRightsList.toArray(supportedRightsArray);
+        return supportedRightsArray;
     }
 
     /**
@@ -210,25 +240,7 @@ public class UserPolicyModel implements Parcelable
         for (String right : supportedRights)
         {
             boolean hasAccess = userPolicy.accessCheck(right);
-            String rightDisplayName = right;// default value is same as ID
-            if (sRightIDToResourceIDMap.containsKey(rightDisplayName))
-            {
-                try
-                {
-                    rightDisplayName = applicationContext.getResources().getString(
-                            sRightIDToResourceIDMap.get(rightDisplayName));
-                }
-                catch (NotFoundException ex)
-                {
-                    Logger.ie(TAG, String.format(
-                            "Resource id for Right: %s was not found in resources. Exception Message: %s", right,
-                            ex.getMessage()));
-                }
-            }
-            else
-            {
-                Logger.i(TAG, String.format("Right: %s - resource id was not found", right), "");
-            }
+            String rightDisplayName = getRightsDisplayName(applicationContext, right);
             mEffectiveViewableRights.add(new RightAccessCheckModel(rightDisplayName, hasAccess));
         }
     }

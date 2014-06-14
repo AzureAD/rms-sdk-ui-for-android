@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">el-gr</string>-->
 <string name="select_templates">Επιλογή προτύπων</string>
 <string name="select_template_title">Επιλογή προτύπου προστασίας</string>
 <string name="protect">Προστασία</string>
@@ -38,7 +37,7 @@
 <string name="co_author">Συντάκτης από κοινού</string>
 <string name="co_owner">Συγκάτοχος</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Προσαρμοσμένα δικαιώματα...</string>
 <string name="edit_permissions">Επεξεργασία δικαιωμάτων</string>
 <string name="edit">Επεξεργασία</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">Απάντηση</string>
 <string name="reply_all_description_string">Απάντηση σε όλους</string>
 <string name="forward_description_string">Προώθηση</string>
+<string name="comment_description_string">Σχόλιο</string>
 <string name="ad_hoc_policy_name_string">ΠΕΡΙΟΡΙΣΜΕΝΗ ΠΡΟΣΒΑΣΗ</string>
 <string name="ad_hoc_policy_description_string">Αυτήν τη στιγμή η πρόσβαση είναι περιορισμένη. Μόνο καθορισμένοι χρήστες μπορούν να έχουν πρόσβαση σε αυτό το περιεχόμενο</string>
 <string name="no_permissions_policy_name_string">Χωρίς δικαιώματα</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">Δυστυχώς, παρουσιάστηκε σφάλμα. Μπορείτε να μας στείλετε τα αρχεία καταγραφής σφαλμάτων, ώστε να διορθώσουμε το πρόβλημα;</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Άκυρο</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Προστασία προσωπικών δεδομένων&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Βοήθεια&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Μη έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου</string>
+<string name="rms_logo_content_description">Υπηρεσίες διαχείρισης δικαιωμάτων</string>
+<string name="email_instruction_text">Εισαγάγετε την εταιρική διεύθυνση ηλεκτρονικού ταχυδρομείου σας</string>
+<string name="email_hint_text">someone@example.com</string>
+<string name="continue_button_text">Συνέχεια</string>
 </resources>

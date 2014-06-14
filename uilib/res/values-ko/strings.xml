@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">ko-kr</string>-->
 <string name="select_templates">템플릿 선택</string>
 <string name="select_template_title">보호 템플릿 선택</string>
 <string name="protect">보호</string>
@@ -38,7 +37,7 @@
 <string name="co_author">공동 저자</string>
 <string name="co_owner">공동 소유자</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">사용자 지정 권한...</string>
 <string name="edit_permissions">권한 편집</string>
 <string name="edit">편집</string>
@@ -54,12 +53,20 @@
 <string name="reply_description_string">회신</string>
 <string name="reply_all_description_string">전체 회신</string>
 <string name="forward_description_string">전달</string>
+<string name="comment_description_string">설명</string>
 <string name="ad_hoc_policy_name_string">제한된 권한</string>
 <string name="ad_hoc_policy_description_string">사용 권한이 현재 제한되어 있습니다. 지정된 사용자만 이 콘텐츠에 액세스할 수 있습니다.</string>
 <string name="no_permissions_policy_name_string">권한 없음</string>
 <string name="no_protection_policy_name_string">보호 안 함</string>
 <string name="no_protection_policy_name_string_description">콘텐츠가 보호되지 않습니다.</string>
-<string name="error_reporting_consent_request_string">죄송합니다. 오류가 발생했습니다. 문제를 수정할 수 있도록 오류 로그를 보내주시겠습니까?</string>
+<string name="error_reporting_consent_request_string">죄송합니다. 오류가 발생했습니다. 문제를 수정할 수 있도록 오류 로그를 보내 주시겠습니까?</string>
 <string name="error_reporting_consent_ok_button_string">확인</string>
 <string name="error_reporting_consent_cancel_button_string">취소</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;개인정보취급방침&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;도움말&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">잘못된 전자 메일 주소</string>
+<string name="rms_logo_content_description">Rights Management 서비스</string>
+<string name="email_instruction_text">회사 전자 메일 주소 입력</string>
+<string name="email_hint_text">someone@example.com</string>
+<string name="continue_button_text">계속</string>
 </resources>

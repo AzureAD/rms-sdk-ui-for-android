@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">lt-lt</string>-->
 <string name="select_templates">Pasirinkti šablonus</string>
 <string name="select_template_title">Pasirinkti apsaugos šabloną</string>
 <string name="protect">Apsaugoti</string>
@@ -30,15 +29,15 @@
 <string name="protection">Apsauga</string>
 <string name="permissions">Teisės</string>
 <string name="your_permissions">Jūsų teisės</string>
-<string name="error_report_message">Susidūrėte su „Windows Azure AD Rights Management SDK“ problema. Padėkite patobulinti mūsų produktą išsiųsdami šį el. laišką.</string>
-<string name="policy_viewer_non_owner_content">Turite tokias teises šio failo atžvilgiu:</string>
-<string name="policy_viewer_owner_content">Nustatėte tokias teises šio failo atžvilgiu:</string>
+<string name="error_report_message">Susidūrėte su „Windows Azure AD Rights Management SDK“ problema. Padėkite mums patobulinti produktą išsiųsdami šį el. laišką.</string>
+<string name="policy_viewer_non_owner_content">Naudodami šį failą turite šias teises:</string>
+<string name="policy_viewer_owner_content">Nustatėte šias šio failo naudojimo teises:</string>
 <string name="viewer">Žiūrovas</string>
 <string name="reviewer">Recenzentas</string>
 <string name="co_author">Bendraautoris</string>
 <string name="co_owner">Bendrasavininkis</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Pasirinktinės teisės...</string>
 <string name="edit_permissions">Redaguoti teises</string>
 <string name="edit">Redaguoti</string>
@@ -54,12 +53,20 @@
 <string name="reply_description_string">Atsakyti</string>
 <string name="reply_all_description_string">Atsakyti visiems</string>
 <string name="forward_description_string">Persiųsti</string>
+<string name="comment_description_string">Komentuoti</string>
 <string name="ad_hoc_policy_name_string">APRIBOTA PRIEIGA</string>
-<string name="ad_hoc_policy_description_string">Teisė dabar apribota. Šį turinį gali pasiekti tik nurodyti vartotojai</string>
+<string name="ad_hoc_policy_description_string">Teisės dabar apribotos. Šį turinį gali pasiekti tik nurodyti vartotojai</string>
 <string name="no_permissions_policy_name_string">Nėra teisių</string>
 <string name="no_protection_policy_name_string">Neapsaugota</string>
 <string name="no_protection_policy_name_string_description">Šis turinys neapsaugotas.</string>
 <string name="error_reporting_consent_request_string">Atsiprašome. Įvyko klaida. Ar galite atsiųsti mums klaidų žurnalus, kad galėtume išspręsti problemą?</string>
 <string name="error_reporting_consent_ok_button_string">Gerai</string>
 <string name="error_reporting_consent_cancel_button_string">Atšaukti</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacy&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Help&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Neteisingas el. pašto adresas</string>
+<string name="rms_logo_content_description">„Rights Management Services“</string>
+<string name="email_instruction_text">Įveskite organizacijos el. pašto adresą</string>
+<string name="email_hint_text">kazkas@example.com</string>
+<string name="continue_button_text">Tęsti</string>
 </resources>

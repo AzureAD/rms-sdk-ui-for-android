@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">ru-ru</string>-->
 <string name="select_templates">Выбрать шаблоны</string>
 <string name="select_template_title">Выбор шаблона защиты</string>
 <string name="protect">Защита</string>
@@ -30,18 +29,18 @@
 <string name="protection">Защита</string>
 <string name="permissions">Разрешения</string>
 <string name="your_permissions">Ваши разрешения</string>
-<string name="error_report_message">Вы обнаружили проблему при работе с набором SDK Windows Azure AD Rights Management. Отправьте данное сообщение электронной почты, чтобы помочь нам улучшить этот продукт.</string>
+<string name="error_report_message">Вы обнаружили проблему при работе с пакетом SDK Windows Azure AD Rights Management. Отправьте данное сообщение электронной почты, чтобы помочь нам улучшить этот продукт.</string>
 <string name="policy_viewer_non_owner_content">У вас есть следующие разрешения для работы с этим файлом:</string>
 <string name="policy_viewer_owner_content">Вы указали следующие разрешения для работы с этим файлом:</string>
-<string name="viewer">читатель</string>
-<string name="reviewer">редактор</string>
-<string name="co_author">соавтор</string>
-<string name="co_owner">совладелец</string>
-<string name="adrms">Служба управления правами Active Directory</string>
-<string name="sdk_ver">3.0</string>
+<string name="viewer">Читатель</string>
+<string name="reviewer">Редактор</string>
+<string name="co_author">Соавтор</string>
+<string name="co_owner">Совладелец</string>
+<string name="adrms">Служба Active Directory Rights Management</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Настраиваемые разрешения...</string>
 <string name="edit_permissions">Изменить разрешения</string>
-<string name="edit">Изменить</string>
+<string name="edit">Правка</string>
 <string name="remove">Удалить</string>
 <string name="version_code">1</string>
 <string name="version_name">1.0.0.51970</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">Ответить</string>
 <string name="reply_all_description_string">Ответить всем</string>
 <string name="forward_description_string">Переслать</string>
+<string name="comment_description_string">Комментарий</string>
 <string name="ad_hoc_policy_name_string">ОГРАНИЧЕННЫЙ ДОСТУП</string>
 <string name="ad_hoc_policy_description_string">Разрешения в данный момент ограничены. Доступ к этому содержимому разрешен только указанным пользователям</string>
 <string name="no_permissions_policy_name_string">Нет разрешений</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">К сожалению, произошла ошибка. Отправьте нам журналы ошибок, чтобы мы могли исправить проблему.</string>
 <string name="error_reporting_consent_ok_button_string">ОК</string>
 <string name="error_reporting_consent_cancel_button_string">Отмена</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Конфиденциальность&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Справка&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Недопустимый адрес электронной почты</string>
+<string name="rms_logo_content_description">Службы Rights Management</string>
+<string name="email_instruction_text">Введите адрес электронной почты своей организации</string>
+<string name="email_hint_text">proverka@example.com</string>
+<string name="continue_button_text">Продолжить</string>
 </resources>

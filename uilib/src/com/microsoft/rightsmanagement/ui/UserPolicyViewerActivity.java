@@ -86,6 +86,11 @@ public class UserPolicyViewerActivity extends BaseActivity implements
     {
         Logger.ms(TAG, "onActivityResult");
         int requestCallbackId = 0;
+        if (data == null)
+        {
+            Logger.i(TAG, "System closed the activity", "");
+            return;
+        }
         try
         {
             final Bundle extras = data.getExtras();
@@ -109,8 +114,8 @@ public class UserPolicyViewerActivity extends BaseActivity implements
             if (requestCallbackId != 0)
             {
                 sCallbackManager.removeWaitingRequest(requestCallbackId);
-                Logger.me(TAG, "onActivityResult");
             }
+            Logger.me(TAG, "onActivityResult");
         }
     }
 
@@ -141,6 +146,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
         sCallbackManager.putWaitingRequest(requestCallbackId, policyViewerActivityCompletionCallback);
         // set launch intent
         Intent intent = new Intent(activity, UserPolicyViewerActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra(REQUEST_CALLBACK_ID, requestCallbackId);
         intent.putExtra(REQUEST_RESULT_POLICY_VIEWER_OPTIONS, policyViewerActivityRequestOption);
         intent.putExtra(REQUEST_RESULT_USER_POLICY_MODEL,
@@ -259,6 +265,19 @@ public class UserPolicyViewerActivity extends BaseActivity implements
         Logger.me(TAG, "onCreate");
     }
 
+    /* (non-Javadoc)
+     * @see android.support.v4.app.FragmentActivity#onDestroy()
+     */
+    @Override
+    protected void onDestroy()
+    {
+        if ((isFinishing() == true) && (mActivityFinishedWithResult == false))
+        {
+            sCallbackManager.removeWaitingRequest(mRequestCallbackId);
+        }
+        super.onDestroy();
+    }
+    
     /**
      * activity sets result to go back to the caller.
      * 
@@ -268,6 +287,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
     @Override
     protected void returnToCaller(int resultCode, Intent data)
     {
+        super.returnToCaller(resultCode, data);
         Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
         setResult(resultCode, data);
         if (mUserPolicyViewerFragment == null)

@@ -39,6 +39,7 @@ import android.view.View.OnClickListener;
 abstract class BaseActivity extends FragmentActivity
 {
     protected static final String REQUEST_CALLBACK_ID = "REQUEST_CALLBACK_ID";
+    
     protected static String TAG = "BaseAnimatedActivity";
 
     protected View mBaseContainerView;
@@ -46,7 +47,11 @@ abstract class BaseActivity extends FragmentActivity
     protected ValueAnimator mBgColorAnimationAtActivityEnd;
 
     protected ValueAnimator mBgColorAnimationAtActivityStart;
+    
     protected int mRequestCallbackId;
+    
+    protected boolean mActivityFinishedWithResult;
+    
     /**
      * Sets the tag.
      * 
@@ -56,6 +61,7 @@ abstract class BaseActivity extends FragmentActivity
     {
         TAG = tag;
     }
+    
     /**
      * Validate activity input parameter.
      * 
@@ -183,15 +189,18 @@ abstract class BaseActivity extends FragmentActivity
         }
         Logger.me(TAG, "createBgAnimators");
     }
-
+    
     /**
      * Return to caller.
      * 
      * @param resultCode the result code
      * @param data the data
      */
-    protected abstract void returnToCaller(int resultCode, Intent data);
-
+    protected void returnToCaller(int resultCode, Intent data)
+    {
+        mActivityFinishedWithResult = true;
+    }
+    
     /**
      * Start activity end animation and finish activity.
      */

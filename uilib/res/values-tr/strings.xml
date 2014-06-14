@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,12 +15,11 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">tr-tr</string>-->
 <string name="select_templates">Şablon seç</string>
 <string name="select_template_title">Koruma şablonu seç</string>
 <string name="protect">Koru</string>
 <string name="protected_content">Korumalı içerik</string>
-<string name="granted_by_string">İzni veren:</string>
+<string name="granted_by_string">İzni veren</string>
 <string name="use_rights_string">Kullanım Hakları</string>
 <string name="ok">Tamam</string>
 <string name="close_string">Kapat</string>
@@ -30,7 +29,7 @@
 <string name="protection">Koruma</string>
 <string name="permissions">İzinler</string>
 <string name="your_permissions">İzinleriniz</string>
-<string name="error_report_message">Windows Azure AD Rights Management SDK ile ilgili bir sorun buldunuz. Bize e-posta göndererek ürünümüzü geliştirmemize yardımcı olun.</string>
+<string name="error_report_message">Microsoft Azure AD Rights Management SDK ile ilgili bir sorun buldunuz. Bize e-posta göndererek ürünümüzü geliştirmemize yardımcı olun.</string>
 <string name="policy_viewer_non_owner_content">Bu dosya için şu izinlere sahipsiniz:</string>
 <string name="policy_viewer_owner_content">Bu dosya için şu izinleri ayarladınız:</string>
 <string name="viewer">Görüntüleyici</string>
@@ -38,7 +37,7 @@
 <string name="co_author">Ortak yazar</string>
 <string name="co_owner">İkincil sahip</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Özel İzinler...</string>
 <string name="edit_permissions">İzinleri Düzenle</string>
 <string name="edit">Düzenle</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">Yanıtla</string>
 <string name="reply_all_description_string">Tümünü Yanıtla</string>
 <string name="forward_description_string">İlet</string>
+<string name="comment_description_string">Yorum</string>
 <string name="ad_hoc_policy_name_string">KISITLANMIŞ ERİŞİM</string>
 <string name="ad_hoc_policy_description_string">İzin şu anda kısıtlanmış durumda. Yalnızca belirli kullanıcılar bu içeriğe erişebilir</string>
 <string name="no_permissions_policy_name_string">İzin yok</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">Maalesef bir hata oluştu. Sorunu giderebilmemiz için hata günlüklerini gönderebilir misiniz?</string>
 <string name="error_reporting_consent_ok_button_string">Tamam</string>
 <string name="error_reporting_consent_cancel_button_string">İptal</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Gizlilik&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Yardım&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Geçersiz e-posta adresi</string>
+<string name="rms_logo_content_description">Rights Management Services</string>
+<string name="email_instruction_text">Kurumsal e-posta adresinizi girin</string>
+<string name="email_hint_text">birisi@example.com</string>
+<string name="continue_button_text">Devam</string>
 </resources>

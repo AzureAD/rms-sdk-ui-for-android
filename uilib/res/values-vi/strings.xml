@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,51 +15,58 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">vi-vn</string>-->
-<string name="select_templates">Chọn mẫu</string>
-<string name="select_template_title">Chọn một mẫu bảo vệ</string>
-<string name="protect">Bảo vệ</string>
-<string name="protected_content">Nội dung được bảo vệ</string>
-<string name="granted_by_string">Được cấp bởi</string>
-<string name="use_rights_string">Quyền Sử dụng</string>
+<string name="select_templates">Select templates</string>
+<string name="select_template_title">Select a protection template</string>
+<string name="protect">Protect</string>
+<string name="protected_content">Protected content</string>
+<string name="granted_by_string">Granted by</string>
+<string name="use_rights_string">Use Rights</string>
 <string name="ok">OK</string>
-<string name="close_string">Đóng</string>
-<string name="report">Gửi email</string>
-<string name="error_report_reporting_string">Đã xảy ra lỗi trong khi báo cáo thông điệp</string>
-<string name="apply">Áp dụng</string>
-<string name="protection">Bảo vệ</string>
-<string name="permissions">Quyền</string>
-<string name="your_permissions">Các quyền của bạn</string>
-<string name="error_report_message">Bạn đã phát hiện một vấn đề với Windows Azure AD Rights Management SDK. Vui lòng giúp chúng tôi cải thiện sản phẩm bằng cách gửi email này.</string>
-<string name="policy_viewer_non_owner_content">Bạn có các quyền sau đây đối với tệp này:</string>
-<string name="policy_viewer_owner_content">Bạn đã thiết lập các quyền sau đây cho tệp này:</string>
-<string name="viewer">Người xem</string>
-<string name="reviewer">Người xem lại</string>
-<string name="co_author">Đồng tác giả</string>
-<string name="co_owner">Đồng sở hữu</string>
+<string name="close_string">Close</string>
+<string name="report">Send e-mail</string>
+<string name="error_report_reporting_string">An error occurred when reporting message</string>
+<string name="apply">Apply</string>
+<string name="protection">Protection</string>
+<string name="permissions">Permissions</string>
+<string name="your_permissions">Your permissions</string>
+<string name="error_report_message">You\'ve found a problem with the Windows Azure AD Rights Management SDK. Please help us improve our product by sending this e-mail.</string>
+<string name="policy_viewer_non_owner_content">You have the following permissions for this file:</string>
+<string name="policy_viewer_owner_content">You have set the following permissions on this file:</string>
+<string name="viewer">Viewer</string>
+<string name="reviewer">Reviewer</string>
+<string name="co_author">Co-author</string>
+<string name="co_owner">Co-owner</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
-<string name="custom_permissions">Quyền Tùy chỉnh...</string>
-<string name="edit_permissions">Sửa Quyền</string>
-<string name="edit">Sửa</string>
-<string name="remove">Loại bỏ</string>
+<string name="sdk_ver">4.0</string>
+<string name="custom_permissions">Custom Permissions...</string>
+<string name="edit_permissions">Edit Permissions</string>
+<string name="edit">Edit</string>
+<string name="remove">Remove</string>
 <string name="version_code">1</string>
 <string name="version_name">1.0.0.51970</string>
-<string name="owner_description_string">Toàn Quyền Kiểm soát</string>
-<string name="view_description_string">Xem</string>
-<string name="edit_description_string">Sửa</string>
-<string name="export_description_string">Lưu mới</string>
-<string name="extract_description_string">Sao chép</string>
-<string name="print_description_string">In</string>
-<string name="reply_description_string">Trả lời</string>
-<string name="reply_all_description_string">Trả lời Tất cả</string>
-<string name="forward_description_string">Chuyển tiếp</string>
-<string name="ad_hoc_policy_name_string">TRUY NHẬP HẠN CHẾ</string>
-<string name="ad_hoc_policy_description_string">Quyền truy nhập đang bị hạn chế. Chỉ những người dùng được chỉ định mới có thể truy nhập nội dung này</string>
-<string name="no_permissions_policy_name_string">Không Có Quyền</string>
-<string name="no_protection_policy_name_string">Không bảo vệ</string>
-<string name="no_protection_policy_name_string_description">Nội dung này không được bảo vệ.</string>
-<string name="error_reporting_consent_request_string">Chúng tôi xin lỗi. Đã xảy ra lỗi. Bạn có thể gửi cho chúng tôi sự kí lỗi để giúp chúng tôi sửa lỗi được không?</string>
+<string name="owner_description_string">Full Control</string>
+<string name="view_description_string">View</string>
+<string name="edit_description_string">Edit</string>
+<string name="export_description_string">Save as</string>
+<string name="extract_description_string">Copy</string>
+<string name="print_description_string">Print</string>
+<string name="reply_description_string">Reply</string>
+<string name="reply_all_description_string">Reply All</string>
+<string name="forward_description_string">Forward</string>
+<string name="comment_description_string">Comment</string>
+<string name="ad_hoc_policy_name_string">RESTRICTED ACCESS</string>
+<string name="ad_hoc_policy_description_string">Permission is currently restricted. Only specified users can access this content</string>
+<string name="no_permissions_policy_name_string">No Permissions</string>
+<string name="no_protection_policy_name_string">No Protection</string>
+<string name="no_protection_policy_name_string_description">This content isn\'t protected.</string>
+<string name="error_reporting_consent_request_string">We\'re sorry. An error has occurred. Can you send us the error logs so we can fix the problem?</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
-<string name="error_reporting_consent_cancel_button_string">Hủy bỏ</string>
+<string name="error_reporting_consent_cancel_button_string">Cancel</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacy&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Help&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Invalid email address</string>
+<string name="rms_logo_content_description">Rights Management Services</string>
+<string name="email_instruction_text">Enter your organizational email address</string>
+<string name="email_hint_text">someone@example.com</string>
+<string name="continue_button_text">Continue</string>
 </resources>

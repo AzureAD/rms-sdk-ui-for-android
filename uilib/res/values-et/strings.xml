@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,12 +15,11 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">et-ee</string>-->
 <string name="select_templates">Mallide valimine</string>
 <string name="select_template_title">Valige kaitsemall</string>
 <string name="protect">Kaitse</string>
 <string name="protected_content">Kaitstud sisu</string>
-<string name="granted_by_string">Andja:</string>
+<string name="granted_by_string">Andja</string>
 <string name="use_rights_string">Kasutusõigused</string>
 <string name="ok">OK</string>
 <string name="close_string">Sule</string>
@@ -38,7 +37,7 @@
 <string name="co_author">Kaasautor</string>
 <string name="co_owner">Kaasomanik</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Kohandatud õigused ...</string>
 <string name="edit_permissions">Redigeeri õigusi</string>
 <string name="edit">Redigeeri</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">Vasta</string>
 <string name="reply_all_description_string">Vasta kõigile</string>
 <string name="forward_description_string">Suuna ümber</string>
+<string name="comment_description_string">Comment</string>
 <string name="ad_hoc_policy_name_string">PIIRATUD JUURDEPÄÄS</string>
 <string name="ad_hoc_policy_description_string">Õigused on praegu piiratud. Sisu juurde pääsevad vaid teatud kasutajad</string>
 <string name="no_permissions_policy_name_string">Õigusi ei ole</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">Kahjuks ilmnes viga. Saatke meile tõrkelogid, et saaksime probleemi lahendada.</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Tühista</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacy&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Help&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Invalid email address</string>
+<string name="rms_logo_content_description">Rights Management Services</string>
+<string name="email_instruction_text">Enter your organizational email address</string>
+<string name="email_hint_text">keegi@example.com</string>
+<string name="continue_button_text">Continue</string>
 </resources>

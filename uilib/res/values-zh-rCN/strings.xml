@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,13 +15,12 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">zh-cn</string>-->
 <string name="select_templates">选择模板</string>
 <string name="select_template_title">选择保护模板</string>
 <string name="protect">保护</string>
-<string name="protected_content">受保护内容</string>
-<string name="granted_by_string">授权者</string>
-<string name="use_rights_string">使用权限</string>
+<string name="protected_content">受保护的内容</string>
+<string name="granted_by_string">受保护的内容</string>
+<string name="use_rights_string">授权者</string>
 <string name="ok">确定</string>
 <string name="close_string">关闭</string>
 <string name="report">发送电子邮件</string>
@@ -29,16 +28,16 @@
 <string name="apply">应用</string>
 <string name="protection">保护</string>
 <string name="permissions">权限</string>
-<string name="your_permissions">你的权限</string>
-<string name="error_report_message">你发现了 Windows Azure AD Rights Management SDK 的一个问题。请发送此电子邮件来帮助我们改进我们的产品。</string>
-<string name="policy_viewer_non_owner_content">你对此文件具有以下权限:</string>
-<string name="policy_viewer_owner_content">你已经设置了对此文件的以下权限:</string>
+<string name="your_permissions">您的权限</string>
+<string name="error_report_message">您发现 Windows Azure AD Rights Management SDK 有问题。请发送此电子邮件来帮助我们改进我们的产品。</string>
+<string name="policy_viewer_non_owner_content">您对此文件具有以下权限：</string>
+<string name="policy_viewer_owner_content">您对此文件设置了以下权限：</string>
 <string name="viewer">查看者</string>
 <string name="reviewer">审阅者</string>
 <string name="co_author">合著者</string>
 <string name="co_owner">共有者</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">自定义权限...</string>
 <string name="edit_permissions">编辑权限</string>
 <string name="edit">编辑</string>
@@ -54,12 +53,20 @@
 <string name="reply_description_string">答复</string>
 <string name="reply_all_description_string">全部答复</string>
 <string name="forward_description_string">转发</string>
+<string name="comment_description_string">注释</string>
 <string name="ad_hoc_policy_name_string">限制访问</string>
-<string name="ad_hoc_policy_description_string">权限当前受到限制。只有指定用户才能访问此内容</string>
+<string name="ad_hoc_policy_description_string">当前权限受到限制。只有指定用户才能访问此内容</string>
 <string name="no_permissions_policy_name_string">无权限</string>
 <string name="no_protection_policy_name_string">无保护</string>
 <string name="no_protection_policy_name_string_description">此内容不受保护。</string>
-<string name="error_reporting_consent_request_string">抱歉，发生了错误。你是否能将错误日志发送给我们，以便我们能够修复问题?</string>
+<string name="error_reporting_consent_request_string">抱歉，发生了错误。您是否能将错误日志发送给我们，以便我们能够修复问题?</string>
 <string name="error_reporting_consent_ok_button_string">确定</string>
 <string name="error_reporting_consent_cancel_button_string">取消</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacy&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Help&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">电子邮件地址无效</string>
+<string name="rms_logo_content_description">权限管理服务</string>
+<string name="email_instruction_text">输入您组织的电子邮件地址</string>
+<string name="email_hint_text">someone@example.com   </string>
+<string name="continue_button_text">继续</string>
 </resources>

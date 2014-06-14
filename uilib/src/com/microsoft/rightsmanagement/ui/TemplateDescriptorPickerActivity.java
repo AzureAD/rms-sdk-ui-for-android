@@ -83,6 +83,11 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
     {
         Logger.ms(TAG, "onActivityResult");
         int requestCallbackId = 0;
+        if (data == null)
+        {
+            Logger.i(TAG, "System closed the activity", "");
+            return;
+        }
         try
         {
             final Bundle extras = data.getExtras();
@@ -304,6 +309,19 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
         createBgAnimators(R.id.template_descriptor_picker_base_container, savedInstanceState);
     }
 
+    /* (non-Javadoc)
+     * @see android.support.v4.app.FragmentActivity#onDestroy()
+     */
+    @Override
+    protected void onDestroy()
+    {
+        if ((isFinishing() == true) && (mActivityFinishedWithResult == false))
+        {
+            sCallbackManager.removeWaitingRequest(mRequestCallbackId);
+        }
+        super.onDestroy();
+    }
+    
     /*
      * (non-Javadoc)
      * @see android.support.v4.app.FragmentActivity#onSaveInstanceState(android.os.Bundle)
@@ -329,6 +347,7 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
     @Override
     protected void returnToCaller(int resultCode, Intent data)
     {
+        super.returnToCaller(resultCode, data);
         Logger.d(TAG, String.format("ReturnToCaller - resultCode=%d", resultCode));
         setResult(resultCode, data);
         if (mTemplateDescriptorPickerFragment == null)

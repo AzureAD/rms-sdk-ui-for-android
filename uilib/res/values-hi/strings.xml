@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">hi-in</string>-->
 <string name="select_templates">टेम्पलेट का चयन करें</string>
 <string name="select_template_title">सुरक्षा टेम्पलेट का चयन करें</string>
 <string name="protect">सुरक्षा करें</string>
@@ -25,12 +24,12 @@
 <string name="ok">ठीक</string>
 <string name="close_string">बंद करें</string>
 <string name="report">ई-मेल भेजें</string>
-<string name="error_report_reporting_string">संदेश की रिपोर्ट करते हुए एक त्रुटि हुई</string>
+<string name="error_report_reporting_string">संदेश की रिपोर्ट करते समय एक त्रुटि हुई</string>
 <string name="apply">लागू करें</string>
 <string name="protection">सुरक्षा</string>
 <string name="permissions">अनुमतियाँ</string>
 <string name="your_permissions">आपकी अनुमतियाँ</string>
-<string name="error_report_message">आपने Windows Azure AD Rights Management SDK के साथ एक समस्या का सामना किया है. कृपया यह ई-मेल भेजकर अपने उत्पाद को बेहतर बनाने में हमारी मदद करें.</string>
+<string name="error_report_message">आपको Windows Azure AD Rights Management SDK में कोई समस्या मिली है. कृपया यह ई-मेल भेजकर अपने उत्पाद को बेहतर बनाने में हमारी मदद करें.</string>
 <string name="policy_viewer_non_owner_content">इस फ़ाइल के लिए आपको निम्न अनुमतियाँ हैं:</string>
 <string name="policy_viewer_owner_content">इस फ़ाइल पर आपने निम्न अनुमतियाँ सेट की हुईं हैं:</string>
 <string name="viewer">व्यूअर</string>
@@ -38,7 +37,7 @@
 <string name="co_author">सह-लेखक</string>
 <string name="co_owner">सह-स्वामी</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">कस्टम अनुमतियाँ...</string>
 <string name="edit_permissions">अनुमतियाँ संपादित करें</string>
 <string name="edit">संपादित करें</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">उत्तर दें</string>
 <string name="reply_all_description_string">सभी को उत्तर दें</string>
 <string name="forward_description_string">अग्रेषित करें</string>
+<string name="comment_description_string">टिप्पणी</string>
 <string name="ad_hoc_policy_name_string">प्रतिबंधित पहुँच</string>
 <string name="ad_hoc_policy_description_string">अनुमति वर्तमान में प्रतिबंधित है. केवल निर्दिष्ट किए गए उपयोगकर्ता इस सामग्री तक पहुँच सकते हैं</string>
 <string name="no_permissions_policy_name_string">कोई अनुमति नहीं</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">हमें खेद है. एक त्रुटि हुई. क्या आप हमें त्रुटि लॉग भेज सकते हैं, ताकि हम समस्या को ठीक कर सकें?</string>
 <string name="error_reporting_consent_ok_button_string">ठीक</string>
 <string name="error_reporting_consent_cancel_button_string">रद्द करें</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;गोपनीयता&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;मदद&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">अमान्य ईमेल पता</string>
+<string name="rms_logo_content_description">अधिकार प्रबंधन सेवाएँ</string>
+<string name="email_instruction_text">अपना व्यावसायिक ईमेल पता दर्ज करें</string>
+<string name="email_hint_text">someone@example.com</string>
+<string name="continue_button_text">जारी रखें</string>
 </resources>

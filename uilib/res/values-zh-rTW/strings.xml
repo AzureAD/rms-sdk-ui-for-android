@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">zh-tw</string>-->
 <string name="select_templates">選取範本</string>
 <string name="select_template_title">選取保護範本</string>
 <string name="protect">保護</string>
@@ -30,15 +29,15 @@
 <string name="protection">保護</string>
 <string name="permissions">權限</string>
 <string name="your_permissions">您的權限</string>
-<string name="error_report_message">您已發現 Windows Azure AD Rights Management SDK 的問題。請傳送這封電子郵件，幫助我們改善產品。</string>
+<string name="error_report_message">您發現 Windows Azure AD Rights Management SDK 的問題。請傳送這封電子郵件，幫助我們改善產品。</string>
 <string name="policy_viewer_non_owner_content">您具有此檔案的下列權限:</string>
 <string name="policy_viewer_owner_content">您已對此檔案設定下列權限:</string>
 <string name="viewer">檢視者</string>
 <string name="reviewer">檢閱者</string>
-<string name="co_author">合著者</string>
+<string name="co_author">共同作者</string>
 <string name="co_owner">共同擁有者</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">自訂權限...</string>
 <string name="edit_permissions">編輯權限</string>
 <string name="edit">編輯</string>
@@ -54,12 +53,20 @@
 <string name="reply_description_string">回覆</string>
 <string name="reply_all_description_string">全部回覆</string>
 <string name="forward_description_string">轉寄</string>
+<string name="comment_description_string">註解</string>
 <string name="ad_hoc_policy_name_string">限制存取</string>
-<string name="ad_hoc_policy_description_string">目前權限限制。僅指定的使用者能夠存取這個內容</string>
+<string name="ad_hoc_policy_description_string">目前已限制權限。只有指定的使用者能夠存取此內容</string>
 <string name="no_permissions_policy_name_string">沒有權限</string>
 <string name="no_protection_policy_name_string">不保護</string>
 <string name="no_protection_policy_name_string_description">此內容未受到保護。</string>
 <string name="error_reporting_consent_request_string">抱歉，發生錯誤。您是否可以將錯誤記錄檔傳送給我們，以便解決問題?</string>
 <string name="error_reporting_consent_ok_button_string">確定</string>
 <string name="error_reporting_consent_cancel_button_string">取消</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;隱私權&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;說明&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">無效的電子郵件地址</string>
+<string name="rms_logo_content_description">Rights Management Services</string>
+<string name="email_instruction_text">請輸入您的組織電子郵件地址</string>
+<string name="email_hint_text">someone@example.com</string>
+<string name="continue_button_text">繼續</string>
 </resources>

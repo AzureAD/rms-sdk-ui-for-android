@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,22 +15,21 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">cs-cz</string>-->
 <string name="select_templates">Vybrat šablony</string>
 <string name="select_template_title">Vybrat šablonu ochrany</string>
 <string name="protect">Chránit</string>
 <string name="protected_content">Chráněný obsah</string>
 <string name="granted_by_string">Udělil</string>
-<string name="use_rights_string">Práva na použití</string>
+<string name="use_rights_string">Užívací práva</string>
 <string name="ok">OK</string>
 <string name="close_string">Zavřít</string>
 <string name="report">Odeslat e-mail</string>
-<string name="error_report_reporting_string">Došlo k chybě při hlášení zprávy.</string>
+<string name="error_report_reporting_string">Při oznamování zprávy se stala chyba.</string>
 <string name="apply">Použít</string>
 <string name="protection">Ochrana</string>
 <string name="permissions">Oprávnění</string>
 <string name="your_permissions">Vaše oprávnění</string>
-<string name="error_report_message">Zjistili jste problém se sadou Windows Azure AD Rights Management SDK. Pomozte nám zlepšit náš produkt odesláním tohoto e-mailu.</string>
+<string name="error_report_message">Zjistili jste problém se sadou Windows Azure AD Rights Management SDK. Pomozte nám prosím vylepšit náš produkt odesláním tohoto e-mailu.</string>
 <string name="policy_viewer_non_owner_content">K tomuto souboru máte tato oprávnění:</string>
 <string name="policy_viewer_owner_content">U tohoto souboru jste nastavili tato oprávnění:</string>
 <string name="viewer">Čtenář</string>
@@ -38,7 +37,7 @@
 <string name="co_author">Spoluautor</string>
 <string name="co_owner">Spoluvlastník</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Vlastní oprávnění...</string>
 <string name="edit_permissions">Upravit oprávnění</string>
 <string name="edit">Upravit</string>
@@ -50,16 +49,24 @@
 <string name="edit_description_string">Upravit</string>
 <string name="export_description_string">Uložit jako</string>
 <string name="extract_description_string">Kopírovat</string>
-<string name="print_description_string">Tisk</string>
+<string name="print_description_string">Vytisknout</string>
 <string name="reply_description_string">Odpovědět</string>
 <string name="reply_all_description_string">Odpovědět všem</string>
 <string name="forward_description_string">Předat dál</string>
+<string name="comment_description_string">Komentovat</string>
 <string name="ad_hoc_policy_name_string">OMEZENÝ PŘÍSTUP</string>
-<string name="ad_hoc_policy_description_string">Oprávnění je nyní omezeno. K tomuto obsahu mohou získat přístup pouze určení uživatelé.</string>
+<string name="ad_hoc_policy_description_string">Oprávnění je momentálně omezené. K tomuto obsahu mají přístup jenom určení uživatelé.</string>
 <string name="no_permissions_policy_name_string">Žádná oprávnění</string>
-<string name="no_protection_policy_name_string">Bez ochrany</string>
+<string name="no_protection_policy_name_string">Žádná ochrana</string>
 <string name="no_protection_policy_name_string_description">Tento obsah není chráněný.</string>
-<string name="error_reporting_consent_request_string">Omlouváme se. Došlo k chybě. Můžete nám odeslat protokoly chyb, abychom mohli daný problém odstranit?</string>
+<string name="error_reporting_consent_request_string">Omlouváme se, stala se chyba. Můžete nám odeslat protokoly chyb, abychom mohli tento problém odstranit?</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Storno</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Ochrana osobních údajů&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Nápověda&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Neplatná e-mailová adresa</string>
+<string name="rms_logo_content_description">Rights Management Services</string>
+<string name="email_instruction_text">Zadejte e-mailovou adresu organizace.</string>
+<string name="email_hint_text">adresa@example.com</string>
+<string name="continue_button_text">Pokračovat</string>
 </resources>
