@@ -1,0 +1,38 @@
+<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http:www.apache.org/licenses/LICENSE-2.0
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+    
+    See the Apache License, Version 2.0 for the specific language
+    governing permissions and limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_expiration_list_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp" >
+
+    <TextView
+        android:id="@+id/duration_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/dark_grey"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+       
+    
+</LinearLayout>

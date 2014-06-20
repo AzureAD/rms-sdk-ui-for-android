@@ -82,9 +82,9 @@ public class UserPolicyViewerFragment extends Fragment
          */
         public void onEditButtonClicked();
     }
-    // the key used to get a PolicyViewerParcelableData object in orientation
-    // changes
+    /** The key used to get a PolicyViewerParcelableData object in orientation changes */
     public static final String FRAGMENT_BUNDLE_DATA_KEY = "dataKey";
+    /** Tag for this Fragment */
     public static final String TAG = "UserPolicyViewerFragment";
     private static final int ALPHA_VALUE = (int)(0.8 * 255);
     private final static String UNKNOWN_TEXT = "Unknown";

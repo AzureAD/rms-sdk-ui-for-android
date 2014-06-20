@@ -48,6 +48,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
          * </p>
          */
         public static final int EDIT_ALLOWED = 0x1;
+        /** None */
         public static final int NONE = 0x0;
     }
 
@@ -60,6 +61,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
          * User requested to Edit policy.
          */
         public static final int EDIT_POLICY = 1;
+        /** None */
         public static final int NONE = 0;
     }
     protected static final String RESULT_POLICY_VIEWER = "RESULT_POLICY_VIEWER";

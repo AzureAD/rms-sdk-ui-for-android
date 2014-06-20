@@ -43,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/rmsLogoImageView"
         android:orientation="vertical" >
 
@@ -57,7 +58,7 @@
         android:text=""
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@color/red"
-        android:visibility="gone" />        
+        android:visibility="gone" />
         
         <TextView
             android:id="@+id/emailInstructionTextView"
@@ -77,6 +78,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/emailIntructionAndErrorTextContainer"
         android:layout_marginTop="15dp"
         android:background="@drawable/textinputborder"

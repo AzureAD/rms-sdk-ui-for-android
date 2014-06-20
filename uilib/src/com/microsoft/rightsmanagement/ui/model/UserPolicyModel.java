@@ -40,6 +40,9 @@ import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
  */
 public class UserPolicyModel implements Parcelable
 {
+    /**
+     * CREATOR for this Parcelable object 
+     */
     public static final Parcelable.Creator<UserPolicyModel> CREATOR = new Creator<UserPolicyModel>()
     {
         @Override
@@ -54,6 +57,7 @@ public class UserPolicyModel implements Parcelable
             return new UserPolicyModel[size];
         }
     };
+    /** TAG */
     public static final String TAG = "UserPolicyModel";
     private static HashMap<String, Integer> sRightIDToResourceIDMap = Helpers.createHashMap(String.class, Integer.class,
             "OWNER", R.string.owner_description_string,

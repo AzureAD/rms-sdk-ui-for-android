@@ -38,7 +38,6 @@
 <string name="co_owner">Co-owner</string>
 <string name="adrms">ADRMS</string>
 <string name="sdk_ver">4.0</string>
-<string name="custom_permissions">Custom Permissions...</string>
 <string name="edit_permissions">Edit Permissions</string>
 <string name="edit">Edit</string>
 <string name="remove">Remove</string>
@@ -69,4 +68,21 @@
 <string name="email_instruction_text">Enter your organizational email address</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">Continue</string>
+<string name="custom_policy_viewer">Viewer - View Only</string>
+<string name="custom_policy_reviewer">Reviewer - View, edit</string>
+<string name="custom_policy_co_auther">Co-author - View, edit, copy, print</string>
+<string name="custom_policy_co_owner">Co-Owner - All Permissions</string>
+<string name="custom_policy_encrypt_only">Authenticated User – No usage restrictions</string>
+<string name="custom_policy_viewer_description">Use this option when sharing outside your organization. Recipients will only be able to view the document. They cannot edit, copy, or print it.</string>
+<string name="custom_policy_reviewer_description">Use this option when sharing outside your organization. Recipients will be able to view and edit the document. They cannot copy or print it.</string>
+<string name="custom_policy_co_auther_description">Use this option when sharing outside your organization. Recipients will be able to view, edit, copy, and print the document.</string>
+<string name="custom_policy_co_owner_description">Use this option when sharing outside your organization. Recipients will have all permissions.</string>
+<string name="custom_policy_encrypt_only_description">Recipients must provide valid user credentials. After the document is opened, usage restrictions aren’t enforced.</string>
+<string name="duration_never">Never</string>
+<string name="duration_one_week">After 1 week</string>
+<string name="duration_one_month">After 1 month</string>
+<string name="duration_two_months">After 2 months</string>
+<string name="duration_custom">Custom</string>
+<string name="content_expires">Content Expires</string>
+<string name="email_to">To</string>
 </resources>

@@ -26,58 +26,57 @@ import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
 import android.widget.ListView;
 import com.microsoft.rightsmanagement.ui.R;
-import com.microsoft.rightsmanagement.ui.TemplateDescriptorPickerActivity;
-import com.microsoft.rightsmanagement.ui.model.TemplateDescriptorModel;
+import com.microsoft.rightsmanagement.ui.model.DescriptorModel;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 
 /**
- * Provides view implementation for displaying the list of templates descriptors.
+ * Provides view implementation for displaying the list of descriptors.
  */
-public final class TemplateDescriptorListFragment extends ListFragment
+public final class DescriptorListFragment extends ListFragment
 {
     /**
-     * The Interface for providing template descriptor data to UI.
+     * The Interface for providing descriptor data to UI.
      */
-    public interface TemplateDescriptorDataProvider
+    public interface DescriptorDataProvider
     {
         /**
-         * Gets the selected template descriptor item index.
+         * Gets the descriptor items.
          * 
-         * @return the selected template descriptor item index
+         * @return the descriptor items
          */
-        public int getSelectedTemplateDescriptorItemIndex();
+        public DescriptorModel[] getDescriptorItems();
 
         /**
-         * Gets the template descriptor items.
+         * Gets the selected descriptor item index.
          * 
-         * @return the template descriptor items
+         * @return the selected descriptor item index
          */
-        public TemplateDescriptorModel[] getTemplateDescriptorItems();
+        public int getSelectedDescriptorItemIndex();
     }
 
     /**
-     * The listener interface for receiving templateDescriptorListEvent events. The class that is interested in
-     * processing a templateDescriptorListEvent event implements this interface, and the object created with that class
-     * is registered with a component using the component's
-     * <code>addTemplateDescriptorListEventListener<code> method. When
-     * the templateDescriptorListEvent event occurs, that object's appropriate
+     * The listener interface for receiving descriptorList events. The class that is interested in processing a
+     * descriptorList event implements this interface, and the object created with that class is registered with a
+     * component using the component's <code>addDescriptorListEventListener<code> method. When
+     * the descriptorListEvent event occurs, that object's appropriate
      * method is invoked.
      * 
-     * @see TemplateDescriptorListEventEvent
+     * @see DescriptorListEventListener
      */
-    public interface TemplateDescriptorListEventListener
+    public interface DescriptorListEventListener
     {
         /**
-         * On template descriptor selected.
+         * On descriptor selected.
          * 
-         * @param selectedTemplateDescriptorIndex the selected template descriptor index
+         * @param selectedDescriptorIndex the selected descriptor index
          */
-        public void onTemplateDescriptorItemSelected(int selectedTemplateDescriptorIndex);
+        public void onDescriptorItemSelected(int selectedDescriptorIndex);
     }
-    public static final String TAG = "TemplateDescriptorListFragment";
-    private TemplateDescriptorListAdapter mTemplateDescriptorArrayAdapter;
-    private TemplateDescriptorDataProvider mTemplateDescriptorDataProvider;
-    private TemplateDescriptorListEventListener mTemplateDescriptorListEventListener;
+    /** Tag for this fragment */
+    public static final String TAG = "DescriptorListFragment";
+    private DescriptorListAdapter mDescriptorArrayAdapter;
+    private DescriptorDataProvider mDescriptorDataProvider;
+    private DescriptorListEventListener mDescriptorListEventListener;
 
     /*
      * (non-Javadoc)
@@ -88,21 +87,20 @@ public final class TemplateDescriptorListFragment extends ListFragment
     {
         Logger.ms(TAG, "onActivityCreated");
         super.onActivityCreated(savedInstanceState);
-        if (mTemplateDescriptorDataProvider.getTemplateDescriptorItems() != null)
+        if (mDescriptorDataProvider.getDescriptorItems() != null)
         {
-            mTemplateDescriptorArrayAdapter = new TemplateDescriptorListAdapter(this.getActivity(),
-                    R.layout.template_descriptor_list_item, Arrays.asList(mTemplateDescriptorDataProvider
-                            .getTemplateDescriptorItems()),
-                    new TemplateDescriptorListAdapter.TemplateDescriptorListAdapterEventListener()
+            mDescriptorArrayAdapter = new DescriptorListAdapter(this.getActivity(), R.layout.descriptor_list_item,
+                    Arrays.asList(mDescriptorDataProvider.getDescriptorItems()),
+                    new DescriptorListAdapter.DescriptorListAdapterEventListener()
                     {
                         @Override
                         public int getSelectedIndex()
                         {
-                            return mTemplateDescriptorDataProvider.getSelectedTemplateDescriptorItemIndex();
+                            return mDescriptorDataProvider.getSelectedDescriptorItemIndex();
                         }
                     });
         }
-        setListAdapter(mTemplateDescriptorArrayAdapter);
+        setListAdapter(mDescriptorArrayAdapter);
         Logger.me(TAG, "onActivityCreated");
     }
 
@@ -117,8 +115,8 @@ public final class TemplateDescriptorListFragment extends ListFragment
         super.onAttach(activity);
         try
         {
-            mTemplateDescriptorListEventListener = (TemplateDescriptorListEventListener)activity;
-            mTemplateDescriptorDataProvider = (TemplateDescriptorDataProvider)activity;
+            mDescriptorListEventListener = (DescriptorListEventListener)activity;
+            mDescriptorDataProvider = (DescriptorDataProvider)activity;
         }
         catch (ClassCastException e)
         {
@@ -137,7 +135,7 @@ public final class TemplateDescriptorListFragment extends ListFragment
     {
         Logger.d(TAG, String.format("onListItemClick invoked with postion = %d and id = %d", position, id));
         selectListItem(view, position);
-        View v =  getActivity().findViewById(R.id.template_picker_fragment_container);
+        View v = getActivity().findViewById(R.id.descriptor_picker_fragment_container);
         v.invalidate();
     }
 
@@ -156,9 +154,9 @@ public final class TemplateDescriptorListFragment extends ListFragment
             @Override
             public void onViewAttachedToWindow(View v)
             {
-                Logger.d(TAG,String.format("onViewAttachedToWindow(%s)", v.getClass().toString()));
+                Logger.d(TAG, String.format("onViewAttachedToWindow(%s)", v.getClass().toString()));
                 // select original item
-                final int position = mTemplateDescriptorDataProvider.getSelectedTemplateDescriptorItemIndex();
+                final int position = mDescriptorDataProvider.getSelectedDescriptorItemIndex();
                 selectListItem(view, position);
                 // when item is clicked make sure the entire view is visible.
                 getListView().post(new Runnable()
@@ -188,26 +186,19 @@ public final class TemplateDescriptorListFragment extends ListFragment
      */
     private void selectListItem(View view, final int position)
     {
-        Logger.d(TAG, String.format("selectListItem(%s, %d)",view.getClass().toString(), position));
-        TemplateDescriptorModel[] templateDescriptorItemArray = mTemplateDescriptorDataProvider
-                .getTemplateDescriptorItems();
-        if (templateDescriptorItemArray == null || position < 0 || position >= templateDescriptorItemArray.length)
+        Logger.d(TAG, String.format("selectListItem(%s, %d)", view.getClass().toString(), position));
+        DescriptorModel[] descriptorItemArray = mDescriptorDataProvider.getDescriptorItems();
+        if (descriptorItemArray == null || position < 0 || position >= descriptorItemArray.length)
         {
             Logger.ie(TAG, "selectListItem has received invalid arguments");
             return;
         }
-        // temporary solution for absence of custom permission feature
-        if (!TemplateDescriptorPickerActivity.isTemplateDescriptorItemEnabled(templateDescriptorItemArray[position]))
-        {
-            return;
-        }
         // Update view only if new position was selected.
-        if (position != mTemplateDescriptorDataProvider.getSelectedTemplateDescriptorItemIndex())
+        if (position != mDescriptorDataProvider.getSelectedDescriptorItemIndex())
         {
-            mTemplateDescriptorArrayAdapter.setViewHighlights(view,
-                    templateDescriptorItemArray[position].getDescription());
+            mDescriptorArrayAdapter.setViewHighlights(view, descriptorItemArray[position].getDescription());
         }
         // Fire the listener.
-        mTemplateDescriptorListEventListener.onTemplateDescriptorItemSelected(position);
+        mDescriptorListEventListener.onDescriptorItemSelected(position);
     }
 }

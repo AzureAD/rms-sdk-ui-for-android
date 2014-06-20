@@ -26,6 +26,10 @@ import android.util.Log;
  */
 public class Logger
 {
+    /**
+     * Enum to specify log level
+     *
+     */
     public enum LogLevel
     {
         Error, Warn, Info, Verbose, Debug

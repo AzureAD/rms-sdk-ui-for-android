@@ -17,23 +17,28 @@
 
 package com.microsoft.rightsmanagement.ui;
 
+import com.microsoft.rightsmanagement.PolicyDescriptor;
 import com.microsoft.rightsmanagement.TemplateDescriptor;
 
 /**
- * Represents TemplateDescriptorPickerActivityResult.
- */
-public class TemplateDescriptorPickerActivityResult
+ * Represents DescriptorPickerActivityResult.
+ */ 
+public class DescriptorPickerActivityResult
 {
     /**
-     * The Enum TemplateDescriptorPickerActivityResultType.
+     * The Enum DescriptorPickerActivityResultType.
      */
-    public enum TemplateDescriptorPickerActivityResultType
+    public enum DescriptorPickerActivityResultType
     {
-        /** Result is an instance of TemplateDescriptor. */
-        Default,
-        /** Result is user's choice to launch PolicyDescriptor Picker. */
-        ShowPolicyDescriptorPicker
+        /** Result is an instance of PolicyDescriptor. **/
+        Custom,
+        /** Result is an instance of TemplateDescriptor. **/
+        Template
     }
-    public TemplateDescriptorPickerActivityResultType mResultType;
+    /** Chosen PolicyDescriptor if ResultType == Custom. **/
+    public PolicyDescriptor mPolicyDescriptor;
+    /** Result type to indicate if templateDescriptor object is returned or policyDescriptor object is returned. **/
+    public DescriptorPickerActivityResultType mResultType;
+    /** Chosen TemplateDescriptor if ResultType == Template. **/
     public TemplateDescriptor mTemplateDescriptor;
 }

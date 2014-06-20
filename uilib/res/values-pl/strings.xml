@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,7 +15,6 @@
     governing permissions and limitations under the License.
 -->
 <resources>
-<!--<string name="sdk_locale_string">pl-pl</string>-->
 <string name="select_templates">Wybierz szablony</string>
 <string name="select_template_title">Wybierz szablon ochrony</string>
 <string name="protect">Chroń</string>
@@ -38,7 +37,7 @@
 <string name="co_author">Współautor</string>
 <string name="co_owner">Współwłaściciel</string>
 <string name="adrms">ADRMS</string>
-<string name="sdk_ver">3.0</string>
+<string name="sdk_ver">4.0</string>
 <string name="custom_permissions">Uprawnienia niestandardowe...</string>
 <string name="edit_permissions">Edytuj uprawnienia</string>
 <string name="edit">Edytuj</string>
@@ -54,6 +53,7 @@
 <string name="reply_description_string">Odpowiedz</string>
 <string name="reply_all_description_string">Odpowiedz wszystkim</string>
 <string name="forward_description_string">Prześlij dalej</string>
+<string name="comment_description_string">Komentarz</string>
 <string name="ad_hoc_policy_name_string">DOSTĘP OGRANICZONY</string>
 <string name="ad_hoc_policy_description_string">Uprawnienie jest obecnie ograniczone. Tylko określeni użytkownicy mogą uzyskiwać dostęp do tej zawartości</string>
 <string name="no_permissions_policy_name_string">Brak uprawnień</string>
@@ -62,4 +62,11 @@
 <string name="error_reporting_consent_request_string">Niestety, wystąpił błąd. Czy możemy otrzymać dzienniki błędów, aby można było rozwiązać ten problem?</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Anuluj</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Prywatność&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Pomoc&lt;/a&gt;</string>
+<string name="error_invalid_email_address_string">Nieprawidłowy adres e-mail</string>
+<string name="rms_logo_content_description">Usługi zarządzania prawami dostępu</string>
+<string name="email_instruction_text">Wprowadź adres e-mail organizacji</string>
+<string name="email_hint_text">osoba@example.com</string>
+<string name="continue_button_text">Kontynuuj</string>
 </resources>

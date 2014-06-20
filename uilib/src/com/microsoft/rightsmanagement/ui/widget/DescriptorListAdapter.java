@@ -18,37 +18,41 @@
 package com.microsoft.rightsmanagement.ui.widget;
 
 import java.util.List;
+
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.microsoft.rightsmanagement.ui.R;
-import com.microsoft.rightsmanagement.ui.TemplateDescriptorPickerActivity;
-import com.microsoft.rightsmanagement.ui.model.TemplateDescriptorModel;
+import com.microsoft.rightsmanagement.ui.model.DescriptorModel;
+import com.microsoft.rightsmanagement.ui.model.CustomDescriptorModel;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 
 /**
- * An ArrayAdapter that generates view for TemplateDescriptor list.
+ * An ArrayAdapter that generates view for Descriptor list.
  */
-class TemplateDescriptorListAdapter extends ArrayAdapter<TemplateDescriptorModel>
+class DescriptorListAdapter extends ArrayAdapter<DescriptorModel>
 {
     /**
-     * The listener interface for receiving templateDescriptorListAdapterEvent events. The class that is interested in
-     * processing a templateDescriptorListAdapterEvent event implements this interface, and the object created with that
-     * class is registered with a component using the component's
-     * <code>addTemplateDescriptorListAdapterEventListener<code> method. When
-     * the templateDescriptorListAdapterEvent event occurs, that object's appropriate
+     * The listener interface for receiving DescriptorListAdapterEvent events. The class that is interested in
+     * processing a DescriptorListAdapterEvent event implements this interface, and the object created with that class
+     * is registered with a component using the component's
+     * <code>addDescriptorListAdapterEventListener<code> method. When
+     * the DescriptorListAdapterEvent event occurs, that object's appropriate
      * method is invoked.
      * 
-     * @see TemplateDescriptorListAdapterEventEvent
+     * @see DescriptorListAdapterEventListener
      */
-    public interface TemplateDescriptorListAdapterEventListener
+    public interface DescriptorListAdapterEventListener
     {
         /**
          * Gets the selected index.
@@ -58,15 +62,16 @@ class TemplateDescriptorListAdapter extends ArrayAdapter<TemplateDescriptorModel
         public int getSelectedIndex();
     }
     private Context mContext;
+    private Drawable mCustomDescriptorIcon;
+    private Drawable mDescriptorIcon;
+    private List<DescriptorModel> mDescriptorItemList;
+    private DescriptorListAdapterEventListener mDescriptorListAdapterEventListener;
     private View mPrevTouchedView;
     private int mSelectedBackgroundColor;
     private int mSelectedTextColor;
-    private List<TemplateDescriptorModel> mTemplateDescriptorItemList;
-    private TemplateDescriptorListAdapterEventListener mTemplateDescriptorListAdapterEventListener;
-    private int mUnSelectatbleTextColor;
     private int mUnSelectedBackgroundColor;
     private int mUnSelectedTextColor;
-    private String TAG = "TemplateDescriptorListAdapter";
+    private String TAG = "DescriptorListAdapter";
 
     /**
      * Instantiates a new template descriptor list adapter.
@@ -76,21 +81,22 @@ class TemplateDescriptorListAdapter extends ArrayAdapter<TemplateDescriptorModel
      * @param objects the objects
      * @param callback the callback
      */
-    public TemplateDescriptorListAdapter(Context context,
-                                         int layoutId,
-                                         List<TemplateDescriptorModel> objects,
-                                         TemplateDescriptorListAdapterEventListener callback)
+    public DescriptorListAdapter(Context context,
+                                 int layoutId,
+                                 List<DescriptorModel> objects,
+                                 DescriptorListAdapterEventListener callback)
     {
         super(context, layoutId, objects);
-        mTemplateDescriptorItemList = objects;
+        mDescriptorItemList = objects;
         Resources resources = context.getResources();
         mUnSelectedTextColor = resources.getColor(R.color.dark_grey);
         mUnSelectedBackgroundColor = resources.getColor(R.color.white);
         mSelectedTextColor = resources.getColor(R.color.white);
         mSelectedBackgroundColor = resources.getColor(R.color.dark_grey);
-        mUnSelectatbleTextColor = resources.getColor(R.color.light_gray);
+        mCustomDescriptorIcon = resources.getDrawable(R.drawable.planet_icon);
+        mDescriptorIcon = resources.getDrawable(R.drawable.corporation_icon);
         mContext = context;
-        mTemplateDescriptorListAdapterEventListener = callback;
+        mDescriptorListAdapterEventListener = callback;
     }
 
     /**
@@ -110,34 +116,32 @@ class TemplateDescriptorListAdapter extends ArrayAdapter<TemplateDescriptorModel
         if (view == null)
         {
             LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.template_descriptor_list_item, null);
+            view = inflater.inflate(R.layout.descriptor_list_item, null);
         }
-        TemplateDescriptorModel selectedTemplateDescriptorItem = mTemplateDescriptorItemList.get(position);
-        if (selectedTemplateDescriptorItem != null)
+        DescriptorModel selectedDescriptorItem = mDescriptorItemList.get(position);
+        if (selectedDescriptorItem != null)
         {
-            TextView templateNameTxtView = (TextView)view.findViewById(R.id.template_name);
-            if (templateNameTxtView != null)
+            TextView templateNameTxtView = (TextView)view.findViewById(R.id.descriptor_name);
+            ImageView iconView = (ImageView)view.findViewById(R.id.descriptor_icon);
+            if (templateNameTxtView != null && iconView != null)
             {
-                templateNameTxtView.setText(selectedTemplateDescriptorItem.getName());
-                // temporary solution to disable custom permissions item
-                if (!TemplateDescriptorPickerActivity.isTemplateDescriptorItemEnabled(selectedTemplateDescriptorItem))
+                if (selectedDescriptorItem instanceof CustomDescriptorModel)
                 {
-                    view.setClickable(false);
-                    view.setEnabled(false);
-                    templateNameTxtView.setEnabled(false);
-                    templateNameTxtView.setTextColor(mUnSelectatbleTextColor);
+                    iconView.setImageDrawable(mCustomDescriptorIcon);
                 }
                 else
                 {
-                    if (position == mTemplateDescriptorListAdapterEventListener.getSelectedIndex())
-                    {
-                        String description = selectedTemplateDescriptorItem.getDescription();
-                        setViewHighlights(view, description);
-                    }
-                    else
-                    {
-                        setUnHighlighted(view);
-                    }
+                    iconView.setImageDrawable(mDescriptorIcon);
+                }
+                templateNameTxtView.setText(selectedDescriptorItem.getName());
+                if (position == mDescriptorListAdapterEventListener.getSelectedIndex())
+                {
+                    String description = selectedDescriptorItem.getDescription();
+                    setViewHighlights(view, description);
+                }
+                else
+                {
+                    setUnHighlighted(view);
                 }
             }
         }
@@ -193,11 +197,13 @@ class TemplateDescriptorListAdapter extends ArrayAdapter<TemplateDescriptorModel
     {
         if (defaultSelectedView != null)
         {
-            TextView templateDescriptionTxtView = (TextView)defaultSelectedView.findViewById(R.id.template_description);
+            TextView templateDescriptionTxtView = (TextView)defaultSelectedView
+                    .findViewById(R.id.descriptor_description);
             if (templateDescriptionTxtView != null)
             {
                 templateDescriptionTxtView.setText("");
                 templateDescriptionTxtView.setVisibility(TextView.GONE);
+                templateDescriptionTxtView.getParent().recomputeViewAttributes(templateDescriptionTxtView);
             }
         }
     }
@@ -213,12 +219,12 @@ class TemplateDescriptorListAdapter extends ArrayAdapter<TemplateDescriptorModel
     {
         if (defaultSelectedView != null)
         {
-            LinearLayout layout = (LinearLayout)defaultSelectedView.findViewById(R.id.template_item_container);
+            LinearLayout layout = (LinearLayout)defaultSelectedView.findViewById(R.id.descriptor_item_container);
             if (layout != null)
             {
                 layout.setBackgroundColor(colorBackground);
             }
-            TextView templateNameTxtView = (TextView)defaultSelectedView.findViewById(R.id.template_name);
+            TextView templateNameTxtView = (TextView)defaultSelectedView.findViewById(R.id.descriptor_name);
             if (templateNameTxtView != null)
             {
                 templateNameTxtView.setTextColor(colorText);
@@ -237,7 +243,7 @@ class TemplateDescriptorListAdapter extends ArrayAdapter<TemplateDescriptorModel
         if ((defaultSelectedView != null) && (description != null) && (description.length() > 0))
         {
             final TextView templateDescriptionTxtView = (TextView)defaultSelectedView
-                    .findViewById(R.id.template_description);
+                    .findViewById(R.id.descriptor_description);
             if (templateDescriptionTxtView != null)
             {
                 templateDescriptionTxtView.setText(description);

@@ -50,6 +50,7 @@ public class PolicyEnforcer
          */
         EnforcementActionDisable,
     }
+    /** Tag */
     public static final String TAG = "PolicyEnforcer";
     private Map<View, List<PolicyEnforcerRule>> mRulesMap;
     private UserPolicy mUserPolicy;

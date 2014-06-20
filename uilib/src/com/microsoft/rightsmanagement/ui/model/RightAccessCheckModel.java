@@ -25,6 +25,9 @@ import android.os.Parcelable;
  */
 public class RightAccessCheckModel implements Parcelable
 {
+    /**
+     * CREATOR for this Parcelable object 
+     */
     public static final Parcelable.Creator<RightAccessCheckModel> CREATOR = new Creator<RightAccessCheckModel>()
     {
         @Override

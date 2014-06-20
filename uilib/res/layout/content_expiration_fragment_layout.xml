@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Copyright © Microsoft Corporation, All Rights Reserved
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -15,55 +15,28 @@
     governing permissions and limitations under the License.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/template_picker_fragment_container"
+    android:id="@+id/content_expiration_container"
     style="@android:style/Theme.NoTitleBar.Fullscreen"
-    android:background="@color/white"
+    android:background="@color/light_gray"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/permission_header"
+        android:id="@+id/content_expiration_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@color/dark_black"
         android:gravity="center"
         android:minHeight="20dp"
-        android:text="@string/permissions"
+        android:text="@string/content_expires"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/white" />
 
-    <FrameLayout
-        android:id="@+id/template_fragment"
+        <FrameLayout
+        android:id="@+id/content_expiration_list_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/permission_header" 
-        android:layout_above="@+id/footer" >
-    </FrameLayout>
-
-    <LinearLayout
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/light_black"
-        android:orientation="vertical" >
-
-        <Button
-            android:id="@+id/protect_btn_template_picker_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="@drawable/button_selector"
-            android:textColor="@drawable/button_selector_text"
-            android:gravity="center"
-            android:minWidth="80dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="@string/apply"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-    </LinearLayout>
-
+        android:layout_below="@+id/content_expiration_header"/> 
+    
 </RelativeLayout>

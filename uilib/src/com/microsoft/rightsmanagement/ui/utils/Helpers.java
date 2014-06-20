@@ -33,8 +33,14 @@ import android.text.style.URLSpan;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * 
+ * Helpers class contains some static utility methods.
+ *
+ */
 public class Helpers
 {
+    /** TAG */
     public static final String TAG = "Helpers";
 
     /**
@@ -43,7 +49,7 @@ public class Helpers
      * @param view view on which to apply animation
      * @param startColor color to start animating from
      * @param endColor color to end animation at
-     * @return
+     * @return ValueAnimator  for a specified view on the background color property
      */
     public static ValueAnimator createBackgroundColorFaderAnimation(final View view,
                                                                    int startColor,
@@ -70,7 +76,7 @@ public class Helpers
      * @param keyType
      * @param valueType
      * @param alternateKeyValueArray
-     * @return
+     * @return created hashMap
      */
     public static <T, U> HashMap<T, U> createHashMap(Class<T> keyType,
                                                      Class<U> valueType,
