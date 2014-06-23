@@ -14,81 +14,80 @@
     See the Apache License, Version 2.0 for the specific language
     governing permissions and limitations under the License.
 -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:background="@color/white"
     android:id="@+id/custom_permissions_fragment_layout"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-     >
-    <!-- Placeholder editText for email picker -->
-     <EditText
-    android:id="@+id/email_address"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:hint="@string/email_to"
-    android:inputType="textEmailAddress" />
-    
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- Placeholder editText for email picker -->
+
+    <EditText
+        android:id="@+id/email_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_to"
+        android:inputType="textEmailAddress" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="8dp"
-    	android:paddingTop="16dp" >
+        android:paddingTop="16dp" >
 
         <TextView
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:textColor="@color/dark_grey"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-        	android:layout_marginRight="16dp"
-        	android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_marginRight="16dp"
             android:layout_weight="0.33"
-            android:text="@string/permissions" />
+            android:text="@string/permissions"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/dark_grey" />
 
-        
         <TextView
             android:id="@+id/custom_policy_name"
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:textColor="@color/dark_grey"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-        	android:layout_marginRight="16dp"
-        	android:paddingTop="12dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="0.67"
+            android:background="@color/light_gray"
             android:paddingBottom="12dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:layout_weight="0.67"
-            android:background="@color/light_gray"
-            android:text="@string/permissions" />
-        
-        
+            android:paddingTop="12dp"
+            android:text="@string/permissions"
+            android:textColor="@color/dark_grey" />
     </LinearLayout>
 
-     <View
-   		android:layout_width="fill_parent"
-   		android:layout_height="1dp"
-   		android:layout_marginStart="16dp"
-   		android:layout_marginEnd="16dp"
-   		android:background="@android:color/darker_gray"/>
-            
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/darker_gray" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="8dp"
-    	android:paddingTop="16dp" >
+        android:paddingTop="16dp" >
 
         <TextView
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
-            android:textColor="@color/dark_grey"
-            android:layout_weight="0.33"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="16dp"
-        	android:layout_marginRight="16dp"
-        	android:layout_gravity="center"
-        	android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/content_expires" />
+            android:layout_marginRight="16dp"
+            android:layout_weight="0.33"
+            android:text="@string/content_expires"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/dark_grey" />
 
         <TextView
             android:id="@+id/custom_policy_duration"
@@ -99,19 +98,19 @@
             android:layout_weight="0.67"
             android:background="@color/light_gray"
             android:focusable="false"
-            android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
+            android:paddingTop="12dp"
             android:text="@string/duration_never"
             android:textColor="@color/dark_grey" />
-
     </LinearLayout>
 
     <View
-   		android:layout_width="fill_parent"
-   		android:layout_height="1dp"
-   		android:layout_marginStart="16dp"
-   		android:layout_marginEnd="16dp"
-   		android:background="@android:color/darker_gray"/>
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/darker_gray" />
+
 </LinearLayout>

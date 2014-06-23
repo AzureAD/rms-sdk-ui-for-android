@@ -594,7 +594,9 @@ public class DescriptorPickerActivity extends BaseActivity implements
      */
     private void updateDescriptorArrayWithCustomTemplates()
     {
-        CustomDescriptorModel[] customPermissionPickerItems = CustomDescriptorModel.create(getApplicationContext());
+        List<CustomDescriptorModel> customPermissionPickerList = CustomDescriptorModel.create(getApplicationContext());
+        CustomDescriptorModel[] customPermissionPickerItems = customPermissionPickerList
+                .toArray(new CustomDescriptorModel[customPermissionPickerList.size()]);
         // resize to put customDescriptors at top
         DescriptorModel[] fullTemplateDescriptorItemArray = new DescriptorModel[mDescriptorItemArray.length
                 + customPermissionPickerItems.length];

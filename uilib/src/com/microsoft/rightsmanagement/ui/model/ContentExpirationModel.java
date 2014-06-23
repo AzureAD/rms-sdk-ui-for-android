@@ -19,6 +19,7 @@ package com.microsoft.rightsmanagement.ui.model;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -44,6 +45,7 @@ public class ContentExpirationModel
         /** fixed duration like 1 month **/
         STATIC
     }
+    private static List<ContentExpirationModel> sContentExpirationModelList;
     private Integer mCalendarField;// Indicates if we need to add CALENDAR.MONTH or CALENDAR.WEEK
     private Integer mDuration;
     private String mExpiryDateTitle;
@@ -64,23 +66,27 @@ public class ContentExpirationModel
      * Returns static list to display on content expires page
      * 
      * @param applicationContext
-     * @return List<ContentExpirationModel> to render content expiration list in the view
+     * @return List<ContentExpirationModel> unmodifiable list to render content expiration list in the view
      */
     public static List<ContentExpirationModel> getContextExpiresList(Context applicationContext)
     {
         Resources resources = applicationContext.getResources();
-        List<ContentExpirationModel> contentExpiresModelList = new ArrayList<ContentExpirationModel>();
-        contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.NEVER, resources
-                .getString(R.string.duration_never), null, null));
-        contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.STATIC, resources
-                .getString(R.string.duration_one_week), Calendar.DATE, 7));
-        contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.STATIC, resources
-                .getString(R.string.duration_one_month), Calendar.MONTH, 1));
-        contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.STATIC, resources
-                .getString(R.string.duration_two_months), Calendar.MONTH, 2));
-        contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.CUSTOM, resources
-                .getString(R.string.duration_custom), null, null));
-        return contentExpiresModelList;
+        if (sContentExpirationModelList == null)
+        {
+            List<ContentExpirationModel> contentExpiresModelList = new ArrayList<ContentExpirationModel>();
+            contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.NEVER, resources
+                    .getString(R.string.duration_never), null, null));
+            contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.STATIC, resources
+                    .getString(R.string.duration_one_week), Calendar.DATE, 7));
+            contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.STATIC, resources
+                    .getString(R.string.duration_one_month), Calendar.MONTH, 1));
+            contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.STATIC, resources
+                    .getString(R.string.duration_two_months), Calendar.MONTH, 2));
+            contentExpiresModelList.add(new ContentExpirationModel(ExpiryDateType.CUSTOM, resources
+                    .getString(R.string.duration_custom), null, null));
+            sContentExpirationModelList = Collections.unmodifiableList(contentExpiresModelList);
+        }
+        return sContentExpirationModelList;
     }
 
     /**

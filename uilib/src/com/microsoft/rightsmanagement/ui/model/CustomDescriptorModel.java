@@ -20,6 +20,7 @@ package com.microsoft.rightsmanagement.ui.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -37,7 +38,7 @@ import com.microsoft.rightsmanagement.ui.R;
 /**
  * Models Custom Descriptor.
  */
-public class CustomDescriptorModel extends DescriptorModel implements Parcelable
+public class CustomDescriptorModel extends DescriptorModel
 {
     /**
      * CREATOR for this Parcelable object
@@ -58,6 +59,7 @@ public class CustomDescriptorModel extends DescriptorModel implements Parcelable
     };
     /** Placeholder Id string for custom descriptor */
     public static final String CUSTOM_DESCRIPTOR_ID = "CUSTOM_DESCRIPTOR_ID";
+    private static List<CustomDescriptorModel> sCustomDescriptorItems;
     private Date mContentValidUntil; // by default null , ie. never expires
     private ArrayList<String> mRightsArrayList = new ArrayList<String>();
     private ArrayList<String> mUsersArrayList = new ArrayList<String>();
@@ -79,7 +81,6 @@ public class CustomDescriptorModel extends DescriptorModel implements Parcelable
     {
         super(CUSTOM_DESCRIPTOR_ID, name, description);
         mRightsArrayList.addAll(rights);
-        // TODO: should any users get rights by default? like owner getting owner right?
     }
 
     /**
@@ -88,28 +89,33 @@ public class CustomDescriptorModel extends DescriptorModel implements Parcelable
      * @param applicationContext the application context
      * @return the template descriptor model
      */
-    public static CustomDescriptorModel[] create(Context applicationContext)
+    public static List<CustomDescriptorModel> create(Context applicationContext)
     {
-        List<CustomDescriptorModel> customDescriptorItems = new ArrayList<CustomDescriptorModel>();
-        Resources resources = applicationContext.getResources();
-        customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_viewer),
-                resources.getString(R.string.custom_policy_viewer_description), Arrays.asList(new String[] {
-                    CommonRights.View
-                })));
-        customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_reviewer),
-                resources.getString(R.string.custom_policy_reviewer_description), Arrays.asList(new String[] {
-                        CommonRights.View, EditableDocumentRights.Edit
-                })));
-        customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_co_auther),
-                resources.getString(R.string.custom_policy_co_auther_description), Arrays.asList(new String[] {
-                        CommonRights.View, EditableDocumentRights.Edit, EditableDocumentRights.Extract,
-                        EditableDocumentRights.Print
-                })));
-        customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_co_owner),
-                resources.getString(R.string.custom_policy_co_owner_description), EditableDocumentRights.ALL));
-        customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_encrypt_only),
-                resources.getString(R.string.custom_policy_encrypt_only_description), EditableDocumentRights.ALL));
-        return customDescriptorItems.toArray(new CustomDescriptorModel[customDescriptorItems.size()]);
+        if (sCustomDescriptorItems == null)
+        {
+            List<CustomDescriptorModel> customDescriptorItems = new ArrayList<CustomDescriptorModel>();
+            Resources resources = applicationContext.getResources();
+            customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_viewer),
+                    resources.getString(R.string.custom_policy_viewer_description), Arrays.asList(new String[] {
+                        CommonRights.View
+                    })));
+            customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_reviewer),
+                    resources.getString(R.string.custom_policy_reviewer_description), Arrays.asList(new String[] {
+                            CommonRights.View, EditableDocumentRights.Edit
+                    })));
+            customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_co_auther),
+                    resources.getString(R.string.custom_policy_co_auther_description), Arrays.asList(new String[] {
+                            CommonRights.View, EditableDocumentRights.Edit, EditableDocumentRights.Extract,
+                            EditableDocumentRights.Print
+                    })));
+            customDescriptorItems.add(new CustomDescriptorModel(resources.getString(R.string.custom_policy_co_owner),
+                    resources.getString(R.string.custom_policy_co_owner_description), EditableDocumentRights.ALL));
+            customDescriptorItems.add(new CustomDescriptorModel(resources
+                    .getString(R.string.custom_policy_encrypt_only), resources
+                    .getString(R.string.custom_policy_encrypt_only_description), EditableDocumentRights.ALL));
+            sCustomDescriptorItems = Collections.unmodifiableList(customDescriptorItems);
+        }
+        return sCustomDescriptorItems;
     }
 
     /**
@@ -174,7 +180,7 @@ public class CustomDescriptorModel extends DescriptorModel implements Parcelable
     public int hashCode()
     {
         final int prime = 31;
-        int result = 1;
+        int result = super.hashCode();
         result = prime * result + getName().hashCode();
         return result;
     }
