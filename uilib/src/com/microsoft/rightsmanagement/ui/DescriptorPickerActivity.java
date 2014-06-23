@@ -55,12 +55,14 @@ public class DescriptorPickerActivity extends BaseActivity implements
     private static final String REQUEST_ORIGINAL_DESCRIPTOR_ITEM = "REQUEST_ORIGINAL_DESCRIPTOR_ITEM";
     private static final String REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY = "REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY";
     private static final String RESULT_DESCRIPTOR_ITEM = "RESULT_DESCRIPTOR_ITEM";
+    private static final String REQUEST_ALLOW_ORIGINAL_POLICY_REAPPLY = "REQUEST_ALLOW_ORIGINAL_POLICY_REAPPLY";
     private static CallbackManager<DescriptorPickerActivityResult, TemplateDescriptor[]> sCallbackManager = new CallbackManager<DescriptorPickerActivityResult, TemplateDescriptor[]>();
     private ContentExpirationFragment mContentExpirationFragment;
     private int mCurrentSelectedDescriptorItemIndex = -1;
     private DescriptorModel[] mDescriptorItemArray;
     private DescriptorPickerFragment mDescriptorPickerFragment;
     private boolean mIsContentExpiresFragmentVisible = false;
+    private boolean mAllowOriginalPolicyReApply = false;
     private DescriptorModel mOriginalDescriptorItem;
     static
     {
@@ -136,6 +138,7 @@ public class DescriptorPickerActivity extends BaseActivity implements
      * @param activity the activity
      * @param templateDescriptorList the template descriptor list
      * @param originalTemplateDescriptor the original template descriptor
+     * @param allowOriginalPolicyReApply enables apply button even if original policy is selected
      * @param pickerCompletionCallback the picker completion callback
      * @throws InvalidParameterException the invalid parameter exception
      */
@@ -143,6 +146,7 @@ public class DescriptorPickerActivity extends BaseActivity implements
                             Activity activity,
                             List<TemplateDescriptor> templateDescriptorList,
                             TemplateDescriptor originalTemplateDescriptor,
+                            boolean allowOriginalPolicyReApply,
                             CompletionCallback<DescriptorPickerActivityResult> pickerCompletionCallback)
             throws InvalidParameterException
     {
@@ -166,6 +170,7 @@ public class DescriptorPickerActivity extends BaseActivity implements
         intent.putExtra(REQUEST_CALLBACK_ID, requestCallbackId);
         intent.putExtra(REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY, templateDescriptorItemArray);
         intent.putExtra(REQUEST_ORIGINAL_DESCRIPTOR_ITEM, originalTemplateDescriptorItem);
+        intent.putExtra(REQUEST_ALLOW_ORIGINAL_POLICY_REAPPLY, allowOriginalPolicyReApply);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         activity.startActivityForResult(intent, requestCode);
         Logger.me(TAG, "show");
@@ -268,10 +273,13 @@ public class DescriptorPickerActivity extends BaseActivity implements
             return;
         // enable protection button if a descriptor item is selected
         // but don't enable protection button if selected list item is same as original selected list item
+        // unless we want to allow user to apply previously selected policy
         DescriptorModel currentSelectedDescriptorItem = mDescriptorItemArray[selectedDescriptorItemIndex];
         mCurrentSelectedDescriptorItemIndex = selectedDescriptorItemIndex;
         if (mOriginalDescriptorItem == null
-                || (mOriginalDescriptorItem != null && !currentSelectedDescriptorItem.equals(mOriginalDescriptorItem)))
+                ||  mAllowOriginalPolicyReApply  
+                || (mOriginalDescriptorItem != null 
+                && !currentSelectedDescriptorItem.equals(mOriginalDescriptorItem)))
         {
             mDescriptorPickerFragment.setProtectionButtonEnabled(true);
         }
@@ -397,6 +405,7 @@ public class DescriptorPickerActivity extends BaseActivity implements
         outState.putParcelable(REQUEST_ORIGINAL_DESCRIPTOR_ITEM, mOriginalDescriptorItem);
         outState.putInt(CURRENT_SELECTED_DESCRIPTOR_INDEX, mCurrentSelectedDescriptorItemIndex);
         outState.putBoolean(IS_CONTENT_EXPIRES_FRAGMENT_VISIBLE, mIsContentExpiresFragmentVisible);
+        outState.putBoolean(REQUEST_ALLOW_ORIGINAL_POLICY_REAPPLY, mAllowOriginalPolicyReApply);
         Logger.me(TAG, "onSaveInstanceState");
     }
 
@@ -540,6 +549,11 @@ public class DescriptorPickerActivity extends BaseActivity implements
         {
             Logger.d(TAG, "parseBundleInput - parsing isContentExpiresFragmentVisible");
             mIsContentExpiresFragmentVisible = bundle.getBoolean(IS_CONTENT_EXPIRES_FRAGMENT_VISIBLE);
+        }
+        if(bundle.containsKey(REQUEST_ALLOW_ORIGINAL_POLICY_REAPPLY))
+        {
+            Logger.d(TAG, "parseBundleInput - parsing allowOriginalPolicyApply");
+            mAllowOriginalPolicyReApply = bundle.getBoolean(REQUEST_ALLOW_ORIGINAL_POLICY_REAPPLY);
         }
     }
 

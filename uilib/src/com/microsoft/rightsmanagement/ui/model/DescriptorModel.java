@@ -100,7 +100,7 @@ public class DescriptorModel implements Parcelable
         if (!(obj instanceof DescriptorModel))
             return false;
         DescriptorModel other = (DescriptorModel)obj;
-        return (mId == other.getId());
+        return (mId.equals(other.getId()));
     }
 
     /**
