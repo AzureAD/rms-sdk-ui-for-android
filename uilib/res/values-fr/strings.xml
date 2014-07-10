@@ -1,18 +1,17 @@
 <!--
-    Copyright © Microsoft Corporation, All Rights Reserved
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-    
-    http:www.apache.org/licenses/LICENSE-2.0
-    
-    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
-    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
-    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
-    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
-    
-    See the Apache License, Version 2.0 for the specific language
-    governing permissions and limitations under the License.
+	Copyright © Microsoft Corporation, All Rights Reserved
+	
+	Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+	MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+	You may not use this file except in compliance with the License.
+	See the license for specific language governing permissions and limitations.
+	You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+	root directory of this project.
+	
+	THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+	OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+	ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+	PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
 -->
 <resources>
 <string name="select_templates">Sélectionner des modèles</string>
@@ -62,8 +61,8 @@
 <string name="error_reporting_consent_request_string">Nous sommes désolés. Une erreur s\'est produite. Pouvez-vous nous envoyer les journaux d\'erreurs afin que nous corrigions le problème ?</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Annuler</string>
-<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacy&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Help&lt;/a&gt;</string>
+<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Confidentialité&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Aide&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Adresse de messagerie non valide</string>
 <string name="rms_logo_content_description">Services RMS</string>
 <string name="email_instruction_text">Entrez l\'adresse de messagerie de votre organisation</string>

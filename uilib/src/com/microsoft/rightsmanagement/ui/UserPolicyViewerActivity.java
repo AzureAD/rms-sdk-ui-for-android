@@ -1,19 +1,18 @@
-//
-// Copyright © Microsoft Corporation, All Rights Reserved
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
-// OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
-// ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
-// PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
-//
-// See the Apache License, Version 2.0 for the specific language
-// governing permissions and limitations under the License.
+/**
+ * Copyright © Microsoft Corporation, All Rights Reserved
+ *
+ * Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+ * MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+ * You may not use this file except in compliance with the License.
+ * See the license for specific language governing permissions and limitations.
+ * You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+ * root directory of this project.
+ *
+ * THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+ * OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ * ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+ * PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+ */
 
 package com.microsoft.rightsmanagement.ui;
 
@@ -123,21 +122,21 @@ public class UserPolicyViewerActivity extends BaseActivity implements
      * Show UI.
      * 
      * @param requestCode the request code for startActivityForResult
-     * @param activity the parent activity that invokes startActivityForResult
+     * @param parentActivity the parent activity that invokes startActivityForResult
      * @param userPolicy user policy instance that provides data to display on the UI
      * @param policyViewerActivityRequestOption PolicyViewerActivityRequestOptions
      * @param policyViewerActivityCompletionCallback callback that's invoked upon completion of activity.
      * @throws InvalidParameterException the invalid parameter exception
      */
     public static void show(int requestCode,
-                            Activity activity,
+                            Activity parentActivity,
                             UserPolicy userPolicy,
                             int policyViewerActivityRequestOption,
                             CompletionCallback<Integer> policyViewerActivityCompletionCallback)
             throws InvalidParameterException
     {
         Logger.ms(TAG, "show");
-        activity = validateActivityInputParameter(activity);
+        parentActivity = validateActivityInputParameter(parentActivity);
         userPolicy = validateUserPolicyInputParameter(userPolicy);
         policyViewerActivityCompletionCallback = validateCompletionCallbackInputParameter(policyViewerActivityCompletionCallback);
         policyViewerActivityRequestOption = validatePolicyViewerActivityRequestOption(policyViewerActivityRequestOption);
@@ -145,14 +144,14 @@ public class UserPolicyViewerActivity extends BaseActivity implements
         int requestCallbackId = policyViewerActivityCompletionCallback.hashCode();
         sCallbackManager.putWaitingRequest(requestCallbackId, policyViewerActivityCompletionCallback);
         // set launch intent
-        Intent intent = new Intent(activity, UserPolicyViewerActivity.class);
+        Intent intent = new Intent(parentActivity, UserPolicyViewerActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra(REQUEST_CALLBACK_ID, requestCallbackId);
         intent.putExtra(REQUEST_RESULT_POLICY_VIEWER_OPTIONS, policyViewerActivityRequestOption);
         intent.putExtra(REQUEST_RESULT_USER_POLICY_MODEL,
-                (new UserPolicyModel(userPolicy, activity.getApplicationContext())));
+                (new UserPolicyModel(userPolicy, parentActivity.getApplicationContext())));
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        activity.startActivityForResult(intent, requestCode);
+        parentActivity.startActivityForResult(intent, requestCode);
         Logger.me(TAG, "show");
     }
 

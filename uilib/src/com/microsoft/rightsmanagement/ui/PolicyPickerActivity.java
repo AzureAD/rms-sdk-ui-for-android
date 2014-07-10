@@ -1,19 +1,18 @@
-//
-// Copyright © Microsoft Corporation, All Rights Reserved
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
-// OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
-// ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
-// PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
-//
-// See the Apache License, Version 2.0 for the specific language
-// governing permissions and limitations under the License.
+/**
+ * Copyright © Microsoft Corporation, All Rights Reserved
+ *
+ * Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+ * MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+ * You may not use this file except in compliance with the License.
+ * See the license for specific language governing permissions and limitations.
+ * You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+ * root directory of this project.
+ *
+ * THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+ * OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ * ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+ * PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+ */
 
 package com.microsoft.rightsmanagement.ui;
 
@@ -25,10 +24,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.FragmentTransaction;
+
+import com.microsoft.rightsmanagement.ui.PolicyPickerActivityResult.PolicyPickerActivityResultType;
 import com.microsoft.rightsmanagement.ui.R;
 import com.microsoft.rightsmanagement.TemplateDescriptor;
 import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
-import com.microsoft.rightsmanagement.ui.TemplateDescriptorPickerActivityResult.TemplateDescriptorPickerActivityResultType;
 import com.microsoft.rightsmanagement.ui.model.TemplateDescriptorModel;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
@@ -36,9 +36,9 @@ import com.microsoft.rightsmanagement.ui.widget.TemplateDescriptorListFragment;
 import com.microsoft.rightsmanagement.ui.widget.TemplateDescriptorPickerFragment;
 
 /**
- * An Activity to control Template Descriptor Picker UI.
+ * An Activity to control Policy Picker UI.
  */
-public class TemplateDescriptorPickerActivity extends BaseActivity implements
+public class PolicyPickerActivity extends BaseActivity implements
         TemplateDescriptorPickerFragment.ProtectionButtonEventListener,
         TemplateDescriptorListFragment.TemplateDescriptorDataProvider,
         TemplateDescriptorListFragment.TemplateDescriptorListEventListener
@@ -47,7 +47,7 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
     private static final String REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM = "REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM";
     private static final String REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY = "REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY";
     private static final String RESULT_TEMPLATE_DESCRIPTOR_ITEM = "RESULT_TEMPLATE_DESCRIPTOR_ITEM";
-    private static CallbackManager<TemplateDescriptorPickerActivityResult, TemplateDescriptor[]> sCallbackManager = new CallbackManager<TemplateDescriptorPickerActivityResult, TemplateDescriptor[]>();
+    private static CallbackManager<PolicyPickerActivityResult, TemplateDescriptor[]> sCallbackManager = new CallbackManager<PolicyPickerActivityResult, TemplateDescriptor[]>();
     private int mCurrentSelectedtemplateDescriptorItemIndex = -1;
     private TemplateDescriptorModel mCustomPermissionDescriptorFakeItem;
     private TemplateDescriptorModel mNoProtectionDescriptorFakeItem;
@@ -92,26 +92,26 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
         {
             final Bundle extras = data.getExtras();
             requestCallbackId = extras.getInt(REQUEST_CALLBACK_ID);
-            final CompletionCallback<TemplateDescriptorPickerActivityResult> callback = sCallbackManager
+            final CompletionCallback<PolicyPickerActivityResult> callback = sCallbackManager
                     .getWaitingRequest(requestCallbackId);
             switch (resultCode)
             {
                 case RESULT_OK:
                     Logger.i(TAG, "resultCode=RESULT_OK", "");
                     Parcelable result = extras.getParcelable(RESULT_TEMPLATE_DESCRIPTOR_ITEM);
-                    TemplateDescriptorPickerActivityResult templateDescriptorPickerActivityResult = new TemplateDescriptorPickerActivityResult();
+                    PolicyPickerActivityResult policyPickerActivityResult = new PolicyPickerActivityResult();
                     TemplateDescriptorModel templateDescriptorItem = (TemplateDescriptorModel)result;
                     if (templateDescriptorItem.isNoProtectionTemplateDescriptorItem())
                     {
                         Logger.d(TAG, "in templateDescriptorItem.isNoProtectionTemplateDescriptorItem()");
-                        templateDescriptorPickerActivityResult.mTemplateDescriptor = null;
-                        templateDescriptorPickerActivityResult.mResultType = TemplateDescriptorPickerActivityResultType.Default;
+                        policyPickerActivityResult.mTemplateDescriptor = null;
+                        policyPickerActivityResult.mResultType = PolicyPickerActivityResultType.Template;
                     }
                     else if (templateDescriptorItem.isCustomPermissionsTemplateDescriptorItem())
                     {
                         Logger.d(TAG, "in templateDescriptorItem.isCustomPermissionsTemplateDescriptorItem()");
-                        templateDescriptorPickerActivityResult.mTemplateDescriptor = null;
-                        templateDescriptorPickerActivityResult.mResultType = TemplateDescriptorPickerActivityResultType.ShowPolicyDescriptorPicker;
+                        policyPickerActivityResult.mTemplateDescriptor = null;
+                        policyPickerActivityResult.mResultType = PolicyPickerActivityResultType.Custom;
                     }
                     else
                     {
@@ -119,11 +119,11 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
                                 TAG,
                                 "neither templateDescriptorItem.isNoProtectionTemplateDescriptorItem(), nor templateDescriptorItem.isCustomPermissionsTemplateDescriptorItem()");
                         TemplateDescriptor[] savedTemplateDescriptors = sCallbackManager.getState(requestCallbackId);
-                        templateDescriptorPickerActivityResult.mTemplateDescriptor = templateDescriptorItem
+                        policyPickerActivityResult.mTemplateDescriptor = templateDescriptorItem
                                 .find(savedTemplateDescriptors);
-                        templateDescriptorPickerActivityResult.mResultType = TemplateDescriptorPickerActivityResultType.Default;
+                        policyPickerActivityResult.mResultType = PolicyPickerActivityResultType.Template;
                     }
-                    callback.onSuccess(templateDescriptorPickerActivityResult);
+                    callback.onSuccess(policyPickerActivityResult);
                     break;
                 case RESULT_CANCELED:
                     Logger.i(TAG, "resultCode=RESULT_CANCELED", "");
@@ -145,28 +145,28 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
      * Show UI.
      * 
      * @param requestCode the request code
-     * @param activity the activity
+     * @param parentActivity the activity
      * @param templateDescriptorList the template descriptor list
      * @param originalTemplateDescriptor the original template descriptor
      * @param pickerCompletionCallback the picker completion callback
      * @throws InvalidParameterException the invalid parameter exception
      */
     public static void show(int requestCode,
-                            Activity activity,
+                            Activity parentActivity,
                             List<TemplateDescriptor> templateDescriptorList,
                             TemplateDescriptor originalTemplateDescriptor,
-                            CompletionCallback<TemplateDescriptorPickerActivityResult> pickerCompletionCallback)
+                            CompletionCallback<PolicyPickerActivityResult> pickerCompletionCallback)
             throws InvalidParameterException
     {
         Logger.ms(TAG, "show");
-        activity = validateActivityInputParameter(activity);
+        parentActivity = validateActivityInputParameter(parentActivity);
         templateDescriptorList = validateTemplateDescriptorListInputParameter(templateDescriptorList);
         pickerCompletionCallback = validateCompletionCallbackInputParameter(pickerCompletionCallback);
         int requestCallbackId = pickerCompletionCallback.hashCode();
         TemplateDescriptor[] templateDescriptorArray = new TemplateDescriptor[templateDescriptorList.size()];
         templateDescriptorList.toArray(templateDescriptorArray); // fill the array
         sCallbackManager.putWaitingRequest(requestCallbackId, pickerCompletionCallback, templateDescriptorArray);
-        Intent intent = new Intent(activity, TemplateDescriptorPickerActivity.class);
+        Intent intent = new Intent(parentActivity, PolicyPickerActivity.class);
         // translate MSIPC SDK object model to UI model
         TemplateDescriptorModel[] templateDescriptorItemArray = TemplateDescriptorModel.create(templateDescriptorArray);
         TemplateDescriptorModel originalTemplateDescriptorItem = null;
@@ -179,7 +179,7 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
         intent.putExtra(REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY, templateDescriptorItemArray);
         intent.putExtra(REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM, originalTemplateDescriptorItem);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        activity.startActivityForResult(intent, requestCode);
+        parentActivity.startActivityForResult(intent, requestCode);
         Logger.me(TAG, "show");
     }
 
@@ -400,7 +400,7 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
         {
             Logger.d(TAG, "parseBundleInput - parsing OriginalTemplateDescriptorItem");
             Parcelable requestOriginalTemplateDescriptor = bundle
-                    .getParcelable(TemplateDescriptorPickerActivity.REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM);
+                    .getParcelable(PolicyPickerActivity.REQUEST_ORIGINAL_TEMPLATE_DESCRIPTOR_ITEM);
             if (requestOriginalTemplateDescriptor != null)
             {
                 Logger.ie(TAG, "requestOriginalTemplateDescriptor is null");
@@ -419,7 +419,7 @@ public class TemplateDescriptorPickerActivity extends BaseActivity implements
         {
             Logger.d(TAG, "parseBundleInput - parsing TemplateDescriptorItemArray");
             Parcelable[] requestArray = bundle
-                    .getParcelableArray(TemplateDescriptorPickerActivity.REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY);
+                    .getParcelableArray(PolicyPickerActivity.REQUEST_TEMPLATE_DESCRIPTOR_ITEM_ARRAY);
             try
             {
                 Object[] requestObjectArray = requestArray;

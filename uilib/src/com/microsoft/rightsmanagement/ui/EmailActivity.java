@@ -1,19 +1,18 @@
-//
-// Copyright © Microsoft Corporation, All Rights Reserved
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
-// OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
-// ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
-// PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
-//
-// See the Apache License, Version 2.0 for the specific language
-// governing permissions and limitations under the License.
+/**
+ * Copyright © Microsoft Corporation, All Rights Reserved
+ *
+ * Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+ * MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+ * You may not use this file except in compliance with the License.
+ * See the license for specific language governing permissions and limitations.
+ * You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+ * root directory of this project.
+ *
+ * THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+ * OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ * ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+ * PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+ */
 
 package com.microsoft.rightsmanagement.ui;
 
@@ -40,7 +39,7 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
     private static final String RESULT_EMAIL = "RESULT_EMAIL";
     private static CallbackManager<String, Void> sCallbackManager = new CallbackManager<String, Void>();
     private static Pattern sEmailPattern = Pattern
-            .compile("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+            .compile("[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?");
     EmailFragment mEmailFragment;
     static
     {
@@ -96,24 +95,24 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
      * Show UI.
      * 
      * @param requestCode the request code to be returned when activity completes
-     * @param activity the parent activity
+     * @param parentActivity the parent activity
      * @param emailActivityCompletionCallback the email activity completion callback
      * @throws InvalidParameterException the invalid parameter exception
      */
     public static void show(int requestCode,
-                            Activity activity,
+                            Activity parentActivity,
                             CompletionCallback<String> emailActivityCompletionCallback)
             throws InvalidParameterException
     {
         Logger.ms(TAG, "show");
-        activity = validateActivityInputParameter(activity);
+        parentActivity = validateActivityInputParameter(parentActivity);
         emailActivityCompletionCallback = validateCompletionCallbackInputParameter(emailActivityCompletionCallback);
         int requestCallbackId = emailActivityCompletionCallback.hashCode();
         sCallbackManager.putWaitingRequest(requestCallbackId, emailActivityCompletionCallback);
-        Intent intent = new Intent(activity, EmailActivity.class);
+        Intent intent = new Intent(parentActivity, EmailActivity.class);
         intent.putExtra(REQUEST_CALLBACK_ID, requestCallbackId);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        activity.startActivityForResult(intent, requestCode);
+        parentActivity.startActivityForResult(intent, requestCode);
         Logger.me(TAG, "show");
     }
 

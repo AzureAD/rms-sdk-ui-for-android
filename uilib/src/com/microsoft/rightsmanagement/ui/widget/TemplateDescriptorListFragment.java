@@ -1,19 +1,18 @@
-//
-// Copyright © Microsoft Corporation, All Rights Reserved
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
-// OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
-// ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
-// PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
-//
-// See the Apache License, Version 2.0 for the specific language
-// governing permissions and limitations under the License.
+/**
+ * Copyright © Microsoft Corporation, All Rights Reserved
+ *
+ * Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+ * MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+ * You may not use this file except in compliance with the License.
+ * See the license for specific language governing permissions and limitations.
+ * You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+ * root directory of this project.
+ *
+ * THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+ * OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ * ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+ * PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+ */
 
 package com.microsoft.rightsmanagement.ui.widget;
 
@@ -26,7 +25,7 @@ import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
 import android.widget.ListView;
 import com.microsoft.rightsmanagement.ui.R;
-import com.microsoft.rightsmanagement.ui.TemplateDescriptorPickerActivity;
+import com.microsoft.rightsmanagement.ui.PolicyPickerActivity;
 import com.microsoft.rightsmanagement.ui.model.TemplateDescriptorModel;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 
@@ -197,7 +196,7 @@ public final class TemplateDescriptorListFragment extends ListFragment
             return;
         }
         // temporary solution for absence of custom permission feature
-        if (!TemplateDescriptorPickerActivity.isTemplateDescriptorItemEnabled(templateDescriptorItemArray[position]))
+        if (!PolicyPickerActivity.isTemplateDescriptorItemEnabled(templateDescriptorItemArray[position]))
         {
             return;
         }
