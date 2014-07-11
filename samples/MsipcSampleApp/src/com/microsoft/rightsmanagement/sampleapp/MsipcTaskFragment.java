@@ -1,19 +1,18 @@
-//
-// Copyright © Microsoft Corporation, All Rights Reserved
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
-// OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
-// ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
-// PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
-//
-// See the Apache License, Version 2.0 for the specific language
-// governing permissions and limitations under the License.
+/**
+ * Copyright © Microsoft Corporation, All Rights Reserved
+ *
+ * Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+ * MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+ * You may not use this file except in compliance with the License.
+ * See the license for specific language governing permissions and limitations.
+ * You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+ * root directory of this project.
+ *
+ * THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+ * OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+ * ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+ * PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+ */
 
 package com.microsoft.rightsmanagement.sampleapp;
 
@@ -31,6 +30,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 import android.app.Activity;
@@ -190,7 +190,10 @@ public class MsipcTaskFragment extends Fragment
     private AuthenticationRequestCallback mRmsAuthCallback;
     private TaskEventCallback mTaskEventCallback;
     private UserPolicy mUserPolicy;
-
+    private LinkedHashSet<String> sSupportedRights = new LinkedHashSet<String>(Arrays.asList(new String[] {
+            CommonRights.Owner, CommonRights.View, EditableDocumentRights.Edit, EditableDocumentRights.Extract,
+            EditableDocumentRights.Print
+    }));
     /**
      * Handle msipc ui activity result.
      * 
@@ -340,7 +343,9 @@ public class MsipcTaskFragment extends Fragment
         super.onDetach();
         mTaskEventCallback = null;
     }
+    
 
+ 
     /**
      * Shows MSIPC user policy on the screen using MSIPC UI library.
      */
@@ -370,9 +375,10 @@ public class MsipcTaskFragment extends Fragment
             UserPolicy userPolicy = mUserPolicy;
             if (userPolicy != null)
             {
-                UserPolicyViewerActivity.show(POLICY_VIEW_REQUEST, getActivity(), userPolicy, mUserPolicy
-                        .isIssuedToOwner() ? UserPolicyViewerActivityRequestOption.EDIT_ALLOWED
-                        : UserPolicyViewerActivityRequestOption.NONE, userPolicyViewerActivityCompletionCallback);
+                UserPolicyViewerActivity.show(POLICY_VIEW_REQUEST, getActivity(), userPolicy, sSupportedRights,
+                        mUserPolicy.isIssuedToOwner() ? UserPolicyViewerActivityRequestOption.EDIT_ALLOWED
+                                : UserPolicyViewerActivityRequestOption.NONE,
+                        userPolicyViewerActivityCompletionCallback);
             }
         }
         catch (InvalidParameterException e)
