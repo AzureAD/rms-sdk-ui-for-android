@@ -16,6 +16,7 @@
 
 package com.microsoft.rightsmanagement.ui;
 
+import java.util.LinkedHashSet;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -124,6 +125,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
      * @param requestCode the request code for startActivityForResult
      * @param parentActivity the parent activity that invokes startActivityForResult
      * @param userPolicy user policy instance that provides data to display on the UI
+     * @param supportedRights rights to check access for and display
      * @param policyViewerActivityRequestOption PolicyViewerActivityRequestOptions
      * @param policyViewerActivityCompletionCallback callback that's invoked upon completion of activity.
      * @throws InvalidParameterException the invalid parameter exception
@@ -131,6 +133,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
     public static void show(int requestCode,
                             Activity parentActivity,
                             UserPolicy userPolicy,
+                            LinkedHashSet<String> supportedRights,
                             int policyViewerActivityRequestOption,
                             CompletionCallback<Integer> policyViewerActivityCompletionCallback)
             throws InvalidParameterException
@@ -149,7 +152,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
         intent.putExtra(REQUEST_CALLBACK_ID, requestCallbackId);
         intent.putExtra(REQUEST_RESULT_POLICY_VIEWER_OPTIONS, policyViewerActivityRequestOption);
         intent.putExtra(REQUEST_RESULT_USER_POLICY_MODEL,
-                (new UserPolicyModel(userPolicy, parentActivity.getApplicationContext())));
+                (new UserPolicyModel(userPolicy, supportedRights, parentActivity.getApplicationContext())));
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         parentActivity.startActivityForResult(intent, requestCode);
         Logger.me(TAG, "show");

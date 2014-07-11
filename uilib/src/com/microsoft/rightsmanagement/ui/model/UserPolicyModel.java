@@ -18,7 +18,7 @@ package com.microsoft.rightsmanagement.ui.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 import com.microsoft.rightsmanagement.ui.R;
@@ -29,8 +29,6 @@ import android.content.Context;
 import android.content.res.Resources.NotFoundException;
 import android.os.Parcel;
 import android.os.Parcelable;
-import com.microsoft.rightsmanagement.CommonRights;
-import com.microsoft.rightsmanagement.EditableDocumentRights;
 import com.microsoft.rightsmanagement.UserPolicy;
 import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 
@@ -75,17 +73,19 @@ public class UserPolicyModel implements Parcelable
      * Instantiates a new user policy model.
      * 
      * @param userPolicy the user policy
+     * @param supportedRights rights to check access for and display
      * @param applicationContext the application context
      * @throws InvalidParameterException the invalid parameter exception
      */
     public UserPolicyModel(UserPolicy userPolicy,
+                           LinkedHashSet<String> supportedRights,
                            Context applicationContext) throws InvalidParameterException
     {
         mName = userPolicy.getName();
         mDescription = userPolicy.getDescription();
         mOwner = userPolicy.getOwner();
         mIsIssuedToOwner = userPolicy.isIssuedToOwner();
-        makeEffectiveRights(userPolicy, applicationContext);
+        makeEffectiveRights(userPolicy, supportedRights, applicationContext);
     }
 
     /**
@@ -116,23 +116,6 @@ public class UserPolicyModel implements Parcelable
             Logger.i(TAG, String.format("Right: %s - resource id was not found", right), "");
         }
         return rightsDisplayName;
-    }
-
-    /**
-     * Gets the supported rights.
-     * 
-     * @param applicationContext the application context
-     * @return the supported rights
-     * @throws InvalidParameterException the invalid parameter exception
-     */
-    private static String[] getSupportedRights(Context applicationContext) throws InvalidParameterException
-    {
-        HashSet<String> supportedRightsList = new HashSet<String>();
-        supportedRightsList.addAll(EditableDocumentRights.ALL);
-        supportedRightsList.addAll(CommonRights.ALL);
-        String[] supportedRightsArray = new String[supportedRightsList.size()];
-        supportedRightsList.toArray(supportedRightsArray);
-        return supportedRightsArray;
     }
 
     /**
@@ -228,14 +211,14 @@ public class UserPolicyModel implements Parcelable
      * Make effective rights.
      * 
      * @param userPolicy the user policy
+     * @param supportedRights rights to check access for and display
      * @param applicationContext the application context
      * @throws InvalidParameterException the invalid parameter exception
      */
-    private void makeEffectiveRights(UserPolicy userPolicy, Context applicationContext)
+    private void makeEffectiveRights(UserPolicy userPolicy, LinkedHashSet<String> supportedRights, Context applicationContext)
             throws InvalidParameterException
     {
         mEffectiveViewableRights = new ArrayList<RightAccessCheckModel>();
-        String[] supportedRights = getSupportedRights(applicationContext);
         for (String right : supportedRights)
         {
             boolean hasAccess = userPolicy.accessCheck(right);
