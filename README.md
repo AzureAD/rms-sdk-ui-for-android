@@ -1,7 +1,7 @@
 UI Library for AD RMS SDK v4 for Android 
 ======================
 
-The UI Library for AD RMS SDK v4 for Android provides Android Activities that implement the required UI for the SDK functionality.  This library is optional and a developer may choose to build his own UI when using AD RMS SDK v4.
+The UI Library for AD RMS SDK v4 for Android provides Android Activities that implement the required UI for the SDK functionality.  This library is optional and a developer may choose to build their own UI when using AD RMS SDK v4.
 This library contains the following Android Activities:
 * **EmailActivity**: Shows an email address input screen, which is required for operations like protection of files. RMS SDK expects to get the email address of the user who wants to protect data or files to redirect his organization sign-in portal.
 * **PolicyPickerActivity**: Shows a policy picker screen, where the user can choose RMS template or specify the permissions to create a protection policy and encrypt files.
