@@ -140,10 +140,10 @@ You can find a sample Android application in the repository, which demonstrates 
 
 ###Sample Scenario
 
-1) Get Templates using AD RMS SDK v4 and show them using Policy Picker Activity. 
-2) Receive the selected Template object and create UserPolicy object.
+* Get Templates using AD RMS SDK v4 and show them using Policy Picker Activity. 
+* Receive the selected Template object and create UserPolicy object.
 
-Step 1 : Get Templates using AD RMS SDK v4
+**Step 1** : Get Templates using AD RMS SDK v4
 
 ```Java
 CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new CreationCallback<List<TemplateDescriptor>>()
@@ -185,7 +185,7 @@ CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new Cr
         } 
 ```
 
-Step 2 : Use PolicyPickerActivity to show these templates
+**Step 2** : Use PolicyPickerActivity to show these templates
 
 Once the EmailActivity is complete onActivityResult is called to process the result of the activity.
 
@@ -232,7 +232,7 @@ CompletionCallback<PolicyPickerActivityResult> policyPickerActivityCompletionCal
 }
 ```
 
-Step 3 : Add following code to your application MainActivity to handle results from UI Lib activities
+**Step 3** : Add following code to your application MainActivity to handle results from UI Lib activities
 
 ```Java
 /**
