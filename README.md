@@ -28,13 +28,16 @@ samples\azure-activedirectory-library-for-android submodule.
 
 ### Setting up development environment
 
-1.	Setup uilib as a library project in eclipse.
-2.	Go through usage guide of RMS SDK located here to familiarize yourself with basic usage of MSIPC SDK v4
-3.	Setup your application project with MSIPC SDK v4. 
-4.	Add a library reference of MSIPC SDK v4 project to uilib project. For help check here : http://developer.android.com/tools/projects/projects-cmdline.html#ReferencingLibraryProject
-Note: Please do steps 3 & 4 for samples\MSIPCSampleApp (if trying to use MSIPCSampleApp).
-5.	Add library reference of uilib project to your application project. Please check here : http://developer.android.com/tools/projects/projects-eclipse.html
-6.	Add following Activities to your application's AndroidManifest.xml
+1.	Go through usage guide of RMS SDK located here (TBD) to familiarize yourself with basic usage of AD RMS SDK v4.
+2.	Download ADRMS SDK v4 for Android Setup from http://go.microsoft.com/fwlink/?LinkId=404271. 
+4.	Import AD RMS SDK v4 project by following these instructions (TBD)
+4.	Import uilib project. 
+5.	Import ADAL project. Follow the instructions here to setup ADAL project - https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/README.md
+**Note:** Rename _libs\compatibility-v4.jar_ to _libs\android-support-v4.jar_ in ADAL project
+6.	Add library reference of AD RMS SDK v4 project to uilib project and your application project.
+7.	Add library reference of uilib project to your application project.
+8.	Add library reference of ADAL project to your application project.
+9.	Add following Activities to your application's AndroidManifest.xml
 
 ```XML
 <activity android:name="com.microsoft.rightsmanagement.ui.EmailActivity"
@@ -53,15 +56,12 @@ Note: Please do steps 3 & 4 for samples\MSIPCSampleApp (if trying to use MSIPCSa
             android:windowSoftInputMode="stateHidden" />
 ```
 
-7.	Set up your application project with ADAL by following these steps.
-Note: Rename _libs\compatibility-v4.jar_ to _libs\android-support-v4.jar_ in ADAL project
-
 ### UI Activities
 
 The following Android Activities are provided in this UI library for AD RMS SDK V4 for Android.
 * **EmailActivity** – Shows a screen with email input which is required application. The returned email address can be used as emailId that is required for protection and consumption of RMS protected data or files.
-* **PolicyPickerActivity** - Takes the list of RMS template descriptors to display them on the screen. Once user selects a template descriptor the app can create a protection policy to protect and encrypt data or files. 
-* **UserPolicyViewerActivity** - Takes the user policy object and display it in a user friendly screen. The activity also provides an optional edit user policy button. The click action of edit button is returned as output to application.
+* **PolicyPickerActivity** - Takes the list of template descriptors (and optionally originally selected value of template descriptor) to display them on the screen. Once user selects a template descriptor the app can create a protection policy to protect and encrypt data or files. 
+* **UserPolicyViewerActivity** - Takes User Policy instance and renders the data on the screen. Also provides an edit button to capture user’s intent to edit the policy. The state of edit button (visible/invisible) is supplied by application. The click action of edit button is returned as output to application.
 
 ### Using Activities
 
@@ -76,7 +76,7 @@ Following snippets are from PolicyPickerActivity.java
 
 public class PolicyPickerActivity extends FragmentActivity
 {
-        /**
+    /**
      * Show UI.
      * 
      * @param requestCode the request code
@@ -93,7 +93,7 @@ public class PolicyPickerActivity extends FragmentActivity
                             CompletionCallback<PolicyPickerActivityResult> pickerCompletionCallback)
             throws InvalidParameterException
     { 
-              ……..
+              ...
     }
 
     /**
@@ -110,11 +110,17 @@ public class PolicyPickerActivity extends FragmentActivity
 }
 ```
 
-Notice: show method uses CompletionCallback as one of its parameters
+Notice show method uses CompletionCallback as one of its parameters
 
 ```Java
+/**
+ * The Interface CompletionCallback.
+ * Provides callback methods for MSIPC UI Activity completion events.
 
-public interface CreationCallback<T>
+ * @param <T> the generic type
+ */
+
+public interface CompletionCallback<T>
 {
 	/**
 	 * This method is called upon completion of async operation
@@ -135,16 +141,37 @@ For other Activities, please find the following classes:
 
 
 ## Sample Usage
+Sample application included in the repository demonstrates the usage of this library. It is located at samples\MsipcSampleApp
 
-You can find a sample Android application in the repository, which demonstrates the usage of this library. It is located at samples\MsipcSampleApp. Simply compile and run it on an Android emulator or device.
+### Sample Scenario: Publish a file using a RMS template and show UserPolicy.
+**Step 1 : Receive email input from user by using EmailActivity**
+```Java
+CompletionCallback<String> emailActivityCompletionCallback = new CompletionCallback<String>()
+        {
+            @Override
+            public void onCancel()
+            {
+             
+            }
 
-###Sample Scenario
+            @Override
+            public void onSuccess(String item)
+            {
+             
+                continueMsipcPolicyCreationWithEmailId(item, originalUserPolicy, 
+                showUserPolicyViewerOnPolicyCreation, onPolicyCreationCallback);
+            }
+        };
+try
+{
+    EmailActivity.show(EMAIL_INPUT_REQUEST, getActivity(), emailActivityCompletionCallback);
+}
+catch (InvalidParameterException e)
+{
+}
+```
 
-* Get Templates using AD RMS SDK v4 and show them using Policy Picker Activity. 
-* Receive the selected Template object and create UserPolicy object.
-
-**Step 1** : Get Templates using AD RMS SDK v4
-
+**Step 2 : Use user email and get Templates using MSIPC SDK v4**
 ```Java
 CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new CreationCallback<List<TemplateDescriptor>>()
         {
@@ -167,17 +194,19 @@ CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new Cr
             public void onSuccess(List<TemplateDescriptor> templateDescriptors)
             {
                 TemplateDescriptor originalTemplateDescriptor = null;
-                if (originalUserPolicy != null && originalUserPolicy.getType() == UserPolicyType.TemplateBased)
+                if (originalUserPolicy != null && 
+                    originalUserPolicy.getType() == UserPolicyType.TemplateBased)
                 {
                     originalTemplateDescriptor = originalUserPolicy.getTemplateDescriptor();
                 }
-                continueMsipcPolicyCreationByPickingAPolicy(templateDescriptors, originalTemplateDescriptor,
-                        showUserPolicyViewerOnPolicyCreation, onPolicyCreationCallback);
+                continueMsipcPolicyCreationByPickingAPolicy(templateDescriptors, 
+                 originalTemplateDescriptor, showUserPolicyViewerOnPolicyCreation, onPolicyCreationCallback);
             }
         };
         try
         {
-                     mIAsyncControl = TemplateDescriptor.getTemplates(emailId, mRmsAuthCallback, getTemplatesCreationCallback);
+             mIAsyncControl = TemplateDescriptor.getTemplates(emailId, mRmsAuthCallback, 
+               getTemplatesCreationCallback);
         }
         catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
         {
@@ -185,13 +214,14 @@ CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new Cr
         } 
 ```
 
-**Step 2** : Use PolicyPickerActivity to show these templates
-
-Once the EmailActivity is complete onActivityResult is called to process the result of the activity.
-
+**Step 3: Use PolicyPickerActivity to show these templates**
+Use list of templates obtained above to call PolicyPickerActivity.Show method to display templates. Notice you can also pass in previously chosen template (originalTemplateDescriptor) for highlighting it.
 
 ```Java
-private void continueMsipcPolicyCreationByPickingAPolicy(List<TemplateDescriptor> templateDescriptors, TemplateDescriptor originalTemplateDescriptor, final boolean showUserPolicyViewerOnPolicyCreation, final Runnable onPolicyCreationCallback)
+private void continueMsipcPolicyCreationByPickingAPolicy(List<TemplateDescriptor> templateDescriptors, 
+                                                         TemplateDescriptor originalTemplateDescriptor, 
+                                                         final boolean showUserPolicyViewerOnPolicyCreation, 
+                                                         final Runnable onPolicyCreationCallback)
 {
         
 CompletionCallback<PolicyPickerActivityResult> policyPickerActivityCompletionCallback = new CompletionCallback<PolicyPickerActivityResult>()
@@ -231,61 +261,102 @@ CompletionCallback<PolicyPickerActivityResult> policyPickerActivityCompletionCal
         }
 }
 ```
-
-**Step 3** : Add following code to your application MainActivity to handle results from UI Lib activities
+**Step 4: Create UserPolicy from TemplateDescriptor chosen in step 3 using MSIPC SDK v4 API**
 
 ```Java
-/**
- * Recieve results from child activity.
- * 
- * @param requestCode the request code
- * @param resultCode the result code
- * @param data the data
- */
-@Override
-protected void onActivityResult(int requestCode, int resultCode, Intent data)
-{
-	super.onActivityResult(requestCode, resultCode, data);
-	// handle ADAL results
-	if (App.getInstance().getAuthenticationContext() != null)
-	{
-		App.getInstance().getAuthenticationContext().onActivityResult(requestCode, resultCode, data);
-	}
-	// handle MSIPC Results
-	MsipcTaskFragment.handleMsipcUIActivityResult(requestCode, resultCode, data);
-}
-// Request codes for MSIPC UI Activities
-public static final int EMAIL_INPUT_REQUEST = 0x1;
-public static final int POLICY_VIEW_REQUEST = 0x3;
-public static final int POLICY_PICK_REQUEST = 0x2;
-/**
- * Handle msipc ui activity result.
- * 
- * @param requestCode the request code
- * @param resultCode the result code
- * @param data the data
- */
-public static void handleMsipcUIActivityResult(int requestCode, int resultCode, Intent data)
-{
-	// handle MSIPC Results
-	switch (requestCode)
-	{
-		case POLICY_PICK_REQUEST:
-			PolicyPickerActivity.onActivityResult(resultCode, data);
-			break;
-		case POLICY_VIEW_REQUEST:
-			UserPolicyViewerActivity.onActivityResult(resultCode, data);
-			break;
-		case EMAIL_INPUT_REQUEST:
-			EmailActivity.onActivityResult(resultCode, data);
-			break;
-		default:
-			// handle invalid request error
-	}
-}
+mIAsyncControl = UserPolicy.create((TemplateDescriptor)selectedDescriptor, mEmailId, 
+                                    mRmsAuthCallback,UserPolicyCreationFlags.NONE, null, 
+                                    userPolicyCreationCallback);
 ```
 
-Follow similar usage pattern for EmailActivity and UserPolicyViewerActivity. See samples/MsipcSampleApp for detailed usage.
+**Step 5: Show chosen policy to user. Notice that you can allow editing of chosen user policy (assuming user has rights to do so).**
+```Java
+CompletionCallback<Integer> userPolicyViewerActivityCompletionCallback = new CompletionCallback<Integer>()
+        {
+            @Override
+            public void onCancel()
+            {
+            }
+
+            @Override
+            public void onSuccess(Integer result)
+            {
+                switch (result)
+                {
+                    case UserPolicyViewerActivityResult.EDIT_POLICY:
+                        startMsipcPolicyCreation(true);
+                        break;
+                }
+            }
+        };
+        try
+        {
+            UserPolicy userPolicy = mUserPolicy;
+            if (userPolicy != null)
+            {
+                UserPolicyViewerActivity.show(POLICY_VIEW_REQUEST, getActivity(), userPolicy, 
+                   sSupportedRights, 
+                   mUserPolicy.isIssuedToOwner() ? UserPolicyViewerActivityRequestOption.EDIT_ALLOWED
+                                : UserPolicyViewerActivityRequestOption.NONE,
+                   userPolicyViewerActivityCompletionCallback);
+            }
+        }
+        catch (InvalidParameterException e)
+        {
+        }
+```
+
+**Step 6: Add following code to your application MainActivity to handle results from all UI Lib activities**
+```Java
+   /**
+     * Recieve results from child activity.
+     * 
+     * @param requestCode the request code
+     * @param resultCode the result code
+     * @param data the data
+     */
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        // handle ADAL results
+        if (App.getInstance().getAuthenticationContext() != null)
+        {
+            App.getInstance().getAuthenticationContext().onActivityResult(requestCode, resultCode, data);
+        }
+        // handle MSIPC Results
+        MsipcTaskFragment.handleMsipcUIActivityResult(requestCode, resultCode, data);
+    }
+    // Request codes for MSIPC UI Activities
+    public static final int EMAIL_INPUT_REQUEST = 0x1;
+    public static final int POLICY_VIEW_REQUEST = 0x3;
+    public static final int POLICY_PICK_REQUEST = 0x2;
+    /**
+     * Handle msipc ui activity result.
+     * 
+     * @param requestCode the request code
+     * @param resultCode the result code
+     * @param data the data
+     */
+    public static void handleMsipcUIActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        // handle MSIPC Results
+        switch (requestCode)
+        {
+            case POLICY_PICK_REQUEST:
+                PolicyPickerActivity.onActivityResult(resultCode, data);
+                break;
+            case POLICY_VIEW_REQUEST:
+                UserPolicyViewerActivity.onActivityResult(resultCode, data);
+                break;
+            case EMAIL_INPUT_REQUEST:
+                EmailActivity.onActivityResult(resultCode, data);
+                break;
+            default:
+                // handle invalid request error
+        }
+    }
+```    
 
 ## License
 
