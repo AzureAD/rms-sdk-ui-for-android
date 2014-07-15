@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Hiba történt a Windows Azure AD Rights Management szolgáltatáshoz való kapcsolódáskor. Ha a probléma nem szűnik meg, forduljon a rendszergazdához.</string>
+    <string name="communication_error_string">Probléma adódott a bejelentkeztetés során. Ellenőrizze az internetkapcsolatát, és próbálkozzon újra.</string>
+    <string name="device_error_string">Az eszköz számára nem engedélyezett a Windows Azure AD Rights Management használata. További információért forduljon a rendszergazdához.</string>
+    <string name="no_publishing_rights_error_string">Sajnos Ön nem jogosult új védett tartalmat létrehozni ennél a szervezetnél. Próbáljon meg bejelentkezni másik felhasználóként, vagy a rendszergazdától kérjen további jogosultságokat.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Nincs engedélye a tartalom megtekintéséhez. Engedély kéréséhez írjon a %s címre.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Nincs engedélye a tartalom megtekintéséhez. Engedély kéréséhez keresse fel a %s webhelyet.</string>
+    <string name="user_rights_expired_contact_email_error_string">Nem tekintheti meg a tartalmat, mert az időkorlát lejárt. A rendszergazdától vagy a következőtől kérheti a tartalom megújítását: %s.</string>
+    <string name="user_rights_expired_contact_url_error_string">Nem tekintheti meg a tartalmat, mert az időkorlát lejárt. A rendszergazdától vagy a következőtől kérje a tartalom megújítását: %s.</string>
+    <string name="unsupported_sdk_version_error_string">Az alkalmazás által használt RMS szoftvert frissíteni kell. Forduljon az alkalmazás ügyfélszolgálatához vagy a rendszergazdához, és kérjen frissítést.</string>
+    <string name="invalid_parameter_error_string">A Windows Azure AD Rights Management szolgáltatást használó alkalmazás váratlan műveletet végzett. Forduljon az alkalmazás ügyfélszolgálatához.</string>
+    <string name="invalid_pl_error_string">A Windows Azure AD Rights Management szolgáltatást használó alkalmazás váratlan műveletet végzett. Forduljon az alkalmazás ügyfélszolgálatához.</string>
+    <string name="service_not_available_error_string">Hiba történt a Windows Azure AD Rights Management szolgáltatáshoz való kapcsolódáskor. Ha a probléma nem szűnik meg, forduljon a rendszergazdához.</string>
+    <string name="rest_service_not_enabled_error_string">A Windows Azure AD Rights Management nincs engedélyezve az Ön szervezete számára. További részletekért lépjen kapcsolatba rendszergazdájával.</string>
+    <string name="on_prem_servers_not_supported_error_string">A helyi AD RMS-kiszolgáló nem támogatja ezt az eszközt, ezért ezt a tartalmat nem lehet visszafejteni. További információért forduljon a rendszergazdához.</string>
+    <string name="auth_failed_with_token_error_string">Nem sikerült a hitelesítés, helytelen a hozzáférési jogkivonat.</string>
+    <string name="invalid_dns_lookup_error_string">A DNS-keresés a DNS-kiszolgáló beállítási hibái miatt sikertelen. Ha a probléma nem szűnik meg, forduljon a rendszergazdához.</string>
+    <string name="invalid_certificate_error_string">Probléma van a szolgáltatás biztonsági tanúsítványával, ami csalásra vagy a kiszolgálónak elküldött adatok elfogására irányuló kísérletet jelezhet. Ha a probléma nem szűnik meg, forduljon a rendszergazdához.</string>
+    <string name="requires_internet_but_offline_only_error_string">Ez a tartalom csak internetkapcsolattal tekinthető meg. Mielőtt újból próbálkozna, ellenőrizze, hogy van-e internetkapcsolata, illetve hogy az alkalmazás nem offline módban működik-e.</string>
+    <string name="sdk_error">Windows Azure AD Rights Management SDK – hiba</string>
+
+</resources>

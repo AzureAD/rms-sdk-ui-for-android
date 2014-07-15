@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Під час спроби зв\'язатися зі службою Microsoft Azure AD Rights Management сталася помилка. Якщо проблема не зникне, зверніться до адміністратора.</string>
+    <string name="communication_error_string">Під час входу сталася помилка. Перевірте підключення до Інтернету та спробуйте знову.</string>
+    <string name="device_error_string">Ваш пристрій не має дозволу на використання Microsoft Azure AD Rights Management. Щоб отримати докладніші відомості, зверніться до адміністратора.</string>
+    <string name="no_publishing_rights_error_string">На жаль, у вас немає дозволу на створення нового захищеного вмісту для цієї організації. Спробуйте ввійти під іншим ім\’ям користувача або зверніться до адміністратора, щоб отримати додаткові дозволи.</string>
+    <string name="no_consumption_rights_contact_email_error_string">У вас немає дозволів на перегляд цього вмісту. Запитайте дозволи за адресою %s.</string>
+    <string name="no_consumption_rights_contact_url_error_string">У вас немає дозволів на перегляд цього вмісту. Відвідайте веб-сайт %s, щоб запитати дозволи.</string>
+    <string name="user_rights_expired_contact_email_error_string">Не можна переглянути вміст, тому що вичерпано обмеження часу. Щоб поновити цей вміст, зверніться до %s або до адміністратора.</string>
+    <string name="user_rights_expired_contact_url_error_string">Не можна переглянути вміст, тому що вичерпано обмеження часу. Щоб поновити цей вміст, відвідайте %s або зверніться до адміністратора.</string>
+    <string name="unsupported_sdk_version_error_string">Програмне забезпечення RMS для цієї програми потребує оновлення. Щоб отримати оновлення, зверніться до служби технічної підтримки цієї програми або до адміністратора.</string>
+    <string name="invalid_parameter_error_string">Програма, яка використовує Microsoft Azure AD Rights Management, виконала неочікувану дію. Зверніться до служби технічної підтримки цієї програми.</string>
+    <string name="invalid_pl_error_string">Програма, яка використовує Microsoft Azure AD Rights Management, виконала неочікувану дію. Зверніться до служби технічної підтримки цієї програми.</string>
+    <string name="service_not_available_error_string">Під час спроби зв\’язатися зі службою Microsoft Azure AD Rights Management сталася помилка. Якщо проблема не зникне, зверніться до адміністратора.</string>
+    <string name="rest_service_not_enabled_error_string">Службу Microsoft Azure AD Rights Management для вашої організації не ввімкнуто. Щоб отримати додаткові відомості, зверніться до адміністратора.</string>
+    <string name="on_prem_servers_not_supported_error_string">Локальний сервер AD RMS не підтримує ваш пристрій, тому цей вміст не можна дешифрувати. Щоб отримати докладніші відомості, зверніться до адміністратора.</string>
+    <string name="auth_failed_with_token_error_string">Помилка автентифікації: неприпустимий маркер доступу.</string>
+    <string name="invalid_dns_lookup_error_string">Не вдалося виконати пошук DNS через помилки в налаштуванні DNS-сервера. Якщо проблема не зникне, зверніться до адміністратора.</string>
+    <string name="invalid_certificate_error_string">Виникла проблема із сертифікатом безпеки служби. Це може свідчити про спробу обманути вас або перехопити дані, які ви надсилаєте на сервер. Якщо проблема не зникне, зверніться до адміністратора.</string>
+    <string name="requires_internet_but_offline_only_error_string">Цей вміст не можна переглядати без підключення до Інтернету. Перш ніж спробувати знову, перевірте підключення та переконайтеся, що програма працює не в автономному режимі.</string>
+    <string name="sdk_error">Помилка пакета SDK для Microsoft Azure AD Rights Management</string>
+
+</resources>

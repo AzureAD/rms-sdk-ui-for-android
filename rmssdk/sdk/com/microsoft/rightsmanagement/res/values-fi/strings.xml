@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Jossakin tapahtui virhe yritettäessä muodostaa yhteyttä Windows Azure AD Rights Management -palveluun. Jos ongelma toistuu, ota yhteyttä järjestelmänvalvojaasi.</string>
+    <string name="communication_error_string">Sisäänkirjauksessasi ilmeni ongelma. Tarkista Internet-yhteytesi ja yritä uudelleen.</string>
+    <string name="device_error_string">Windows Azure AD Rights Management -palvelun käyttö ei ole sallittu laitteellesi. Kysy lisätietoja järjestelmänvalvojaltasi.</string>
+    <string name="no_publishing_rights_error_string">Sinulla ei ole uuden suojatun sisällön luontioikeutta tässä organisaatiossa. Yritä kirjautua sisään toisena käyttäjänä tai pyydä järjestelmänvalvojalta lisäoikeuksia.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Sinulla ei ole tämän sisällön tarkasteluoikeuksia. Pyydä oikeudet ottamalla yhteyttä seuraavaan tahoon: %s.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Sinulla ei ole tämän sisällön tarkasteluoikeuksia. Pyydä oikeudet osoitteesta %s.</string>
+    <string name="user_rights_expired_contact_email_error_string">Et voi nähdä tätä sisältöä, koska aikaraja on ohitettu. Ota yhteyttä tahoon %s tai järjestelmänvalvojaasi, jos haluat uusia tämän sisällön.</string>
+    <string name="user_rights_expired_contact_url_error_string">Et voi nähdä tätä sisältöä, koska aikaraja on ohitettu. Käy osoitteessa %s tai ota yhteyttä järjestelmänvalvojaasi, jos haluat uusia tämän sisällön.</string>
+    <string name="unsupported_sdk_version_error_string">Tämän sovelluksen käyttämä RMS-ohjelmisto täytyy päivittää. Pyydä päivitys sovelluksen tekniseltä tuelta tai järjestelmänvalvojaltasi.</string>
+    <string name="invalid_parameter_error_string">Windows Azure AD Rights Managementia käyttävä sovellus teki jotakin odottamatonta. Ota yhteyttä tämän sovelluksen tekniseen tukeen.</string>
+    <string name="invalid_pl_error_string">Windows Azure AD Rights Managementia käyttävä sovellus teki jotakin odottamatonta. Ota yhteyttä tämän sovelluksen tekniseen tukeen.</string>
+    <string name="service_not_available_error_string">Jossakin tapahtui virhe yritettäessä muodostaa yhteyttä Windows Azure AD Rights Management -palveluun. Jos ongelma toistuu, ota yhteyttä järjestelmänvalvojaasi.</string>
+    <string name="rest_service_not_enabled_error_string">Windows Azure AD Rights Management ei ole käytössä organisaatiossasi. Saat lisätietoja järjestelmänvalvojaltasi.</string>
+    <string name="on_prem_servers_not_supported_error_string">Paikallinen AD RMS -palvelin ei tue laitettasi, joten tämän sisällön salausta ei voi purkaa. Kysy lisätietoja järjestelmänvalvojaltasi.</string>
+    <string name="auth_failed_with_token_error_string">Todennus epäonnistui, virheellinen käyttöoikeustietue.</string>
+    <string name="invalid_dns_lookup_error_string">DNS-haku epäonnistui DNS-palvelimen määritysten virheiden vuoksi. Jos ongelma jatkuu, ota yhteyttä järjestelmänvalvojaasi.</string>
+    <string name="invalid_certificate_error_string">Palvelun suojausvarmenteessa on ongelma, mikä saattaa ilmaista yritystä huijata sinua tai siepata palvelimeen lähettämiäsi tietoja. Jos ongelma jatkuu, ota yhteyttä järjestelmänvalvojaasi.</string>
+    <string name="requires_internet_but_offline_only_error_string">Et voi tarkastella tätä sisältöä ilman Internet-yhteyttä. Ennen kuin yrität uudelleen, tarkista yhteytesi ja se, että sovelluksesi ei ole toiminnassa offline-tilassa.</string>
+    <string name="sdk_error">Windows Azure AD Rights Management SDK:n virhe</string>
+
+</resources>

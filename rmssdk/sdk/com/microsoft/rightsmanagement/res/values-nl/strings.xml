@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Er is een fout opgetreden tijdens het tot stand brengen van een verbinding met Windows Azure AD Rights Management. Neem contact op met de beheerder als het probleem zich blijft voordoen.</string>
+    <string name="communication_error_string">Er is een probleem opgetreden tijdens het aanmelden. Controleer uw internetverbinding en probeer het opnieuw.</string>
+    <string name="device_error_string">Uw apparaat heeft geen toegang tot Windows Azure AD Rights Management. Neem voor meer informatie contact op met de beheerder.</string>
+    <string name="no_publishing_rights_error_string">U hebt niet de juiste machtigingen om nieuwe beschermde inhoud voor deze organisatie te maken. Meld u aan als een andere gebruiker of neem contact op met de beheerder voor aanvullende machtigingen.</string>
+    <string name="no_consumption_rights_contact_email_error_string">U hebt geen machtigingen om deze inhoud weer te geven. Neem contact op via %s om machtigingen aan te vragen.</string>
+    <string name="no_consumption_rights_contact_url_error_string">U hebt geen machtigingen om deze inhoud weer te geven. Ga naar %s om machtigingen aan te vragen.</string>
+    <string name="user_rights_expired_contact_email_error_string">U kunt deze inhoud niet weergeven omdat de tijdslimiet is verstreken. Neem contact op met %s of met de beheerder om deze inhoud te vernieuwen.</string>
+    <string name="user_rights_expired_contact_url_error_string">U kunt deze inhoud niet weergeven omdat de tijdslimiet is verstreken. Ga naar %s of neem contact op met de beheerder om deze inhoud te vernieuwen.</string>
+    <string name="unsupported_sdk_version_error_string">De RMS-software die door deze toepassing wordt gebruikt, moet worden bijgewerkt. Neem contact op met de beheerder of met de technische ondersteuning van deze toepassing om een update aan te vragen.</string>
+    <string name="invalid_parameter_error_string">Er is een onverwachte fout opgetreden in de toepassing die gebruikmaakt van Windows Azure AD Rights Management. Neem contact op met de technische ondersteuning van deze toepassing.</string>
+    <string name="invalid_pl_error_string">Er is een onverwachte fout opgetreden in de toepassing die gebruikmaakt van Windows Azure AD Rights Management. Neem contact op met de technische ondersteuning van deze toepassing.</string>
+    <string name="service_not_available_error_string">Er is een fout opgetreden tijdens het tot stand brengen van een verbinding met Windows Azure AD Rights Management. Neem contact op met de beheerder als het probleem zich blijft voordoen.</string>
+    <string name="rest_service_not_enabled_error_string">Windows Azure AD Rights Management is niet ingeschakeld voor uw organisatie. Neem contact op met de beheerder voor meer informatie.</string>
+    <string name="on_prem_servers_not_supported_error_string">Omdat uw lokale AD RMS-server uw apparaat niet ondersteunt, kan deze inhoud niet worden ontsleuteld. Neem voor meer informatie contact op met de beheerder.</string>
+    <string name="auth_failed_with_token_error_string">Authenticatie is mislukt, ongeldig toegangstoken.</string>
+    <string name="invalid_dns_lookup_error_string">DNS-zoekactie is mislukt vanwege fouten in de DNS-serverinstallatie. Neem contact op met uw beheer als het probleem zich blijft voordoen.</string>
+    <string name="invalid_certificate_error_string">Er is een probleem met het beveiligingscertificaat van de service, wat kan duiden op een poging om u te misleiden of gegevens te onderscheppen die u naar de server verzendt. Als het probleem blijft bestaan, kunt u contact opnemen met uw beheerder.</string>
+    <string name="requires_internet_but_offline_only_error_string">U kunt deze inhoud niet bekijken zonder internetverbinding. Controleer uw verbinding voordat u het opnieuw probeert en controleer of uw app niet is ingesteld op de offlinemodus.</string>
+    <string name="sdk_error">Fout met Windows Azure AD Rights Management SDK</string>
+
+</resources>

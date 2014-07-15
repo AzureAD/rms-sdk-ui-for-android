@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Noe gikk galt under forsøk på å kontakte Windows Azure AD Rights Management. Kontakt administrator hvis problemet fortsetter.</string>
+    <string name="communication_error_string">Det var et problem med å logge deg på. Kontroller Internett-forbindelsen, og prøv på nytt.</string>
+    <string name="device_error_string">Enheten har ikke tillatelse til å bruke Windows Azure AD Rights Management. Kontakt administrator hvis du vil ha mer informasjon.</string>
+    <string name="no_publishing_rights_error_string">Vi beklager, men du har ikke tillatelse til å opprette nytt beskyttet innhold for denne organisasjonen. Prøv å logge på som en annen bruker, eller kontakt administrator for å få flere tillatelser.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Du har ikke tillatelse til å vise dette innholdet. Kontakt %s for å be om tillatelse.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Du har ikke tillatelse til å vise dette innholdet. Gå til %s for å be om tillatelse.</string>
+    <string name="user_rights_expired_contact_email_error_string">Du kan ikke vise dette innholdet fordi tidsgrensen er utløpt. Kontakt %s eller administrator for å fornye dette innholdet.</string>
+    <string name="user_rights_expired_contact_url_error_string">Du kan ikke vise dette innholdet fordi tidsgrensen er utløpt. Gå til %s, eller kontakt administrator for å fornye dette innholdet.</string>
+    <string name="unsupported_sdk_version_error_string">RMS-programvaren som brukes av dette programmet, må oppdateres. Kontakt teknisk kundestøtte for dette programmet eller administrator for å be om en oppdatering.</string>
+    <string name="invalid_parameter_error_string">Programmet som bruker Windows Azure AD Rights Management, gjorde noe uventet. Kontakt teknisk kundestøtte for dette programmet.</string>
+    <string name="invalid_pl_error_string">Programmet som bruker Windows Azure AD Rights Management, gjorde noe uventet. Kontakt teknisk kundestøtte for dette programmet.</string>
+    <string name="service_not_available_error_string">Noe gikk galt under forsøk på å kontakte Windows Azure AD Rights Management. Kontakt administrator hvis problemet fortsetter.</string>
+    <string name="rest_service_not_enabled_error_string">Windows Azure AD Rights Management er ikke aktivert for organisasjonen. Kontakt administrator hvis du vil ha mer informasjon.</string>
+    <string name="on_prem_servers_not_supported_error_string">Den lokale AD RMS-serveren støtter ikke enheten din, så dette innholdet kan ikke dekrypteres. Kontakt administrator hvis du vil ha mer informasjon.</string>
+    <string name="auth_failed_with_token_error_string">Godkjenning mislyktes. Ugyldig tilgangstoken.</string>
+    <string name="invalid_dns_lookup_error_string">DNS-oppslag mislyktes på grunn av feil i DNS-serveroppsettet. Kontakt administrator hvis problemet fortsetter.</string>
+    <string name="invalid_certificate_error_string">Det oppstod et problem med sikkerhetssertifikatet til tjenesten, noe som kan indikere et forsøk på å lure deg eller fange opp data du sender til serveren. Kontakt administrator hvis problemet fortsetter.</string>
+    <string name="requires_internet_but_offline_only_error_string">Du kan ikke vise dette innholdet uten Internett-tilkobling. Kontroller tilkoblingen før du prøver på nytt, og at appen ikke kjører i frakoblet modus.</string>
+    <string name="sdk_error">Windows Azure AD Rights Management SDK-feil</string>
+
+</resources>

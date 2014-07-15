@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Hubo un problema al intentar contactar con Windows Azure AD Rights Management. Si el problema continúa, póngase en contacto con el administrador.</string>
+    <string name="communication_error_string">Hubo un problema al iniciar sesión. Compruebe su conexión a Internet e inténtelo de nuevo.</string>
+    <string name="device_error_string">Su dispositivo no tiene permisos para usar Windows Azure AD Rights Management. Póngase en contacto con el administrador para obtener más información.</string>
+    <string name="no_publishing_rights_error_string">Lo sentimos, no tiene permisos para crear nuevo contenido protegido para esta organización. Intente iniciar sesión con un usuario diferente o póngase en contacto con el administrador para obtener permisos adicionales.</string>
+    <string name="no_consumption_rights_contact_email_error_string">No tiene los permisos para ver este contenido. Póngase en contacto con %s para solicitar permisos.</string>
+    <string name="no_consumption_rights_contact_url_error_string">No tiene los permisos para ver este contenido. Visite %s para solicitar permisos.</string>
+    <string name="user_rights_expired_contact_email_error_string">No puede visualizar el contenido porque el límite de tiempo ha finalizado. Póngase en contacto con %s o con el administrador para renovar el contenido.</string>
+    <string name="user_rights_expired_contact_url_error_string">No puede visualizar el contenido porque el límite de tiempo ha finalizado. Visite %s o póngase en contacto con el administrador para renovar el contenido.</string>
+    <string name="unsupported_sdk_version_error_string">Es necesario actualizar el software de RMS usado por esta aplicación. Póngase en contacto con el soporte técnico para esta aplicación o con el administrador para solicitar una actualización.</string>
+    <string name="invalid_parameter_error_string">La aplicación que usa Windows Azure AD Rights Management hizo algo inesperado. Póngase en contacto con el soporte técnico para esta aplicación.</string>
+    <string name="invalid_pl_error_string">La aplicación que usa Windows Azure AD Rights Management hizo algo inesperado. Póngase en contacto con el soporte técnico para esta aplicación.</string>
+    <string name="service_not_available_error_string">Hubo un problema al intentar contactar con Windows Azure AD Rights Management. Si el problema continúa, póngase en contacto con el administrador.</string>
+    <string name="rest_service_not_enabled_error_string">Windows Azure AD Rights Management no se ha habilitado para la organización. Póngase en contacto con el administrador para obtener más información.</string>
+    <string name="on_prem_servers_not_supported_error_string">Su servidor de AD RMS local no es compatible con este dispositivo, por lo que este contenido no se puede descifrar. Póngase en contacto con el administrador para obtener más información.</string>
+    <string name="auth_failed_with_token_error_string">Error de autenticación, token de acceso incorrecto.</string>
+    <string name="invalid_dns_lookup_error_string">Error en la búsqueda DNS debido a errores en la configuración del servidor DNS. Si el problema continúa, póngase en contacto con el administrador.</string>
+    <string name="invalid_certificate_error_string">Hay un problema con el certificado de seguridad\del servicio, lo que puede indicar un intento de engañarle o de interceptar datos que envíe al servidor. Si el problema continúa, póngase en contacto con el administrador.</string>
+    <string name="requires_internet_but_offline_only_error_string">No puede\'t ver este contenido sin conexión a Internet. Compruebe su conexión antes de intentarlo de nuevo y que su aplicación no se encuentra en el modo sin conexión.</string>
+    <string name="sdk_error">Error de Windows Azure AD Rights Management SDK</string>
+
+</resources>

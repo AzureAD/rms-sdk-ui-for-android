@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Si è verificato un problema durante il tentativo di contattare Microsoft Azure AD Rights Management. Se il problema persiste, contattare l\'amministratore.</string>
+    <string name="communication_error_string">Si è verificato un problema durante l\'accesso. Controllare la connessione Internet e riprovare.</string>
+    <string name="device_error_string">Il dispositivo non è autorizzato all\'uso di Microsoft Azure AD Rights Management. Per ulteriori informazioni, contattare l\'amministratore.</string>
+    <string name="no_publishing_rights_error_string">Non si dispone dell\'autorizzazione necessaria per creare nuovo contenuto protetto per l\'organizzazione. Provare ad accedere con un altro nome utente o richiedere ulteriori autorizzazioni all\'amministratore.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Non si dispone delle autorizzazioni necessarie per visualizzare questo contenuto. Contattare %s per richiedere le autorizzazioni.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Non si dispone delle autorizzazioni per visualizzare questo contenuto. Per richiedere le autorizzazioni aggiuntive, visitare %s.</string>
+    <string name="user_rights_expired_contact_email_error_string">Il contenuto è scaduto e non può essere visualizzato. Per rinnovare il contenuto, contattare %s o l\'amministratore.</string>
+    <string name="user_rights_expired_contact_url_error_string">Il contenuto è scaduto e non può essere visualizzato. Per rinnovare il contenuto, visitare %s o contattare l\'amministratore.</string>
+    <string name="unsupported_sdk_version_error_string">Il software RMS usato da questa applicazione deve essere aggiornato. Per richiedere un aggiornamento, contattare il supporto tecnico dell\'applicazione o l\'amministratore.</string>
+    <string name="invalid_parameter_error_string">Si è verificato un comportamento imprevisto dell\'applicazione che usa Microsoft Azure AD Rights Management. Contattare il supporto tecnico dell\'applicazione.</string>
+    <string name="invalid_pl_error_string">Si è verificato un comportamento imprevisto dell\'applicazione che usa Microsoft Azure AD Rights Management. Contattare il supporto tecnico dell\'applicazione.</string>
+    <string name="service_not_available_error_string">Si è verificato un problema durante il tentativo di contattare Microsoft Azure AD Rights Management. Se il problema persiste, contattare l\'amministratore.</string>
+    <string name="rest_service_not_enabled_error_string">Microsoft Azure AD Rights Management non è abilitato per l\'organizzazione. Per ulteriori informazioni, contattare l\'amministratore.</string>
+    <string name="on_prem_servers_not_supported_error_string">Il dispositivo non è supportato nel server AD RMS locale. Impossibile decrittografare il contenuto. Per ulteriori informazioni, contattare l\'amministratore.</string>
+    <string name="auth_failed_with_token_error_string">L\'autenticazione non è riuscita. Il token di accesso non è corretto.</string>
+    <string name="invalid_dns_lookup_error_string">La ricerca del DNS non è riuscita a causa di errori nell\'installazione del server DNS. Se il problema persiste, contattare l\'amministratore.</string>
+    <string name="invalid_certificate_error_string">Si è verificato un problema con il certificato di sicurezza del servizio. Questo può indicare un tentativo di ingannare l\'utente o di intercettare i dati inviati dall\'utente al server. Se il problema persiste, contattare l\'amministratore.</string>
+    <string name="requires_internet_but_offline_only_error_string">Non è possibile visualizzare il contenuto senza una connessione Internet. Prima di riprovare, controllare la connessione e verificare che l\'app non sia in modalità offline.</string>
+    <string name="sdk_error">Errore di Microsoft Azure AD Rights Management SDK</string>
+
+</resources>

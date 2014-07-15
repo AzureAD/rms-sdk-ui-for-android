@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">尝试联系 Windows Azure AD Rights Management 时出错。如果问题仍然存在，请与管理员联系。</string>
+    <string name="communication_error_string">登录时发生问题。请检查 Internet 连接并重试。</string>
+    <string name="device_error_string">不允许您的设备使用 Windows Azure AD Rights Management。有关详细信息，请与管理员联系。</string>
+    <string name="no_publishing_rights_error_string">抱歉，您无权为此组织创建新的受保护的内容。请尝试以其他用户身份登录，或者尝试与管理员联系以获取附加权限。</string>
+    <string name="no_consumption_rights_contact_email_error_string">您没有查看此内容的权限。请与 %s 联系以请求权限。</string>
+    <string name="no_consumption_rights_contact_url_error_string">您没有查看此内容的权限。请访问 %s 以请求权限。</string>
+    <string name="user_rights_expired_contact_email_error_string">由于期限已结束，您无法查看此内容。请与 %s 或管理员联系以续订此内容。</string>
+    <string name="user_rights_expired_contact_url_error_string">由于期限已结束，您无法查看此内容。请访问 %s 或与管理员联系以续订此内容。</string>
+    <string name="unsupported_sdk_version_error_string">需要更新此应用程序使用的 RMS 软件。请与此应用程序的技术支持或管理员联系以请求更新。</string>
+    <string name="invalid_parameter_error_string">使用 Windows Azure AD Rights Management 的应用程序执行了意外操作。请与此应用程序的技术支持联系。</string>
+    <string name="invalid_pl_error_string">使用 Windows Azure AD Rights Management 的应用程序执行了意外操作。请与此应用程序的技术支持联系。</string>
+    <string name="service_not_available_error_string">尝试联系 Windows Azure AD Rights Management 时出错。如果问题仍然存在，请与管理员联系。</string>
+    <string name="rest_service_not_enabled_error_string">没有为您的组织启用 Windows Azure AD Rights Management。有关更多详细信息，请与管理员联系。</string>
+    <string name="on_prem_servers_not_supported_error_string">本地 AD RMS 服务器不支持您的设备，因此无法对此内容进行解密。有关详细信息，请与管理员联系。</string>
+    <string name="auth_failed_with_token_error_string">身份验证失败，访问令牌不正确。</string>
+    <string name="invalid_dns_lookup_error_string">由于 DNS 服务器设置错误导致 DNS 查找失败。如果问题仍然存在，请与管理员联系。</string>
+    <string name="invalid_certificate_error_string">服务的安全证书存在一个问题，表明可能有人试图欺骗您或截获您向服务器发送的数据。如果问题仍然存在，请与管理员联系。</string>
+    <string name="requires_internet_but_offline_only_error_string">需进行 Internet 连接才能查看此内容。请先检查连接，然后重试，并确认应用程序不是在脱机模式下工作。</string>
+    <string name="sdk_error">Windows Azure AD Rights Management SDK 错误</string>
+
+</resources>

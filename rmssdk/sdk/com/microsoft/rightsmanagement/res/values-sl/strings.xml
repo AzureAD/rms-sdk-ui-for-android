@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Med vzpostavljanjem povezave s storitvijo Windows Azure AD Rights Management je prišlo do napake. Če težave ne morete odpraviti, se obrnite na skrbnika.</string>
+    <string name="communication_error_string">Pri vpisu je prišlo do težave. Preverite internetno povezavo in poskusite znova.</string>
+    <string name="device_error_string">Vaša naprava nima ustreznih dovoljenj za uporabo upravljanja Windows Azure AD Rights Management. Če želite več informacij, se obrnite na svojega skrbnika.</string>
+    <string name="no_publishing_rights_error_string">Žal nimate dovoljenj za ustvarjanje nove zaščitene vsebine za to organizacijo. Poskusite se vpisati kot drug uporabnik ali se za pridobitev dodatnih dovoljenj obrnite na skrbnika.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Za ogled te vsebine nimate dovoljenj. Obrnite se na osebo %s in zahtevajte dovoljenja.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Za ogled te vsebine nimate dovoljenj. Obiščite %s in zahtevajte dovoljenja.</string>
+    <string name="user_rights_expired_contact_email_error_string">Te vsebine si ne morete ogledati, ker je časovna omejitev potekla. Vsebino lahko obnovi %s ali skrbnik, zato se obrnite na enega od njiju.</string>
+    <string name="user_rights_expired_contact_url_error_string">Te vsebine si ne morete ogledati, ker je časovna omejitev potekla. Za obnovitev vsebine obiščite %s ali se obrnite na skrbnika.</string>
+    <string name="unsupported_sdk_version_error_string">Programsko opremo RMS, ki jo uporablja ta program, je treba posodobiti. Obrnite se na tehnično podporo za ta program ali na skrbnika in zahtevajte posodobitev.</string>
+    <string name="invalid_parameter_error_string">Prišlo je do nepričakovanega dogodka v programu, ki uporablja storitev Windows Azure AD Rights Management. Obrnite se na tehnično podporo za ta program.</string>
+    <string name="invalid_pl_error_string">Prišlo je do nepričakovanega dogodka v programu, ki uporablja storitev Windows Azure AD Rights Management. Obrnite se na tehnično podporo za ta program.</string>
+    <string name="service_not_available_error_string">Med vzpostavljanjem povezave s storitvijo Windows Azure AD Rights Management je prišlo do napake. Če težave ne morete odpraviti, se obrnite na skrbnika.</string>
+    <string name="rest_service_not_enabled_error_string">Windows Azure AD Rights Management za vašo organizacijo ni omogočen. Za dodatne podrobnosti se obrnite na skrbnika.</string>
+    <string name="on_prem_servers_not_supported_error_string">Vaš lokalni strežnik AD RMS ne podpira vaše naprave, zato te vsebine ni mogoče dešifrirati. Za več informacij se obrnite na skrbnika.</string>
+    <string name="auth_failed_with_token_error_string">Preverjanje pristnosti ni uspelo, ker žeton za dostop ni veljaven.</string>
+    <string name="invalid_dns_lookup_error_string">Iskanje DNS ni uspelo zaradi napak pri namestitvi strežnika DNS. Če težave ne uspete odpraviti, se obrnite na skrbnika.</string>
+    <string name="invalid_certificate_error_string">Z varnostnim potrdilom storitve je prišlo do težave, ki je lahko znak tega, da vas je skušal nekdo pretentati ali pa je skušal nekdo prestreči vaše podatke, ki jih pošljete strežniku. Če težave ne morete odpraviti, se obrnite na skrbnika.</string>
+    <string name="requires_internet_but_offline_only_error_string">Če si želite ogledati to vsebino, potrebujete internetno povezavo. Preden poskusite znova, preverite, ali imate vzpostavljeno internetno povezavo in ali program morda deluje v načinu brez povezave.</string>
+    <string name="sdk_error">Napaka kompleta za razvoj programske opreme Windows Azure AD Rights Management</string>
+
+</resources>

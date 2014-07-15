@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Sazinoties ar Windows Azure AD Rights Management, radās problēma. Ja problēma joprojām pastāv, sazinieties ar administratoru.</string>
+    <string name="communication_error_string">Pierakstīšanās laikā radās problēma. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz.</string>
+    <string name="device_error_string">Ierīcē nav atļauts lietot Windows Azure AD Rights Management. Lai saņemtu papildinformāciju, sazinieties ar administratoru.</string>
+    <string name="no_publishing_rights_error_string">Diemžēl jums nav attiecīgas atļaujas, lai veidotu jaunu aizsargāto saturu šajā uzņēmumā. Pierakstieties kā cits lietotājs vai sazinieties ar administratoru, lai iegūtu papildu atļaujas.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Jums nav attiecīgas atļaujas skatīt šo saturu. Lai pieprasītu atļaujas, sazinieties ar šo personu: %s.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Jums nav attiecīgas atļaujas skatīt šo saturu. Lai pieprasītu atļaujas, apmeklējiet vietni %s.</string>
+    <string name="user_rights_expired_contact_email_error_string">Jūs nevarat skatīt šo saturu, jo ir beidzies laika ierobežojums. Lai atjaunotu šo saturu, sazinieties ar kādu no šīm personām: %s vai administrators.</string>
+    <string name="user_rights_expired_contact_url_error_string">Jūs nevarat skatīt šo saturu, jo ir beidzies laika ierobežojums. Lai atjaunotu šo saturu, apmeklējiet vietni %s vai sazinieties ar administratoru.</string>
+    <string name="unsupported_sdk_version_error_string">Šajā lietojumprogrammā izmantoto RMS programmatūru nepieciešams atjaunināt. Lai pieprasītu atjauninājumu, sazinieties ar lietojumprogrammas tehniskā atbalsta dienestu vai administratoru.</string>
+    <string name="invalid_parameter_error_string">Lietojumprogrammā, kas izmanto Windows Azure AD Rights Management, radās neparedzēta kļūda. Sazinieties ar lietojumprogrammas tehniskā atbalsta dienestu.</string>
+    <string name="invalid_pl_error_string">Lietojumprogrammā, kas izmanto Windows Azure AD Rights Management, radās neparedzēta kļūda. Sazinieties ar lietojumprogrammas tehniskā atbalsta dienestu.</string>
+    <string name="service_not_available_error_string">Sazinoties ar Windows Azure AD Rights Management, radās problēma. Ja problēma joprojām pastāv, sazinieties ar administratoru.</string>
+    <string name="rest_service_not_enabled_error_string">Uzņēmumā nav iespējots pakalpojums Windows Azure AD Rights Management. Sazinieties ar administratoru, lai iegūtu papildinformāciju.</string>
+    <string name="on_prem_servers_not_supported_error_string">Vietējais AD RMS serveris neatbalsta ierīci, tādēļ šo saturu nevar atšifrēt. Sazinieties ar administratoru, lai iegūtu papildinformāciju.</string>
+    <string name="auth_failed_with_token_error_string">Autentifikācija neizdevās, jo tika izmantota nederīga piekļuves pilnvara.</string>
+    <string name="invalid_dns_lookup_error_string">DNS uzmeklēšana neizdevās DNS servera iestatīšanas kļūdu dēļ. Ja problēma joprojām pastāv, sazinieties ar administratoru.</string>
+    <string name="invalid_certificate_error_string">Radās pakalpojuma drošības sertifikāta problēma. Iespējams, šī problēma norāda uz mēģinājumu jūs apmuļķot vai pārtvert serverim sūtītos datus. Ja problēma joprojām pastāv, sazinieties ar administratoru.</string>
+    <string name="requires_internet_but_offline_only_error_string">Šo saturu nevar skatīt, ja nav pieejams interneta savienojums. Pirms mēģināsit vēlreiz, lūdzu, pārbaudiet interneta savienojumu un pārliecinieties, ka programma nedarbojas bezsaistes režīmā.</string>
+    <string name="sdk_error">Windows Azure AD Rights Management SDK kļūda</string>
+
+</resources>

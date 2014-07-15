@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Der opstod en fejl under forsøg på at oprette forbindelse til Microsoft Azure AD Rights Management. Kontakt administratoren, hvis problemet fortsætter.</string>
+    <string name="communication_error_string">Der opstod et problem under logon. Kontrollér internetforbindelsen, og prøv igen.</string>
+    <string name="device_error_string">Din enhed må ikke bruge Microsoft Azure AD Rights Management. Kontakt administratoren for at få flere oplysninger.</string>
+    <string name="no_publishing_rights_error_string">Vi beklager, men du har ikke tilladelse til at oprette nyt beskyttet indhold for denne organisation. Prøv at logge på som en anden bruger, eller kontakt din administrator for at få yderligere tilladelser.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Du har ikke tilladelse til at få vist dette indhold. Kontakt %s for at anmode om tilladelse.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Du har ikke tilladelse til at få vist dette indhold. Gå til %s for at anmode om tilladelse.</string>
+    <string name="user_rights_expired_contact_email_error_string">Du kan ikke få vist indholdet, da tidsperioden er udløbet. Kontakt %s eller administratoren for at forny indholdet.</string>
+    <string name="user_rights_expired_contact_url_error_string">Du kan ikke få vist indholdet, da tidsperioden er udløbet. Gå til %s, eller kontakt administratoren for at forny indholdet.</string>
+    <string name="unsupported_sdk_version_error_string">RMS-softwaren, der bruges af dette program, skal opdateres. Kontakt teknisk support eller administratoren for at anmode om en opdatering.</string>
+    <string name="invalid_parameter_error_string">Der blev udført en uventet handling i det program, der anvender Microsoft Azure AD Rights Management. Kontakt teknisk support for at få hjælp til dette program.</string>
+    <string name="invalid_pl_error_string">Der blev udført en uventet handling i det program, der anvender Microsoft Azure AD Rights Management. Kontakt teknisk support for at få hjælp til dette program.</string>
+    <string name="service_not_available_error_string">Der opstod en fejl under forsøg på at oprette forbindelse til Microsoft Azure AD Rights Management. Kontakt administratoren, hvis problemet fortsætter.</string>
+    <string name="rest_service_not_enabled_error_string">Microsoft Azure AD Rights Management er ikke aktiveret for din organisation. Kontakt administratoren for at få flere oplysninger.</string>
+    <string name="on_prem_servers_not_supported_error_string">Din lokale AD RMS-server understøtter ikke enheden, så indholdet kan ikke dekrypteres. Kontakt administratoren for at få flere oplysninger.</string>
+    <string name="auth_failed_with_token_error_string">Godkendelse mislykkedes, ugyldigt adgangstoken.</string>
+    <string name="invalid_dns_lookup_error_string">Søgningen i DNS mislykkes pga. fejl i konfigurationen af DNS-serveren. Kontakt administratoren, hvis problemet fortsætter.</string>
+    <string name="invalid_certificate_error_string">Der er et problem med tjenestens sikkerhedscertifikat, kan skyldes et forsøg på at narre dig eller opsnappe data, du sender til serveren. Kontakt administratoren, hvis problemet fortsætter.</string>
+    <string name="requires_internet_but_offline_only_error_string">Du kan ikke se dette indhold uden internetforbindelse. Kontrollér forbindelsen, før du prøver igen, og at din app ikke er i offlinetilstand.</string>
+    <string name="sdk_error">Fejl i Microsoft Azure AD Rights Management SDK</string>
+
+</resources>

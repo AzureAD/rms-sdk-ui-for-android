@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Pri pokuse o nadviazanie kontaktu so službou Windows Azure AD Rights Management sa vyskytla chyba. Ak problém pretrváva, obráťte sa na svojho správcu.</string>
+    <string name="communication_error_string">Pri prihlásení sa vyskytol problém. Skontrolujte internetové pripojenie a skúste to znova.</string>
+    <string name="device_error_string">Vaše zariadenie nemá povolenie používať službu Windows Azure AD Rights Management. Ďalšie informácie získate od svojho správcu.</string>
+    <string name="no_publishing_rights_error_string">Ľutujeme, na vytvorenie nového chráneného obsahu pre túto organizáciu nemáte povolenie. Skúste sa prihlásiť ako iný používateľ, prípadne požiadajte svojho správcu o ďalšie povolenia.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Na zobrazenie tohto obsahu nemáte povolenia. O povolenia požiadajte na adrese %s.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Na zobrazenie tohto obsahu nemáte povolenia. O povolenia požiadajte na stránke %s.</string>
+    <string name="user_rights_expired_contact_email_error_string">Tento obsah nemožno zobraziť, pretože uplynul časový limit. O obnovenie obsahu požiadajte na adrese %s alebo sa obráťte na svojho správcu.</string>
+    <string name="user_rights_expired_contact_url_error_string">Tento obsah nemožno zobraziť, pretože uplynul časový limit. O obnovenie obsahu požiadajte na stránke %s alebo sa obráťte na svojho správcu.</string>
+    <string name="unsupported_sdk_version_error_string">Vyžaduje sa aktualizácia softvéru RMS, ktorý používa táto aplikácia. Obráťte sa na technickú podporu pre túto aplikáciu alebo na svojho správcu a požiadajte o aktualizáciu.</string>
+    <string name="invalid_parameter_error_string">V aplikácii používajúcej službu Windows Azure AD Rights Management sa udialo niečo neočakávané. Obráťte sa na technickú podporu pre túto aplikáciu.</string>
+    <string name="invalid_pl_error_string">V aplikácii používajúcej službu Windows Azure AD Rights Management sa udialo niečo neočakávané. Obráťte sa na technickú podporu pre túto aplikáciu.</string>
+    <string name="service_not_available_error_string">Pri pokuse o nadviazanie kontaktu so službou Windows Azure AD Rights Management sa vyskytla chyba. Ak problém pretrváva, obráťte sa na svojho správcu.</string>
+    <string name="rest_service_not_enabled_error_string">Služba Windows Azure AD Rights Management nie je pre vašu organizáciu povolená. Ďalšie podrobnosti získate od svojho správcu.</string>
+    <string name="on_prem_servers_not_supported_error_string">Lokálny server AD RMS nepodporuje vaše zariadenie, preto tento obsah nemožno dešifrovať. Ďalšie informácie získate od svojho správcu.</string>
+    <string name="auth_failed_with_token_error_string">Overenie zlyhalo, nesprávny prístupový token.</string>
+    <string name="invalid_dns_lookup_error_string">Vyhľadávanie DNS zlyhalo, pretože sa vyskytli chyby v nastavení servera DNS. Ak problém pretrváva, obráťte sa na svojho správcu.</string>
+    <string name="invalid_certificate_error_string">Vyskytol sa problém s certifikátom zabezpečenia služby, čo môže naznačovať pokus o podvodné konanie alebo zachytenie údajov, ktoré odosielate na server. Ak problém pretrváva, obráťte sa na svojho správcu.</string>
+    <string name="requires_internet_but_offline_only_error_string">Bez internetového pripojenia nie je možné zobraziť tento obsah. Pred opätovným pokusom skontrolujte, či ste pripojení a či vaša aplikácia nefunguje v offline režime.</string>
+    <string name="sdk_error">Chyba súpravy SDK pre službu Windows Azure AD Rights Management</string>
+
+</resources>

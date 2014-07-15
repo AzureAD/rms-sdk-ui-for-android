@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="general_error_string">Bandant susisiekti su „Windows Azure AD Rights Management“ kilo problema. Jei problema išliks, kreipkitės į administratorių.</string>
+    <string name="communication_error_string">Prisijungiant kilo problema. Patikrinkite interneto ryšį ir bandykite dar kartą.</string>
+    <string name="device_error_string">Įrenginiui neleidžiama naudoti „Windows Azure AD Rights Management“. Jei reikia daugiau informacijos, kreipkitės į administratorių.</string>
+    <string name="no_publishing_rights_error_string">Atsiprašome, neturite teisės kurti naujo apsaugoto šios organizacijos turinio. Pamėginkite prisijungti kaip kitas vartotojas arba dėl papildomų teisių kreipkitės į administratorių.</string>
+    <string name="no_consumption_rights_contact_email_error_string">Neturite teisių peržiūrėti šį turinį. Kreipkitės į %s ir paprašykite suteikti teises.</string>
+    <string name="no_consumption_rights_contact_url_error_string">Neturite teisių peržiūrėti šį turinį. Apslankykite %s ir paprašykite suteikti teises.</string>
+    <string name="user_rights_expired_contact_email_error_string">Negalite peržiūrėti šio turinio, nes baigėsi skirtasis laikas. Kreipkitės į %s arba į administratorių, kad atnaujintų šį turinį.</string>
+    <string name="user_rights_expired_contact_url_error_string">Negalite peržiūrėti šio turinio, nes baigėsi skirtasis laikas. Apsilankykite %s arba kreipkitės į administratorių, kad atnaujintų šį turinį.</string>
+    <string name="unsupported_sdk_version_error_string">Šios programos naudojamą RMS programinę įrangą reikia atnaujinti. Kreipkitės į šios programos techninės priežiūros tarnybą arba administratorių ir paprašykite naujinimo.</string>
+    <string name="invalid_parameter_error_string">„Windows Azure AD Rights Management“ naudojanti programa atliko nenumatytų veiksmų. Kreipkitės į programos techninės priežiūros tarnybą.</string>
+    <string name="invalid_pl_error_string">„Windows Azure AD Rights Management“ naudojanti programa atliko nenumatytų veiksmų. Kreipkitės į programos techninės priežiūros tarnybą.</string>
+    <string name="service_not_available_error_string">Bandant susisiekti su „Windows Azure AD Rights Management“ kilo problema. Jei problema išliks, kreipkitės į administratorių.</string>
+    <string name="rest_service_not_enabled_error_string">„Windows Azure AD Rights Management“ jūsų organizacijoje neįjungta. Norėdami sužinoti daugiau kreipkitės į administratorių.</string>
+    <string name="on_prem_servers_not_supported_error_string">Vietinis AD RMS serveris nepalaiko jūsų įrenginio, todėl šio turinio neįmanoma iššifruoti. Jei reikia daugiau informacijos, kreipkitės į administratorių.</string>
+    <string name="auth_failed_with_token_error_string">Autentifikuoti nepavyko, netinkamas prieigos žetonas.</string>
+    <string name="invalid_dns_lookup_error_string">DNS peržvalgos atlikti nepavyko dėl DNS serverio sąrankos klaidų. Jei problema išliks, kreipkitės į administratorių.</string>
+    <string name="invalid_certificate_error_string">Kilo problema dėl tarnybos saugos sertifikato, tai gali reikšti, kad kažkas bando jus apgauti arba perimti duomenis, kuriuos siunčiate serveriui. Jei problema kartojasi, kreipkitės į administratorių.</string>
+    <string name="requires_internet_but_offline_only_error_string">Norint peržiūrėti šį turinį reikia interneto ryšio. Patikrinkite ryšį ir įsitikinkite, kad programėlė nedirba atjungties režimu, tada bandykite dar kartą.</string>
+    <string name="sdk_error">„Windows Azure AD Rights Management SDK“ klaida</string>
+
+</resources>

@@ -1,0 +1,1 @@
+Microsoft RMS SDK help is available here: http://msdn.microsoft.com/en-us/library/hh552972(v=vs.85).aspx
