@@ -1,11 +1,19 @@
-UI Library for AD RMS SDK v4 for Android 
+UI Library for Microsoft RMS SDK v4 for Android 
 ======================
 
-The UI Library for AD RMS SDK v4 for Android provides Android Activities that implement the required UI for the SDK functionality.  This library is optional and a developer may choose to build their own UI when using AD RMS SDK v4.
+
+The UI Library for Microsoft RMS SDK v4 for Android provides Android Activities that implement the required UI for the SDK functionality.  This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.
 This library contains the following Android Activities:
 * **EmailActivity**: Shows an email address input screen, which is required for operations like protection of files. RMS SDK expects to get the email address of the user who wants to protect data or files to redirect his organization sign-in portal.
 * **PolicyPickerActivity**: Shows a policy picker screen, where the user can choose RMS template or specify the permissions to create a protection policy and encrypt files.
 * **UserPolicyViewerActivity**: Shows the permissions that the user has for RMS protected data or file.
+
+
+**_Repository Structure_**
+* **uilib**: UI Library project for Microsoft RMS SDK v4 for Android
+* **rmssdk**:  Library project using Microsoft Rights Management SDK 4.0 package. You can download the package from here  http://go.microsoft.com/fwlink/?LinkId=404271. Please follow the instruction over here (TBD) to setup this library project.
+* **samples\azure-activedirectory-library-for-android**: A submodule of ADAL repository(https://github.com/AzureAD/azure-activedirectory-library-for-android/)
+* **samples\MsipcSampleApp**: A sample RMS complaint application demostrating use of uilib and rmssdk with ADAL.
 
 
 ## Prerequisites
@@ -28,13 +36,13 @@ samples\azure-activedirectory-library-for-android submodule.
 
 ### Setting up development environment
 
-1.	Go through usage guide of RMS SDK located here (TBD) to familiarize yourself with basic usage of AD RMS SDK v4.
-2.	Download ADRMS SDK v4 for Android Setup from http://go.microsoft.com/fwlink/?LinkId=404271. 
-4.	Import AD RMS SDK v4 project by following these instructions (TBD)
+1.	Go through usage guide of RMS SDK located here (TBD) to familiarize yourself with basic usage of Microsoft RMS SDK v4.
+2.	Download Microsoft RMS SDK v4 for Android Setup from http://go.microsoft.com/fwlink/?LinkId=404271. 
+4.	Import Microsoft RMS SDK v4 project by following these instructions (TBD)
 4.	Import uilib project. 
 5.	Import ADAL project. Follow the instructions here to setup ADAL project - https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/README.md
 **Note:** Rename _libs\compatibility-v4.jar_ to _libs\android-support-v4.jar_ in ADAL project
-6.	Add library reference of AD RMS SDK v4 project to uilib project and your application project.
+6.	Add library reference of Microsoft RMS SDK v4 project to uilib project and your application project.
 7.	Add library reference of uilib project to your application project.
 8.	Add library reference of ADAL project to your application project.
 9.	Add following Activities to your application's AndroidManifest.xml
