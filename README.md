@@ -56,12 +56,6 @@ samples\azure-activedirectory-library-for-android submodule.
             android:windowSoftInputMode="stateHidden" />
 ```
 
-### UI Activities
-
-The following Android Activities are provided in this UI library for AD RMS SDK V4 for Android.
-* **EmailActivity** – Shows a screen with email input which is required application. The returned email address can be used as emailId that is required for protection and consumption of RMS protected data or files.
-* **PolicyPickerActivity** - Takes the list of template descriptors (and optionally originally selected value of template descriptor) to display them on the screen. Once user selects a template descriptor the app can create a protection policy to protect and encrypt data or files. 
-* **UserPolicyViewerActivity** - Takes User Policy instance and renders the data on the screen. Also provides an edit button to capture user’s intent to edit the policy. The state of edit button (visible/invisible) is supplied by application. The click action of edit button is returned as output to application.
 
 ### Using Activities
 
