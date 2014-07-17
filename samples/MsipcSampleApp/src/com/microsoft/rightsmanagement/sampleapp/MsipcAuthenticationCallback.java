@@ -64,6 +64,8 @@ class MsipcAuthenticationCallback implements AuthenticationRequestCallback
     {
         mParentActivity = parentActivity;
         setADALKeyStore();
+        
+        //Note: Following values of are client_id and redirect_uri are for demo purpose only.
         mClientId = "com.microsoft.rightsmanagement.sampleapp";
         mRedirectURI = mClientId + "://authorize";
     }
