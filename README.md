@@ -2,50 +2,52 @@ UI Library for Microsoft RMS SDK v4 for Android
 ======================
 
 
-The UI Library for Microsoft RMS SDK v4 for Android provides Android Activities that implement the required UI for the SDK functionality.  This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.
-This library contains the following Android Activities:
-* **EmailActivity**: Shows an email address input screen, which is required for operations like protection of files. RMS SDK expects to get the email address of the user who wants to protect data or files to redirect his organization sign-in portal.
-* **PolicyPickerActivity**: Shows a policy picker screen, where the user can choose RMS template or specify the permissions to create a protection policy and encrypt files.
-* **UserPolicyViewerActivity**: Shows the permissions that the user has for RMS protected data or file.
+The UI Library for Microsoft RMS SDK v4 for Android provides Android Activities that implement the UI required for the SDK functionality.  This library is optional and a developer may choose to build their own UI when using Microsoft RMS SDK v4.
 
+##Features
 
-**_Repository Structure_**
-* **uilib**: UI Library project for Microsoft RMS SDK v4 for Android
-* **rmssdk**:  Library project using Microsoft Rights Management SDK 4.0 package. You can download the package from here  http://go.microsoft.com/fwlink/?LinkId=404271. Please follow the instruction over here (TBD) to setup this library project.
-* **samples\azure-activedirectory-library-for-android**: A submodule of ADAL repository(https://github.com/AzureAD/azure-activedirectory-library-for-android/)
-* **samples\MsipcSampleApp**: A sample RMS complaint application demostrating use of uilib and rmssdk with ADAL.
+This library provides following Android Activities:
+* **EmailActivity**: Shows an email address input screen, which is required for RMS operations like protection of files. RMS SDK expects to get the email address of the user who wants to protect data or files to redirect to his organization sign-in portal.
+* **PolicyPickerActivity**: Shows a policy picker screen, where the user can choose RMS template or specify the permissions to create a policy for protection of data or files.
+* **UserPolicyViewerActivity**: Shows the permissions that the user has on a RMS protected data or file.
 
+##Contributing
 
-## Prerequisites
+All code is licensed under MICROSOFT SOFTWARE LICENSE TERMS, MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES. We enthusiastically welcome contributions and feedback. You can clone the repo and start contributing now.
+
+##Download
+
+To get the source code of this library via git just type
+```
+git clone https://github.com/AzureAD/rms-sdk-ui-for-android.git
+cd ./rms-sdk-ui-for-android/src
+```
+
+## How to use this library
+
+### Prerequisites
 
 You must have downloaded and/or installed following software
 
 * Git
 * Android SDK 
 * AVD image or device running (API level 15) or higher
-* Microsoft Rights Management SDK  4.0 (RMS SDK). 
-  You can download this from  http://go.microsoft.com/fwlink/?LinkId=404271
-* Windows Azure Active Directory Authentication Library (ADAL) for Android . 
-  For more information on ADAL please refer to the ADAL documentation here. https://github.com/MSOpenTech/azure-activedirectory-library-for-android
-You may create a submodule of ADAL in your project.
-Sample app as under samples\ folder uses 
-samples\azure-activedirectory-library-for-android submodule.
+* Microsoft Rights Management SDK  4.0 (RMS SDK). You can download this from [here](http://go.microsoft.com/fwlink/?LinkId=404271)
+* Windows Azure Active Directory Authentication Library (ADAL) for Android. Visit [here](https://github.com/MSOpenTech/azure-activedirectory-library-for-android) more information on ADAL. However, you may use any authentication library that supports OAUTH2.
 
-
-## Usage
 
 ### Setting up development environment
 
-1.	Go through usage guide of RMS SDK located here (TBD) to familiarize yourself with basic usage of Microsoft RMS SDK v4.
-2.	Download Microsoft RMS SDK v4 for Android Setup from http://go.microsoft.com/fwlink/?LinkId=404271. 
-4.	Import Microsoft RMS SDK v4 project by following these instructions (TBD)
-4.	Import uilib project. 
-5.	Import ADAL project. Follow the instructions here to setup ADAL project - https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/README.md
-**Note:** Rename _libs\compatibility-v4.jar_ to _libs\android-support-v4.jar_ in ADAL project
-6.	Add library reference of Microsoft RMS SDK v4 project to uilib project and your application project.
-7.	Add library reference of uilib project to your application project.
-8.	Add library reference of ADAL project to your application project.
-9.	Add following Activities to your application's AndroidManifest.xml
+You may use any IDE, however following steps assume use of Eclipse ADT.
+
+1. First of all familiarize yourself with RMS SDK v4 [developer guidance](http://msdn.microsoft.com/en-us/library/dn758265\(v=vs.85\).aspx), [code examples](http://msdn.microsoft.com/en-us/library/dn758246\(v=vs.85\).aspx) and [API reference](http://msdn.microsoft.com/en-us/library/dn758245\(v=vs.85\).aspx)
+2. Download Microsoft RMS SDK v4 for Android from [here](from http://go.microsoft.com/fwlink/?LinkId=404271) and setup up your development environment following [this](http://msdn.microsoft.com/en-us/library/dn758247\(v=vs.85\).aspx) guidance. After this step your workspace should have atleast have two projects (your _application_ project and _com.microsoft.rightsmanagement_(_RMS SDK v4_) library project).
+3. Import UI library project (_uilib_) under _./rms-sdk-ui-for-android/_ directory. 
+4. Setup ADAL project by following instructions [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/README.md) and import it.
+5. Add library reference of _RMS SDK v4_ library project to _uilib_ project and your _application_ project.
+6. Add library reference of _uilib_ project to your _application_ project.
+7. Add library reference of _ADAL_ project to your _application_ project.
+8. Add following Activities to your application's AndroidManifest.xml
 
 ```XML
 <activity android:name="com.microsoft.rightsmanagement.ui.EmailActivity"
@@ -63,6 +65,21 @@ samples\azure-activedirectory-library-for-android submodule.
             android:theme="@style/Overlay"
             android:windowSoftInputMode="stateHidden" />
 ```
+### Setup workspace for msipcsampleapp
+Application under _./rms-sdk-ui-for-android/samples/msipcsampleapp_ demonstrates a sample RMS complaint application that uses RMS SDK v4, this UI library and ADAL. 
+This sample application uses a submodule of ADAL repository.** You need to perform following additional steps to get ADAL code via submodule
+```
+cd ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android
+git submodule init
+git submodule update
+```
+After that import following projects
+* **(com.microsoft.adal)** ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android/adal
+* **(com.microsoft.rightsmanagement)** ./rms-sdk-ui-for-android/external/rmssdk/sdk/com/microsoft/rightsmanagement
+* **(msipcsampleapp)** ./rms-sdk-ui-for-android/samples/msipcsampleapp
+* **(uilib)** ./rms-sdk-ui-for-android
+
+**Note** You may be required to add following two libraries to _ADAL(com.microsoft.adal)_ project (under _libs/_ folder) ([android-support-v4.jar](https://developer.android.com/tools/support-library/setup.html) and [gson.jar](https://code.google.com/p/google-gson/))
 
 
 ### Using Activities
@@ -138,12 +155,12 @@ public interface CompletionCallback<T>
 ```
 
 For other Activities, please find the following classes:
-/uilib/src/com/microsoft/rightsmanagement/ui/EmailActivity.java
-/uilib/src/com/microsoft/rightsmanagement/ui/PolicyPickerActivityResult.java
+_src/com/microsoft/rightsmanagement/ui/EmailActivity.java_
+_src/com/microsoft/rightsmanagement/ui/PolicyPickerActivityResult.java_
 
 
 ## Sample Usage
-Sample application included in the repository demonstrates the usage of this library. It is located at samples\MsipcSampleApp
+Sample application included in the repository demonstrates the usage of this library. It is located at _samples\MsipcSampleApp_. Following are some snippets from the sample application ordered to achieve a following scenario.
 
 ### Sample Scenario: Publish a file using a RMS template and show UserPolicy.
 **Step 1 : Receive email input from user by using EmailActivity**
