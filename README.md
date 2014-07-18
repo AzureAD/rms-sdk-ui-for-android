@@ -32,22 +32,38 @@ You must have downloaded and/or installed following software
 * Git
 * Android SDK 
 * AVD image or device running (API level 15) or higher
-* Microsoft Rights Management SDK  4.0 (RMS SDK). You can download this from [here](http://go.microsoft.com/fwlink/?LinkId=404271)
-* Windows Azure Active Directory Authentication Library (ADAL) for Android. Visit [here](https://github.com/MSOpenTech/azure-activedirectory-library-for-android) more information on ADAL. However, you may use any authentication library that supports OAUTH2.
+* Microsoft Rights Management SDK  4.0 (RMS SDK). You can download this from [here](http://go.microsoft.com/fwlink/?LinkId=404271).
+* Windows Azure Active Directory Authentication Library (ADAL) for Android. Visit [here](https://github.com/MSOpenTech/azure-activedirectory-library-for-android) for more information on ADAL. However, you may use any authentication library that supports OAUTH2.
 
+
+### Setup workspace for MsipcSampleApp
+Application under _./rms-sdk-ui-for-android/samples/msipcsampleapp_ demonstrates a sample RMS complaint application that uses RMS SDK v4, this UI library and ADAL. 
+This sample application uses a submodule of ADAL repository.** You need to perform following additional steps to get ADAL code via submodule
+```
+cd ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android
+git submodule init
+git submodule update
+```
+After that import following projects
+* **(com.microsoft.adal)** ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android/adal
+* **(com.microsoft.rightsmanagement)** ./rms-sdk-ui-for-android/external/rmssdk/sdk/com/microsoft/rightsmanagement
+* **(msipcsampleapp)** ./rms-sdk-ui-for-android/samples/msipcsampleapp
+* **(uilib)** ./rms-sdk-ui-for-android
+
+**Note** You may be required to add following two libraries to _ADAL(com.microsoft.adal)_ project: [android-support-v4.jar](https://developer.android.com/tools/support-library/setup.html) and [gson.jar](https://code.google.com/p/google-gson/). Please select the project and go to Properties->Java Build Path->Libraries->Add External JARs.. and add the required .jar files.
 
 ### Setting up development environment
 
+To build your own Android application using RMS SDK V4 please follow these steps. 
 You may use any IDE, however following steps assume use of Eclipse ADT.
 
-1. First of all familiarize yourself with RMS SDK v4 [developer guidance](http://msdn.microsoft.com/en-us/library/dn758265\(v=vs.85\).aspx), [code examples](http://msdn.microsoft.com/en-us/library/dn758246\(v=vs.85\).aspx) and [API reference](http://msdn.microsoft.com/en-us/library/dn758245\(v=vs.85\).aspx)
-2. Download Microsoft RMS SDK v4 for Android from [here](from http://go.microsoft.com/fwlink/?LinkId=404271) and setup up your development environment following [this](http://msdn.microsoft.com/en-us/library/dn758247\(v=vs.85\).aspx) guidance. After this step your workspace should have atleast have two projects (your _application_ project and _com.microsoft.rightsmanagement_(_RMS SDK v4_) library project).
-3. Import UI library project (_uilib_) under _./rms-sdk-ui-for-android/_ directory. 
-4. Setup ADAL project by following instructions [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/README.md) and import it.
-5. Add library reference of _RMS SDK v4_ library project to _uilib_ project and your _application_ project.
-6. Add library reference of _uilib_ project to your _application_ project.
-7. Add library reference of _ADAL_ project to your _application_ project.
-8. Add following Activities to your application's AndroidManifest.xml
+1. Download Microsoft RMS SDK v4 for Android from [here](from http://go.microsoft.com/fwlink/?LinkId=404271) and setup up your development environment following [this](http://msdn.microsoft.com/en-us/library/dn758247\(v=vs.85\).aspx) guidance. After this step your workspace should at least have two projects (your _application_ project and _com.microsoft.rightsmanagement_(_RMS SDK v4_) library project).
+2. Import UI library project (_uilib_) under _./rms-sdk-ui-for-android/_ directory. 
+3. Setup ADAL project by following instructions [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/README.md) and import it.
+4. Add library reference of _RMS SDK v4_ library project to _uilib_ project and your _application_ project.
+5. Add library reference of _uilib_ project to your _application_ project.
+6. Add library reference of _ADAL_ project to your _application_ project.
+7. Add following Activities to your application's AndroidManifest.xml
 
 ```XML
 <activity android:name="com.microsoft.rightsmanagement.ui.EmailActivity"
@@ -65,22 +81,7 @@ You may use any IDE, however following steps assume use of Eclipse ADT.
             android:theme="@style/Overlay"
             android:windowSoftInputMode="stateHidden" />
 ```
-### Setup workspace for msipcsampleapp
-Application under _./rms-sdk-ui-for-android/samples/msipcsampleapp_ demonstrates a sample RMS complaint application that uses RMS SDK v4, this UI library and ADAL. 
-This sample application uses a submodule of ADAL repository.** You need to perform following additional steps to get ADAL code via submodule
-```
-cd ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android
-git submodule init
-git submodule update
-```
-After that import following projects
-* **(com.microsoft.adal)** ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android/adal
-* **(com.microsoft.rightsmanagement)** ./rms-sdk-ui-for-android/external/rmssdk/sdk/com/microsoft/rightsmanagement
-* **(msipcsampleapp)** ./rms-sdk-ui-for-android/samples/msipcsampleapp
-* **(uilib)** ./rms-sdk-ui-for-android
-
-**Note** You may be required to add following two libraries to _ADAL(com.microsoft.adal)_ project (under _libs/_ folder) ([android-support-v4.jar](https://developer.android.com/tools/support-library/setup.html) and [gson.jar](https://code.google.com/p/google-gson/))
-
+**Note** For more information about the RMS SDK v4 please visit [developer guidance](http://msdn.microsoft.com/en-us/library/dn758265\(v=vs.85\).aspx), [code examples](http://msdn.microsoft.com/en-us/library/dn758246\(v=vs.85\).aspx) and [API reference](http://msdn.microsoft.com/en-us/library/dn758245\(v=vs.85\).aspx).
 
 ### Using Activities
 
