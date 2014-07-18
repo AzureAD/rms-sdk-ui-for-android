@@ -15,13 +15,6 @@ This library provides following Android Activities:
 
 All code is licensed under MICROSOFT SOFTWARE LICENSE TERMS, MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES. We enthusiastically welcome contributions and feedback. You can clone the repo and start contributing now.
 
-##Download
-
-To get the source code of this library via git just type
-```
-git clone https://github.com/AzureAD/rms-sdk-ui-for-android.git
-cd ./rms-sdk-ui-for-android/src
-```
 
 ## How to use this library
 
@@ -32,19 +25,25 @@ You must have downloaded and/or installed following software
 * Git
 * Android SDK 
 * AVD image or device running (API level 15) or higher
-* Microsoft Rights Management SDK  4.0 (RMS SDK). You can download this from [here](http://go.microsoft.com/fwlink/?LinkId=404271).
-* Windows Azure Active Directory Authentication Library (ADAL) for Android. Visit [here](https://github.com/MSOpenTech/azure-activedirectory-library-for-android) for more information on ADAL. However, you may use any authentication library that supports OAUTH2.
+* Eclipse ADT (You may use any IDE, however this guidance assumes use of Eclipse ADT)
 
+###Download
 
-### Setup workspace for MsipcSampleApp
+To get the source code of this library via git just type
+```
+git clone https://github.com/AzureAD/rms-sdk-ui-for-android.git
+cd ./rms-sdk-ui-for-android/src
+```
+
+### Setup workspace for msipcsampleapp
 Application under _./rms-sdk-ui-for-android/samples/msipcsampleapp_ demonstrates a sample RMS complaint application that uses RMS SDK v4, this UI library and ADAL. 
-This sample application uses a submodule of ADAL repository.** You need to perform following additional steps to get ADAL code via submodule
+This sample application uses a submodule of ADAL repository. You need to perform following additional steps to get ADAL code via submodule.
 ```
 cd ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android
 git submodule init
 git submodule update
 ```
-After that import following projects
+After that import following projects 
 * **(com.microsoft.adal)** ./rms-sdk-ui-for-android/external/azure-activedirectory-library-for-android/adal
 * **(com.microsoft.rightsmanagement)** ./rms-sdk-ui-for-android/external/rmssdk/sdk/com/microsoft/rightsmanagement
 * **(msipcsampleapp)** ./rms-sdk-ui-for-android/samples/msipcsampleapp
@@ -54,8 +53,7 @@ After that import following projects
 
 ### Setting up development environment
 
-To build your own Android application using RMS SDK V4 please follow these steps. 
-You may use any IDE, however following steps assume use of Eclipse ADT.
+To develop your own RMS complaint Android application using RMS SDK V4 please follow these steps. 
 
 1. Download Microsoft RMS SDK v4 for Android from [here](from http://go.microsoft.com/fwlink/?LinkId=404271) and setup up your development environment following [this](http://msdn.microsoft.com/en-us/library/dn758247\(v=vs.85\).aspx) guidance. After this step your workspace should at least have two projects (your _application_ project and _com.microsoft.rightsmanagement_(_RMS SDK v4_) library project).
 2. Import UI library project (_uilib_) under _./rms-sdk-ui-for-android/_ directory. 
