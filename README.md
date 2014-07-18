@@ -55,7 +55,7 @@ After that import following projects
 
 To develop your own RMS complaint Android application using RMS SDK V4 please follow these steps. 
 
-1. Download Microsoft RMS SDK v4 for Android from [here](from http://go.microsoft.com/fwlink/?LinkId=404271) and setup up your development environment following [this](http://msdn.microsoft.com/en-us/library/dn758247\(v=vs.85\).aspx) guidance. After this step your workspace should at least have two projects (your _application_ project and _com.microsoft.rightsmanagement_(_RMS SDK v4_) library project).
+1. Download Microsoft RMS SDK v4 for Android from [here](http://www.microsoft.com/en-ie/download/details.aspx?id=43673) and setup up your development environment following [this](http://msdn.microsoft.com/en-us/library/dn758247\(v=vs.85\).aspx) guidance. After this step your workspace should at least have two projects (your _application_ project and _com.microsoft.rightsmanagement_(_RMS SDK v4_) library project).
 2. Import UI library project (_uilib_) under _./rms-sdk-ui-for-android/_ directory. 
 3. Setup ADAL project by following instructions [here](https://github.com/AzureAD/azure-activedirectory-library-for-android/blob/master/README.md) and import it.
 4. Add library reference of _RMS SDK v4_ library project to _uilib_ project and your _application_ project.
