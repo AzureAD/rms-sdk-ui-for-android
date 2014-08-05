@@ -33,7 +33,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
-import com.microsoft.adal.AuthenticationContext;
+import com.microsoft.aad.adal.AuthenticationContext;
 import com.microsoft.rightsmanagement.AuthenticationRequestCallback;
 
 /**

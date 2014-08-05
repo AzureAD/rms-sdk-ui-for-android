@@ -30,12 +30,12 @@ import javax.crypto.spec.SecretKeySpec;
 import android.app.Activity;
 import android.os.Build;
 
-import com.microsoft.adal.AuthenticationCallback;
-import com.microsoft.adal.AuthenticationCancelError;
-import com.microsoft.adal.AuthenticationContext;
-import com.microsoft.adal.AuthenticationResult;
-import com.microsoft.adal.AuthenticationSettings;
-import com.microsoft.adal.PromptBehavior;
+import com.microsoft.aad.adal.AuthenticationCallback;
+import com.microsoft.aad.adal.AuthenticationCancelError;
+import com.microsoft.aad.adal.AuthenticationContext;
+import com.microsoft.aad.adal.AuthenticationResult;
+import com.microsoft.aad.adal.AuthenticationSettings;
+import com.microsoft.aad.adal.PromptBehavior;
 import com.microsoft.rightsmanagement.AuthenticationCompletionCallback;
 import com.microsoft.rightsmanagement.AuthenticationRequestCallback;
 import com.microsoft.rightsmanagement.ui.utils.Logger;

@@ -229,15 +229,9 @@ public class UserPolicyViewerFragment extends Fragment
     {
         if (mEditBtn != null)
         {
-            if (isEnabled)
-            {
-                mEditBtn.setVisibility(View.VISIBLE);
-                mEditBtnContainer.setVisibility(View.VISIBLE);
-            }
-            else
-            {
-                mEditBtnContainer.setVisibility(View.GONE);
-            }
+            int viewState = isEnabled ? View.VISIBLE : View.GONE;
+            mEditBtn.setVisibility(viewState);
+            mEditBtnContainer.setVisibility(viewState);
         }
     }
 

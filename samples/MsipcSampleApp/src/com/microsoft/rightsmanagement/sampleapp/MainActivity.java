@@ -20,7 +20,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
-import com.microsoft.adal.Logger;
+import com.microsoft.aad.adal.Logger;
 import com.microsoft.rightsmanagement.UserPolicy;
 import com.microsoft.rightsmanagement.sampleapp.R;
 import com.microsoft.rightsmanagement.sampleapp.MsipcTaskFragment.TaskStatus;
