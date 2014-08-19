@@ -75,7 +75,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
     }
 
     /**
-     * Processes the result of TemplateDescriptorPickerActivity started via startActivityForResult from the parent
+     * Processes the result of UserPolicyViewerActivity started via startActivityForResult from the parent
      * activity, and invokes the callback supplied to show(). This method must be called from parent Activity's
      * onActivityResult.
      * 

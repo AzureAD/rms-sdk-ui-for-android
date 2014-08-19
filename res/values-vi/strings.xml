@@ -62,7 +62,7 @@
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Hủy</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Bảo mật&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Trợ giúp&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Trợ giúp&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Địa chỉ email không hợp lệ</string>
 <string name="rms_logo_content_description">Dịch vụ Quản lý Quyền</string>
 <string name="email_instruction_text">Nhập địa chỉ email tổ chức của bạn</string>

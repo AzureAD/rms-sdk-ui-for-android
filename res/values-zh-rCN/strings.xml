@@ -62,7 +62,7 @@
 <string name="error_reporting_consent_ok_button_string">确定</string>
 <string name="error_reporting_consent_cancel_button_string">取消</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;隐私&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;帮助&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;帮助&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">电子邮件地址无效</string>
 <string name="rms_logo_content_description">权限管理服务</string>
 <string name="email_instruction_text">输入您组织的电子邮件地址</string>

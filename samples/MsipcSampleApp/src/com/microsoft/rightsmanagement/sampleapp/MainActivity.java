@@ -20,25 +20,31 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
-import com.microsoft.aad.adal.Logger;
-import com.microsoft.rightsmanagement.UserPolicy;
-import com.microsoft.rightsmanagement.sampleapp.R;
-import com.microsoft.rightsmanagement.sampleapp.MsipcTaskFragment.TaskStatus;
-import com.microsoft.rightsmanagement.sampleapp.TextEditorFragment.TextEditorMode;
+
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+
+import com.microsoft.aad.adal.Logger;
+import com.microsoft.rightsmanagement.UserPolicy;
+import com.microsoft.rightsmanagement.sampleapp.MsipcTaskFragment.TaskStatus;
+import com.microsoft.rightsmanagement.sampleapp.TextEditorFragment.TextEditorMode;
+import com.microsoft.rightsmanagement.ui.CustomerExperienceDataConsentDialogFragment;
+
 /**
  * The Class MainActivity.
  */
 public class MainActivity extends FragmentActivity implements TextEditorFragment.TextEditorFragmentEventListener,
         MsipcTaskFragment.TaskEventCallback, ProgressDialogFragment.ProgressDialogEventListener
 {
+    private static final String DISPLAY_EXPERIENCE_DATA_CONSENT_DIALOG = "DisplayExperienceDataConsentDialog";
     private MsipcTaskFragment mMsipcTaskFragment;
     private TextEditorFragment mTextEditorFragment;
     private Uri mUriOfFilePendingConsumption;
@@ -207,6 +213,8 @@ public class MainActivity extends FragmentActivity implements TextEditorFragment
             {
                 throw new RuntimeException("shouldn't reach here");
             }
+            // Show Log dialog only on first launch
+            showCustomerExperienceDataConsentDialogFragment(fragmentManager);
         }
     }
 
@@ -296,6 +304,27 @@ public class MainActivity extends FragmentActivity implements TextEditorFragment
         {   
             InputStream inputStream = getContentResolver().openInputStream(uri);
             mMsipcTaskFragment.startContentConsumptionFromMyOwnProtectedTextFileFormat(inputStream);
+        }
+    }
+
+    /**
+     * CustomerExperienceDataConsentDialogFragment dialog should be shown only once, This helper method decides if it
+     * has already been displayed, If not then displays it
+     * 
+     * @param fragmentManager
+     */
+    private void showCustomerExperienceDataConsentDialogFragment(FragmentManager fragmentManager)
+    {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        boolean showDialog = preferences.getBoolean(DISPLAY_EXPERIENCE_DATA_CONSENT_DIALOG, true);
+        if (showDialog)
+        {
+            CustomerExperienceDataConsentDialogFragment customerExperienceDataConsentDialogFragment =
+                    new CustomerExperienceDataConsentDialogFragment();
+            customerExperienceDataConsentDialogFragment.show(fragmentManager, TAG);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean(DISPLAY_EXPERIENCE_DATA_CONSENT_DIALOG, false);
+            editor.commit();
         }
     }
 }

@@ -62,7 +62,7 @@
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Cancelar</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacidade&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Ajuda&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ajuda&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Endereço de correio eletrónico inválido</string>
 <string name="rms_logo_content_description">Serviços de Gestão de Direitos</string>
 <string name="email_instruction_text">Introduza o endereço de correio eletrónico da sua organização</string>

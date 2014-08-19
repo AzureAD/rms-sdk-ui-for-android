@@ -62,7 +62,7 @@
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Zrušiť</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Ochrana osobných údajov&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Pomocník&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Pomocník&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Neplatná e-mailová adresa</string>
 <string name="rms_logo_content_description">Správa prístupových práv</string>
 <string name="email_instruction_text">Zadajte e-mailovú adresu pridelenú vašou organizáciou</string>

@@ -62,7 +62,7 @@
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Annuler</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Confidentialité&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Aide&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Aide&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Adresse de messagerie non valide</string>
 <string name="rms_logo_content_description">Services RMS</string>
 <string name="email_instruction_text">Entrez l\'adresse de messagerie de votre organisation</string>

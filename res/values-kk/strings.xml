@@ -62,7 +62,7 @@
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Бас тарту</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Құпиялылық&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Анықтама&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Анықтама&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Қате электрондық пошта мекенжайы</string>
 <string name="rms_logo_content_description">Құқықтарды басқару қызметтері</string>
 <string name="email_instruction_text">Ұйымыңыздың электрондық пошта мекенжайын енгізіңіз</string>

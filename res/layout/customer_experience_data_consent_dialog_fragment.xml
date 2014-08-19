@@ -1,0 +1,101 @@
+<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    
+    Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+    MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+    You may not use this file except in compliance with the License.
+    See the license for specific language governing permissions and limitations.
+    You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+    root directory of this project.
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customer_experience_data_consent_dialog_fragment_container"
+    android:layout_width="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+    <TextView
+        android:id="@+id/customer_experience_data_consent_dialog_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_black"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:text="@string/customer_experience_data_consent_dialog_header"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/customer_experience_data_consent_dialog_message_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="@string/customer_experience_data_consent_dialog_message"
+        android:background="@android:color/white"
+        android:textColor="@color/dark_black"
+        android:textSize="15sp">
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/customer_experience_data_consent_dialog_button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="120dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/customer_experience_data_consent_dialog_positive_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/dialog_button_selector"
+            android:textColor="@drawable/button_selector_text"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/customer_experience_data_consent_dialog_positive_button_txt"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        
+        <Button
+            android:id="@+id/customer_experience_data_consent_dialog_negative_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/dialog_button_selector"
+            android:textColor="@drawable/button_selector_text"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/customer_experience_data_consent_dialog_negative_button_txt"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+                
+         <Button
+            android:id="@+id/customer_experience_data_consent_dialog_neutral_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/dialog_button_selector"
+            android:textColor="@drawable/button_selector_text"
+            android:gravity="center"
+            android:minWidth="80dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/customer_experience_data_consent_dialog_neutral_button_txt"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+
+</LinearLayout>

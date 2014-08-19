@@ -62,10 +62,21 @@
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Cancel</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacy&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317564\'&gt;Help&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Help&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Invalid email address</string>
 <string name="rms_logo_content_description">Rights Management Services</string>
 <string name="email_instruction_text">Enter your organizational email address</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">Continue</string>
+<string name="customer_experience_data_consent_dialog_header">Improve RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Send information to help improve RMS? The information will not be used to identify or contact you.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Yes</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">No Thanks</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Learn more</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Use of documents that are protected by Microsoft Rights Management might be tracked by the sender and/or by their organization\'s IT administrator</string>
+<string name="service_url_consent_messsage">By clicking Accept, you authorize this application to connect to the following services:</string>
+<string name="dont_show_again_checkbox_text">Don\'t show this message again</string>
+<string name="cancel">Cancel</string>
+<string name="accept">Accept</string>
 </resources>
