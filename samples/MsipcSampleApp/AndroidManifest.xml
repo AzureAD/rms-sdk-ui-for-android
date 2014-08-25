@@ -138,6 +138,11 @@
             android:exported="false"
             android:theme="@style/Overlay"
             android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.microsoft.rightsmanagement.ui.ConsentActivity"
+            android:exported="false"
+            android:theme="@style/Overlay"
+            android:windowSoftInputMode="stateHidden" />
         <activity android:name="com.microsoft.aad.adal.AuthenticationActivity" >
         </activity>
     </application>

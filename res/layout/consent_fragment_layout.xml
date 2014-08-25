@@ -1,0 +1,158 @@
+<!--
+	Copyright © Microsoft Corporation, All Rights Reserved
+	
+	Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+	MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+	You may not use this file except in compliance with the License.
+	See the license for specific language governing permissions and limitations.
+	You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+	root directory of this project.
+	
+	THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+	OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+	ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+	PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/consent_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
+
+    <RelativeLayout
+        android:id="@+id/acceptAndCancelContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:minHeight="40dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancelConsentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="0dp"
+            android:background="@color/white"
+            android:minWidth="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/cancel"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/royal_blue"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/acceptConsentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="0dp"
+            android:background="@color/white"
+            android:minWidth="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/accept"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/royal_blue"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/notificationContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/acceptAndCancelContainer"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/black" />
+
+        <TextView
+            android:id="@+id/service_url_consent_messsage_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:text="@string/service_url_consent_messsage"
+            android:textColor="@color/dark_black"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/document_tracking_consent_message_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:text="@string/document_tracking_consent_message"
+            android:textColor="@color/dark_black"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkboxContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/privacyAndHelpContainer"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+         >
+
+        <CheckBox
+            android:id="@+id/dont_show_again_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:checked="true"
+            android:text="@string/dont_show_again_checkbox_text"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/privacyAndHelpContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/privacyHyperLinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/hyperlink_bg_selector"
+            android:padding="0dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="@color/royal_blue" />
+
+        <TextView
+            android:id="@+id/helpHyperLinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/hyperlink_bg_selector"
+            android:padding="0dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="@color/royal_blue" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -29,6 +29,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -43,6 +44,9 @@ import android.support.v4.app.Fragment;
 
 import com.microsoft.rightsmanagement.AuthenticationRequestCallback;
 import com.microsoft.rightsmanagement.CommonRights;
+import com.microsoft.rightsmanagement.Consent;
+import com.microsoft.rightsmanagement.ConsentCallback;
+import com.microsoft.rightsmanagement.ConsentCompletionCallback;
 import com.microsoft.rightsmanagement.CreationCallback;
 import com.microsoft.rightsmanagement.CustomProtectedInputStream;
 import com.microsoft.rightsmanagement.CustomProtectedOutputStream;
@@ -60,6 +64,7 @@ import com.microsoft.rightsmanagement.UserRights;
 import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.exceptions.ProtectionException;
 import com.microsoft.rightsmanagement.ui.CompletionCallback;
+import com.microsoft.rightsmanagement.ui.ConsentActivity;
 import com.microsoft.rightsmanagement.ui.EmailActivity;
 import com.microsoft.rightsmanagement.ui.PolicyPickerActivity;
 import com.microsoft.rightsmanagement.ui.PolicyPickerActivityResult;
@@ -179,6 +184,7 @@ public class MsipcTaskFragment extends Fragment
     public static final int EMAIL_INPUT_REQUEST = 0x1;
     public static final int POLICY_VIEW_REQUEST = 0x3;
     public static final int POLICY_PICK_REQUEST = 0x2;
+    public static final int CONSENT_REQUEST = 0x4;
     public static final String TAG = "MsipcTaskFragment";
     protected TaskStatus mLatestUnpostedTaskStatus;
     protected Object mLockOnLatestUnpostedTaskStatus = new Object();
@@ -188,6 +194,7 @@ public class MsipcTaskFragment extends Fragment
     private IAsyncControl mIAsyncControl;
     private String mProtectedContentFilePath;
     private AuthenticationRequestCallback mRmsAuthCallback;
+    private ConsentCallback mConsentCallback;
     private TaskEventCallback mTaskEventCallback;
     private UserPolicy mUserPolicy;
     private LinkedHashSet<String> sSupportedRights = new LinkedHashSet<String>(Arrays.asList(new String[] {
@@ -214,6 +221,9 @@ public class MsipcTaskFragment extends Fragment
                 break;
             case EMAIL_INPUT_REQUEST:
                 EmailActivity.onActivityResult(resultCode, data);
+                break;
+            case CONSENT_REQUEST:
+                ConsentActivity.onActivityResult(resultCode, data);
                 break;
             default:
                 // handle invalid request error
@@ -309,6 +319,7 @@ public class MsipcTaskFragment extends Fragment
         // Retain this fragment across configuration changes.
         setRetainInstance(true);
         updateTaskStatus(new TaskStatus(TaskState.NotStarted, null, false));
+        mConsentCallback = getConsentCallback();
         try
         {
             mRmsAuthCallback = App.getInstance().getRmsAuthenticationCallback(getActivity());
@@ -448,10 +459,12 @@ public class MsipcTaskFragment extends Fragment
                         Signal.ContentConsumed));
             }
         };
+        
         try
         {
             updateTaskStatus(new TaskStatus(TaskState.Starting, "Consuming content", true));
-            ProtectedFileInputStream.create(inputStream, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
+            
+            ProtectedFileInputStream.create(inputStream, null, mRmsAuthCallback, mConsentCallback, PolicyAcquisitionFlags.NONE,
                     protectedFileInputStreamCreationCallback);
         }
         catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
@@ -563,6 +576,8 @@ public class MsipcTaskFragment extends Fragment
                 return mApplicationContext;
             }
         };
+        
+
         try
         {
             // Step 1: Create a UserPolicy from serializedContentPolicy
@@ -573,7 +588,8 @@ public class MsipcTaskFragment extends Fragment
             inputStream.read(serializedContentPolicy);
             updateTaskStatus(new TaskStatus(TaskState.Starting,
                     "Acquring user policy to consume content from my own file format", true));
-            UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
+                        
+            UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, mConsentCallback, PolicyAcquisitionFlags.NONE,
                     userPolicyCreationCallbackFromSerializedContentPolicy);
         }
         catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
@@ -1104,6 +1120,53 @@ public class MsipcTaskFragment extends Fragment
         }
     }
 
+    /**
+     * helper method to create consentCallback
+     * 
+     * @return consentCallback
+     */
+    private ConsentCallback getConsentCallback()
+    {
+        return new ConsentCallback()
+        {
+            @Override
+            public void consents(Collection<Consent> consents, final ConsentCompletionCallback consentCompletionCallback)
+            {
+                // create callback to process result from consent screen
+                CompletionCallback<Collection<Consent>> consentActivityCompletionCallback = new CompletionCallback<Collection<Consent>>()
+                {
+                    @Override
+                    public void onCancel()
+                    {
+                        updateTaskStatus(new TaskStatus(TaskState.Cancelled, "Consent Activity was cancelled", false));
+                    }
+
+                    @Override
+                    public void onSuccess(Collection<Consent> item)
+                    {
+                        try
+                        {
+                            consentCompletionCallback.submitConsentsWithConsentResults(item);
+                        }
+                        catch (ProtectionException e)
+                        {
+                            updateTaskStatus(new TaskStatus(TaskState.Faulted, e.getLocalizedMessage(), true));
+                            return;
+                        }
+                    }
+                };
+                try
+                {
+                    // show the consent page
+                    ConsentActivity.show(CONSENT_REQUEST, getActivity(), consents, consentActivityCompletionCallback);
+                }
+                catch (InvalidParameterException e)
+                {
+                    updateTaskStatus(new TaskStatus(TaskState.Faulted, e.getLocalizedMessage(), true));
+                }
+            }
+        };
+    }
     /**
      * Update task status.
      * 
