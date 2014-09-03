@@ -28,7 +28,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.microsoft.rightsmanagement.ConsentType;
 import com.microsoft.rightsmanagement.ui.R;
 import com.microsoft.rightsmanagement.ui.model.ConsentModel;
 import com.microsoft.rightsmanagement.ui.utils.Helpers;
@@ -172,6 +171,7 @@ public class ConsentFragment extends Fragment
         {
             CheckBox checkbox = (CheckBox) view.findViewById(R.id.dont_show_again_checkbox);
             checkbox.setVisibility(View.VISIBLE);
+            mDontShowAgainCheckbox = checkbox;
         }
     }
     
@@ -189,11 +189,11 @@ public class ConsentFragment extends Fragment
                 Logger.d(TAG, "Accept button onClick called");
                 if (mDontShowAgainCheckbox != null && mDontShowAgainCheckbox.isShown())
                 {
-                    mConsentFragmentEventListner.onAcceptButtonClicked(mDontShowAgainCheckbox.isChecked());
+                    mConsentFragmentEventListner.onAcceptButtonClicked(!mDontShowAgainCheckbox.isChecked());
                 }
                 else
                 {
-                    mConsentFragmentEventListner.onAcceptButtonClicked(true);
+                    mConsentFragmentEventListner.onAcceptButtonClicked(false);
                 }
             }
         });
@@ -210,7 +210,7 @@ public class ConsentFragment extends Fragment
                 }
                 else
                 {
-                    mConsentFragmentEventListner.onCancelButtonClicked(false);
+                    mConsentFragmentEventListner.onCancelButtonClicked(true);
                 }
             }
         });
