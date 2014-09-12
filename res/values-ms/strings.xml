@@ -62,10 +62,21 @@
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Batal</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privasi&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Bantuan&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Help&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Alamat e-mel tidak sah</string>
 <string name="rms_logo_content_description">Perkhidmatan Pengurusan Hak</string>
 <string name="email_instruction_text">Masukkan alamat e-mel organisasi anda</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">Teruskan</string>
+<string name="customer_experience_data_consent_dialog_header">Menjadikan RMS Lebih Baik</string>
+<string name="customer_experience_data_consent_dialog_message">Hantar maklumat untuk membangtu menjadikan RMS lebih baik? Maklumat tersebut tidak akan digunakan untuk mengenal pasti atau menghubungi anda.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Ya</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Tidak</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Ketahui lebih lanjut</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Penggunaan dokumen yang dilindungi oleh Microsoft Rights Management mungkin dijejaki oleh penghantar dan/atau oleh pentadbir IT organisasi</string>
+<string name="service_url_consent_messsage">Dengan mengklik Terima, anda membenarkan aplikasi ini untuk bersambung kepada perkhidmatan yang berikut:</string>
+<string name="dont_show_again_checkbox_text">Jangan tunjukkan mesej ini lagi</string>
+<string name="cancel">Batal</string>
+<string name="accept">Terima</string>
 </resources>

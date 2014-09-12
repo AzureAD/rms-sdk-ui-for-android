@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Introduza o endereço de correio eletrónico da sua organização</string>
 <string name="email_hint_text">alguem@example.com</string>
 <string name="continue_button_text">Continuar</string>
+<string name="customer_experience_data_consent_dialog_header">Melhorar o RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Enviar informações para ajudar a melhorar o RMS? As informações não serão utilizadas para o identificar ou contactar.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Sim</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Não, Obrigado</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Obter mais informações</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">A utilização de documentos protegidos pelo Microsoft Rights Management pode ser controlada pelo remetente e/ou administrador de TI da sua organização</string>
+<string name="service_url_consent_messsage">Ao clicar em Aceitar, autoriza que esta aplicação se ligue aos seguintes serviços:</string>
+<string name="dont_show_again_checkbox_text">Não mostrar esta mensagem novamente</string>
+<string name="cancel">Cancelar</string>
+<string name="accept">Aceitar</string>
 </resources>

@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Zadejte e-mailovou adresu organizace.</string>
 <string name="email_hint_text">adresa@example.com</string>
 <string name="continue_button_text">Pokračovat</string>
+<string name="customer_experience_data_consent_dialog_header">Zdokonalit RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Chcete poslat informace pro účely zdokonalení RMS? Tyto informace nepoužijeme k vaší identifikaci ani k tomu, abychom vás kontaktovali.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Ano</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Ne, děkuji</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Další informace</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Použití dokumentů chráněných pomocí Microsoft Rights Management může sledovat jejich odesílatel a správce IT příslušné organizace.</string>
+<string name="service_url_consent_messsage">Pokud kliknete na Přijmout, bude mít tato aplikace oprávnění připojit se k těmto službám:</string>
+<string name="dont_show_again_checkbox_text">Tuto zprávu už nezobrazovat.</string>
+<string name="cancel">Zrušit</string>
+<string name="accept">Přijmout</string>
 </resources>

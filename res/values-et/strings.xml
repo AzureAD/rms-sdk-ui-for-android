@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Sisestage organisatsiooni meiliaadress</string>
 <string name="email_hint_text">keegi@example.com</string>
 <string name="continue_button_text">Jätka</string>
+<string name="customer_experience_data_consent_dialog_header">Täiusta RMS-i</string>
+<string name="customer_experience_data_consent_dialog_message">Kas saata teavet, mis aitab täiustada RMS-i? Teavet ei kasutata teie tuvastamiseks ega teiega ühenduse võtmiseks.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Jah</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Tänan, ei</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Lisateave</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Microsoft Rights Managementi kaitstud dokumentide kasutamist võib saatja ja/või tema organisatsiooni IT-administraator jälitada</string>
+<string name="service_url_consent_messsage">Kui klõpsate valikut Nõustu, lubate sellel rakendusel luua ühenduse järgmiste teenustega:</string>
+<string name="dont_show_again_checkbox_text">Ära seda teadet rohkem näita</string>
+<string name="cancel">Tühista</string>
+<string name="accept">Nõustu</string>
 </resources>

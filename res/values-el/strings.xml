@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Εισαγάγετε την εταιρική διεύθυνση ηλεκτρονικού ταχυδρομείου σας</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">Συνέχεια</string>
+<string name="customer_experience_data_consent_dialog_header">Βελτίωση του RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Να αποστέλλονται πληροφορίες για τη βελτίωση του RMS; Οι πληροφορίες δεν θα χρησιμοποιηθούν για την εξακρίβωση της ταυτότητάς σας ή για να επικοινωνήσουμε μαζί σας.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Ναι</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Όχι, ευχαριστώ</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Μάθετε περισσότερα</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Η χρήση εγγράφων που προστατεύονται από το Microsoft Rights Management ενδέχεται να εντοπιστεί από τον αποστολέα ή/και το διαχειριστή IT του οργανισμού του</string>
+<string name="service_url_consent_messsage">Εάν κάνετε κλικ στην επιλογή Αποδοχή, εξουσιοδοτείτε αυτήν την εφαρμογή να συνδέεται στις ακόλουθες υπηρεσίες:</string>
+<string name="dont_show_again_checkbox_text">Να μην εμφανιστεί ξανά αυτό το μήνυμα</string>
+<string name="cancel">Άκυρο</string>
+<string name="accept">Αποδοχή</string>
 </resources>

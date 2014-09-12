@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Nhập địa chỉ email tổ chức của bạn</string>
 <string name="email_hint_text">ai_do@example.com</string>
 <string name="continue_button_text">Tiếp tục</string>
+<string name="customer_experience_data_consent_dialog_header">Cải thiện RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Gửi thông tin để cải thiện RMS? Thông tin sẽ không được sử dụng để xác định hoặc liên hệ với bạn.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Có</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Không, cảm ơn</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Tìm hiểu thêm</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Việc sử dụng các tài liệu do Quản lý Quyền của Microsoft bảo vệ có thể được theo dõi bởi người gửi và/hoặc quản trị viên CNTT trong tổ chức của họ</string>
+<string name="service_url_consent_messsage">Bằng cách bấm Chấp nhận, bạn cấp quyền cho ứng dụng này kết nối với các dịch vụ sau:</string>
+<string name="dont_show_again_checkbox_text">Không hiển thị lại thông báo này</string>
+<string name="cancel">Hủy</string>
+<string name="accept">Chấp nhận</string>
 </resources>

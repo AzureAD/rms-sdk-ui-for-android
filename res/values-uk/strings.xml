@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Введіть адресу електронної пошти, отриману від організації</string>
 <string name="email_hint_text">abc@example.com</string>
 <string name="continue_button_text">Продовжити</string>
+<string name="customer_experience_data_consent_dialog_header">Удосконалення служби RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Надіслати інформацію, яка допоможе вдосконалити службу RMS? Цю інформацію не буде використано, щоб ідентифікувати вас або зв’язатися з вами.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Так</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Ні, дякую</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Докладно</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Використання документів, захищених за допомогою технології Microsoft Rights Management, може відстежувати відправник або IT-адміністратор його організації.</string>
+<string name="service_url_consent_messsage">Натискаючи кнопку "Прийняти", ви авторизуєте підключення цієї програми до таких служб:</string>
+<string name="dont_show_again_checkbox_text">Більше не показувати це повідомлення</string>
+<string name="cancel">Скасувати</string>
+<string name="accept">Прийняти</string>
 </resources>

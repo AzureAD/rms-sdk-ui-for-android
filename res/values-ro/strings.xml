@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Introduceți adresa dvs. de e-mail din cadrul organizației</string>
 <string name="email_hint_text">cineva@example.com</string>
 <string name="continue_button_text">Continuare</string>
+<string name="customer_experience_data_consent_dialog_header">Îmbunătățiți RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Trimiteți informații pentru a contribui la îmbunătățirea RMS? Informațiile nu vor fi utilizate pentru a vă identifica sau contacta.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Da</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Nu, mulțumesc</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Aflați mai multe</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Utilizarea documentelor care sunt protejate de Microsoft Rights Management poate fi urmărită de către expeditor și/sau de către administratorul IT al organizației sale</string>
+<string name="service_url_consent_messsage">Dacă faceți clic pe Accept, autorizați această aplicație să se conecteze la următoarele servicii:</string>
+<string name="dont_show_again_checkbox_text">Nu mai afișați acest mesaj</string>
+<string name="cancel">Anulare</string>
+<string name="accept">Acceptare</string>
 </resources>

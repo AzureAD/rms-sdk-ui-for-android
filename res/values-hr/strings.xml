@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Unesite svoju adresu e-pošte u tvrtki ili ustanovi</string>
 <string name="email_hint_text">netko@example.com</string>
 <string name="continue_button_text">Nastavi</string>
+<string name="customer_experience_data_consent_dialog_header">Poboljšanje RMS-a</string>
+<string name="customer_experience_data_consent_dialog_message">Želite li poslati informacije koje će pridonijeti poboljšanju RMS-a? Informacije se neće koristiti za utvrđivanje vašeg identiteta ni za stupanje s vama u kontakt.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Da</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Ne, hvala</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Dodatne informacije</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Pošiljatelj i/ili IT administrator njegove tvrtke ili ustanove mogu pratiti na koji način koristite dokumente zaštićene značajkom Microsoft Rights Management</string>
+<string name="service_url_consent_messsage">Klikom na Prihvaćam aplikaciji dopuštate povezivanje sa sljedećim servisima:</string>
+<string name="dont_show_again_checkbox_text">Ne prikazuj više ovu poruku</string>
+<string name="cancel">Odustani</string>
+<string name="accept">Prihvaćam</string>
 </resources>

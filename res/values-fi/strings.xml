@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Anna organisaatiosähköpostiosoitteesi</string>
 <string name="email_hint_text">joku@example.com</string>
 <string name="continue_button_text">Jatka</string>
+<string name="customer_experience_data_consent_dialog_header">Paranna RMS:ää</string>
+<string name="customer_experience_data_consent_dialog_message">Lähetä tietoja ja auta meitä kehittämään RMS:ää? Tietoja ei käytetä tunnistamiseen tai yhteydenottoihin.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Kyllä</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Ei kiitos</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Lue lisää</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Lähettäjä tai lähettäjän organisaation järjestelmänvalvoja voi seurata Microsoft Rights Managementilla suojattujen asiakirjojen käyttöä</string>
+<string name="service_url_consent_messsage">Klikkaamalla Hyväksy sallit että sovellus yhdistää seuraaviin palveluihin:</string>
+<string name="dont_show_again_checkbox_text">Älä näytä tätä viestiä uudelleen</string>
+<string name="cancel">Peruuta</string>
+<string name="accept">Hyväksy</string>
 </resources>

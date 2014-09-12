@@ -62,10 +62,21 @@
 <string name="error_reporting_consent_ok_button_string">ตกลง</string>
 <string name="error_reporting_consent_cancel_button_string">ยกเลิก</string>
 <string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;ความเป็นส่วนตัว&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;วิธีใช้&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Help&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">ที่อยู่อีเมลไม่ถูกต้อง</string>
 <string name="rms_logo_content_description">บริการจัดการสิทธิ์</string>
 <string name="email_instruction_text">ป้อนที่อยู่อีเมลองค์กรของคุณ</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">ทำต่อไป</string>
+<string name="customer_experience_data_consent_dialog_header">ปรับปรุง RMS ให้ดีขึ้น</string>
+<string name="customer_experience_data_consent_dialog_message">ต้องการส่งข้อมูลเพื่อช่วยในการปรับปรุง RMS ให้ดีขึ้นหรือไม่? จะไม่มีการใช้ข้อมูลนี้ในการระบุตัวตนหรือติดต่อคุณ</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">ใช่</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">ไม่ ขอบคุณ</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">เรียนรู้เพิ่มเติม</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">อาจมีการติดตามการใช้เอกสารที่ได้รับการปกป้องภายใต้ Microsoft Rights Management โดยผู้ส่งและ/หรือผู้ดูแลระบบ IT ขององค์กร</string>
+<string name="service_url_consent_messsage">โดยการคลิก ยอมรับ ถือว่า คุณอนุญาตให้แอปพลิเคชันนี้เชื่อมต่อเข้าบริการดังต่อไปนี้:</string>
+<string name="dont_show_again_checkbox_text">ไม่ต้องแสดงข้อความนี้อีกครั้ง</string>
+<string name="cancel">ยกเลิก</string>
+<string name="accept">ยอมรับ</string>
 </resources>

@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Ange din e-postadress i organisationen</string>
 <string name="email_hint_text">namn@example.com</string>
 <string name="continue_button_text">Fortsätt</string>
+<string name="customer_experience_data_consent_dialog_header">Förbättra RMS</string>
+<string name="customer_experience_data_consent_dialog_message">Skicka information för att förbättra RMS? Informationen används inte för att identifiera eller kontakta dig.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Ja</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Nej tack</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Läs mer</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Användning av dokument som skyddas med Microsoft Rights Management kan spåras av användaren eller av IT-administratören vid användarens organisation</string>
+<string name="service_url_consent_messsage">Genom att klicka på Acceptera godkänner du att detta program ansluter till följande tjänster:</string>
+<string name="dont_show_again_checkbox_text">Visa inte det här meddelandet igen</string>
+<string name="cancel">Avbryt</string>
+<string name="accept">Acceptera</string>
 </resources>

@@ -68,4 +68,15 @@
 <string name="email_instruction_text">請輸入您的組織電子郵件地址</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">繼續</string>
+<string name="customer_experience_data_consent_dialog_header">改善 RMS</string>
+<string name="customer_experience_data_consent_dialog_message">要傳送資訊以協助改善 RMS 嗎? 這個資訊不會被用來識別您的身分或連絡您。</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">是</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">不了，謝謝</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">深入了解</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">受 Microsoft Rights Management 保護的之文件的使用可能會受到傳送者及/或其組織的 IT 管理員追蹤</string>
+<string name="service_url_consent_messsage">按一下接受，即代表您授權這個應用程式連接下列服務:</string>
+<string name="dont_show_again_checkbox_text">不要再顯示這個訊息</string>
+<string name="cancel">取消</string>
+<string name="accept">接受</string>
 </resources>

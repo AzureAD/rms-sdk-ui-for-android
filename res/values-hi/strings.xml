@@ -68,4 +68,15 @@
 <string name="email_instruction_text">अपना व्यावसायिक ईमेल पता दर्ज करें</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">जारी रखें</string>
+<string name="customer_experience_data_consent_dialog_header">RMS को बेहतर बनाएँ</string>
+<string name="customer_experience_data_consent_dialog_message">RMS को बेहतर बनाने में मदद करने के लिए जानकारी भेजें? इस जानकारी का उपयोग आपकी पहचान करने या आपसे संपर्क करने के लिए नहीं किया जाएगा.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">हाँ</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">नहीं, धन्‍यवाद</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">अधिक जानें</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Microsoft Rights Management द्वारा संरक्षित दस्‍तावेज़ों के उपयोग को प्रेषक और/या उनके संगठन के IT व्‍यवस्‍थापक द्वारा ट्रैक किया जा सकता है</string>
+<string name="service_url_consent_messsage">स्‍वीकार करें पर क्‍लिक करके, आप इस एप्‍लिकेशन को निम्‍न सेवाओं से कनेक्‍ट होने के लिए अधिकृत करते हैं:</string>
+<string name="dont_show_again_checkbox_text">इस संदेश को दुबारा न दिखाएँ</string>
+<string name="cancel">रद्द करें</string>
+<string name="accept">स्‍वीकार करें</string>
 </resources>

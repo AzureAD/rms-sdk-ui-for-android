@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Voer het e-mailadres van uw organisatie in</string>
 <string name="email_hint_text">iemand@example.com</string>
 <string name="continue_button_text">Doorgaan</string>
+<string name="customer_experience_data_consent_dialog_header">RMS verbeteren</string>
+<string name="customer_experience_data_consent_dialog_message">Gegevens verzenden om RMS te helpen verbeteren? De gegevens worden niet gebruikt om u te identificeren of contact met u op te nemen.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Ja</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Nee bedankt</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Meer informatie</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Gebruik van documenten die worden beschermd met Microsoft Rights Management, wordt mogelijk bijgehouden door de afzender en/of de IT-beheerder van de organisatie</string>
+<string name="service_url_consent_messsage">Door op Accepteren te klikken, geeft u deze toepassing toestemming om verbinding te maken met de volgende services:</string>
+<string name="dont_show_again_checkbox_text">Dit bericht niet opnieuw weergeven</string>
+<string name="cancel">Annuleren</string>
+<string name="accept">Accepteren</string>
 </resources>

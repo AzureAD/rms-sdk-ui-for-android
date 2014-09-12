@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Angiv din organisationsmailadresse</string>
 <string name="email_hint_text">nogen@example.com</string>
 <string name="continue_button_text">Fortsæt</string>
+<string name="customer_experience_data_consent_dialog_header">Gør RMS bedre</string>
+<string name="customer_experience_data_consent_dialog_message">Vil du sende oplysninger som en hjælp til at forbedre RMS? Oplysningerne bruges ikke til at identificere eller kontakte dig.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Ja</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Nej tak</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Få mere at vide</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Brug af dokumenter, der er beskyttet af Microsoft Rights Management kan evt. spores af afsenderen og/eller af organisationens it-administrator</string>
+<string name="service_url_consent_messsage">Når du klikker på Jeg accepterer, tillader du, at dette program opretter forbindelse til følgende tjenester:</string>
+<string name="dont_show_again_checkbox_text">Vis ikke denne meddelelse igen</string>
+<string name="cancel">Annuller</string>
+<string name="accept">Jeg accepterer</string>
 </resources>

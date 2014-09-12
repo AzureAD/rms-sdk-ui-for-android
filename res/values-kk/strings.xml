@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Ұйымыңыздың электрондық пошта мекенжайын енгізіңіз</string>
 <string name="email_hint_text">tekseru@example.com</string>
 <string name="continue_button_text">Жалғастыру</string>
+<string name="customer_experience_data_consent_dialog_header">RMS жақсарту</string>
+<string name="customer_experience_data_consent_dialog_message">RMS ажқсарту анықтамасы туралы ақпарат жіберу қажет пе? Ақпарат идентификациялау немесе хабарласу үшін пайдаланылмайды.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Иә</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">Жоқ, рақмет!</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Қосымша ақпарат алу</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">Microsoft Rights Management бағдарламасымен қорғалған құжаттардың пайдалануын жіберуші және/немесе ұйымның АТ әкімшісі бақылауы мүмкін</string>
+<string name="service_url_consent_messsage">«Қабылдау» түймешігін басу арқылы бағдарламаға келесі қызметтерге қосылуға рұқсат бересіз:</string>
+<string name="dont_show_again_checkbox_text">Бұл хабарда енді көрсетпеу</string>
+<string name="cancel">Бас тарту</string>
+<string name="accept">Қабылдау</string>
 </resources>

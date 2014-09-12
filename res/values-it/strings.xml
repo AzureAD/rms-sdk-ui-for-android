@@ -68,4 +68,15 @@
 <string name="email_instruction_text">Immettere l\'indirizzo di posta aziendale</string>
 <string name="email_hint_text">prova@example.com</string>
 <string name="continue_button_text">Continua</string>
+<string name="customer_experience_data_consent_dialog_header">Migliora RMS</string>
+<string name="customer_experience_data_consent_dialog_message">È possibile inviare informazioni per contribuire a migliorare RMS. Queste informazioni non verranno usate per identificare l\'utente o per contattarlo.</string>
+<string name="customer_experience_data_consent_dialog_positive_button_txt">Sì</string>
+<string name="customer_experience_data_consent_dialog_negative_button_txt">No, grazie</string>
+<string name="customer_experience_data_consent_dialog_neutral_button_txt">Altre informazioni</string>
+<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="document_tracking_consent_message">L\'uso dei documenti protetti con Microsoft Rights Management potrebbe essere monitorato dal mittente e/o dall\'amministratore IT dell\'organizzazione</string>
+<string name="service_url_consent_messsage">Facendo clic su Accetto, si autorizza l\'applicazione a connettersi ai servizi seguenti:</string>
+<string name="dont_show_again_checkbox_text">Non visualizzare più questo messaggio</string>
+<string name="cancel">Annulla</string>
+<string name="accept">Accetto</string>
 </resources>
