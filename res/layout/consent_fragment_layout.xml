@@ -26,6 +26,8 @@
         android:id="@+id/acceptAndCancelContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:minHeight="40dp"
         android:orientation="horizontal" >
@@ -109,8 +111,7 @@
         android:layout_above="@+id/privacyAndHelpContainer"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:orientation="horizontal"
-         >
+        android:orientation="horizontal">
 
         <CheckBox
             android:id="@+id/dont_show_again_checkbox"
@@ -118,11 +119,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_margin="10dp"
+            android:paddingLeft="@dimen/padding_checkbox"
             android:background="@android:color/white"
             android:checked="true"
             android:text="@string/dont_show_again_checkbox_text"
             android:textColor="@color/dark_grey"
-            android:textSize="12sp" 
+            android:textSize="12sp"
             android:visibility="gone"/>
     </LinearLayout>
 
