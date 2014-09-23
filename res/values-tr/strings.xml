@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Evet</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Hayır, Teşekkürler</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Daha fazla bilgi edinin</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Microsoft Rights Management tarafından korunan belgelerin kullanımı, gönderen ve/veya kuruluşun BT yöneticisi tarafından takip edilebilir</string>
 <string name="service_url_consent_messsage">Kabul Et seçeneğini tıklayarak bu uygulamaya, aşağıdaki hizmetlere erişmesi için yetki vermiş olursunuz:</string>
 <string name="dont_show_again_checkbox_text">Bu iletiyi bir daha gösterme</string>

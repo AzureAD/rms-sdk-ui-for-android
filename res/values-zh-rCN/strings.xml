@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">是</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">不 谢谢</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">了解详细信息</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">受 Microsoft 权限管理保护的文档的使用可能被发送者和/或其组织的 IT 管理员跟踪</string>
 <string name="service_url_consent_messsage">通过单击“接受”，您授权此应用程序连接到以下服务：</string>
 <string name="dont_show_again_checkbox_text">不再显示此消息</string>

@@ -58,7 +58,10 @@ public class CallbackManager<T, S>
         try
         {
             Item item = sCallbackMap.get(requestCallbackId);
-            state = item.mState;
+            if (item != null)
+            {
+                state = item.mState;
+            }
         }
         finally
         {
@@ -82,7 +85,10 @@ public class CallbackManager<T, S>
         try
         {
             Item item = sCallbackMap.get(requestCallbackId);
-            request = item.mCompletetionCallback;
+            if (item != null)
+            {
+                request = item.mCompletetionCallback;
+            }
         }
         finally
         {

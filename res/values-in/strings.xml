@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Ya</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Tidak, Terima Kasih</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Pelajari lebih lanjut</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Penggunaan dokumen yang dilindungi oleh Pengelola Hak Microsoft mungkin dilacak oleh pengirim dan/atau administrator TI organisasi mereka</string>
 <string name="service_url_consent_messsage">Dengan mengeklik Terima, Anda memberi otorisasi pada aplikasi ini untuk terhubung ke layanan berikut:</string>
 <string name="dont_show_again_checkbox_text">Jangan tampilkan pesan ini lagi</string>

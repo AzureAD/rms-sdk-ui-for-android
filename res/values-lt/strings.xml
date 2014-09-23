@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Taip</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Ačiū, ne</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Sužinokite daugiau</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Dokumentų, kurie apsaugoti pagal „Microsoft“ teisių valdymo strategiją, naudojimą gali stebėti siuntėjas ir (arba) organizacijos IT administratorius</string>
 <string name="service_url_consent_messsage">Spustelėdami Sutinku, jūs leidžiate šiai programai prisijungti prie šių paslaugų:</string>
 <string name="dont_show_again_checkbox_text">Daugiau šio pranešimo nerodyti</string>

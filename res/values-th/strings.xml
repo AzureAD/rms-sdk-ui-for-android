@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">ใช่</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">ไม่ ขอบคุณ</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">เรียนรู้เพิ่มเติม</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">อาจมีการติดตามการใช้เอกสารที่ได้รับการปกป้องภายใต้ Microsoft Rights Management โดยผู้ส่งและ/หรือผู้ดูแลระบบ IT ขององค์กร</string>
 <string name="service_url_consent_messsage">โดยการคลิก ยอมรับ ถือว่า คุณอนุญาตให้แอปพลิเคชันนี้เชื่อมต่อเข้าบริการดังต่อไปนี้:</string>
 <string name="dont_show_again_checkbox_text">ไม่ต้องแสดงข้อความนี้อีกครั้ง</string>

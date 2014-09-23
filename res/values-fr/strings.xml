@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Oui</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Non merci</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">En savoir plus</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">L\'utilisation de documents protégés par Microsoft Rights Management peut être suivie par l\'expéditeur et/ou l\'administrateur informatique de son organisation</string>
 <string name="service_url_consent_messsage">En cliquant sur Accepter, vous autorisez cette application à se connecter aux services suivants :</string>
 <string name="dont_show_again_checkbox_text">Ne plus afficher ce message</string>

@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">はい</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">いいえ</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">詳細情報を見る</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Microsoft Rights Management によって保護されているドキュメントの使用は、送信者および/または送信者の組織の IT 管理者によって追跡される可能性があります。</string>
 <string name="service_url_consent_messsage">[同意する] をクリックすることにより、このアプリケーションが、以下のサービスに接続することを許可することになります。</string>
 <string name="dont_show_again_checkbox_text">今後、このメッセージを表示しない</string>

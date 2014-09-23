@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Да</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Не, благодаря</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Научете повече</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Използването на документи, защитени от Microsoft Rights Management, може да бъде проследено от подателя и/или от ИТ администратора на съответната организация</string>
 <string name="service_url_consent_messsage">Като щракнете върху „Приемам“, позволявате на приложението да се свърже със следните услуги:</string>
 <string name="dont_show_again_checkbox_text">Не показвай това съобщение отново</string>

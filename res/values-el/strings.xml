@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Ναι</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Όχι, ευχαριστώ</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Μάθετε περισσότερα</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Η χρήση εγγράφων που προστατεύονται από το Microsoft Rights Management ενδέχεται να εντοπιστεί από τον αποστολέα ή/και το διαχειριστή IT του οργανισμού του</string>
 <string name="service_url_consent_messsage">Εάν κάνετε κλικ στην επιλογή Αποδοχή, εξουσιοδοτείτε αυτήν την εφαρμογή να συνδέεται στις ακόλουθες υπηρεσίες:</string>
 <string name="dont_show_again_checkbox_text">Να μην εμφανιστεί ξανά αυτό το μήνυμα</string>

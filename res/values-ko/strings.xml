@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">예</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">아니요</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">자세한 정보</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Microsoft Rights Management로 보호되는 문서를 사용할 경우 보낸 사람 및/또는 조직의 IT 관리자가 이를 추적할 수 있습니다.</string>
 <string name="service_url_consent_messsage">[동의함]을 클릭하면 이 앱이 다음 서비스에 연결할 수 있는 권한을 부여합니다.</string>
 <string name="dont_show_again_checkbox_text">이 메시지를 다시 표시 안 함</string>

@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Ja</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Nei, takk</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Finn ut mer</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Bruk av dokumenter som er beskyttet av Microsoft Rights Management, kan spores av avsenderen og/eller IT-administratoren i organisasjonen</string>
 <string name="service_url_consent_messsage">Ved å klikke Godta godkjenner du at dette programmet kobler til følgende tjenester:</string>
 <string name="dont_show_again_checkbox_text">Ikke vis denne meldingen igjen</string>

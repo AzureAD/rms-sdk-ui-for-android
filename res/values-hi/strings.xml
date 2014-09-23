@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">हाँ</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">नहीं, धन्‍यवाद</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">अधिक जानें</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Microsoft Rights Management द्वारा संरक्षित दस्‍तावेज़ों के उपयोग को प्रेषक और/या उनके संगठन के IT व्‍यवस्‍थापक द्वारा ट्रैक किया जा सकता है</string>
 <string name="service_url_consent_messsage">स्‍वीकार करें पर क्‍लिक करके, आप इस एप्‍लिकेशन को निम्‍न सेवाओं से कनेक्‍ट होने के लिए अधिकृत करते हैं:</string>
 <string name="dont_show_again_checkbox_text">इस संदेश को दुबारा न दिखाएँ</string>

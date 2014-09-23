@@ -73,7 +73,7 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Yes</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">No Thanks</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Learn more</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
+<string name="learn_more_uri">http://go.microsoft.com/fwlink/?LinkId=317563</string>
 <string name="document_tracking_consent_message">Use of documents that are protected by Microsoft Rights Management might be tracked by the sender and/or by their organization\'s IT administrator</string>
 <string name="service_url_consent_messsage">By clicking Accept, you authorize this application to connect to the following services:</string>
 <string name="dont_show_again_checkbox_text">Don\'t show this message again</string>

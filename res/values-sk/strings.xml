@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Áno</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Nie, ďakujem</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Ďalšie informácie</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Používanie dokumentov chránených službou Microsoft Rights Management je možné sledovať podľa odosielateľa alebo správcu IT danej organizácie</string>
 <string name="service_url_consent_messsage">Kliknutím na položku Prijať poskytujete tejto aplikácii oprávnenie na pripojenie k nasledujúcim službám:</string>
 <string name="dont_show_again_checkbox_text">Túto správu viac nezobrazovať</string>

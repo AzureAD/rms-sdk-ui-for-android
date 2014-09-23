@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Kyllä</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Ei kiitos</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Lue lisää</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Lähettäjä tai lähettäjän organisaation järjestelmänvalvoja voi seurata Microsoft Rights Managementilla suojattujen asiakirjojen käyttöä</string>
 <string name="service_url_consent_messsage">Klikkaamalla Hyväksy sallit että sovellus yhdistää seuraaviin palveluihin:</string>
 <string name="dont_show_again_checkbox_text">Älä näytä tätä viestiä uudelleen</string>

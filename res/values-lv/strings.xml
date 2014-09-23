@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Jā</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Nē, paldies</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Uzzināt vairāk</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Lietojumprogrammā Microsoft Rights Management aizsargāto dokumentu sūtītājs un/vai IT administrators organizācijā, kura nosūtīja šos dokumentus, var sekot līdzi šo dokumentu lietošanai.</string>
 <string name="service_url_consent_messsage">Noklikšķinot uz Pieņemt, jūs sankcionējat šīs lietojumprogrammas savienojuma izveidi ar šiem pakalpojumiem:</string>
 <string name="dont_show_again_checkbox_text">Turpmāk nerādīt šo ziņojumu</string>

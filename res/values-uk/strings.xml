@@ -73,7 +73,6 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Так</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Ні, дякую</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Докладно</string>
-<string name="learn_more_uri">http://www.placeholder.com</string>
 <string name="document_tracking_consent_message">Використання документів, захищених за допомогою технології Microsoft Rights Management, може відстежувати відправник або IT-адміністратор його організації.</string>
 <string name="service_url_consent_messsage">Натискаючи кнопку "Прийняти", ви авторизуєте підключення цієї програми до таких служб:</string>
 <string name="dont_show_again_checkbox_text">Більше не показувати це повідомлення</string>
