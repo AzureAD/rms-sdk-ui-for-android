@@ -107,7 +107,11 @@ public class CustomerExperienceDataConsentDialogFragment extends DialogFragment
         
         // initialize the field for cases when fragment is recreated by OS
         // During recreation, OS would use default constructor and set the state
-        mRequestCallbackId = getArguments().getInt(REQUEST_CALLBACK_ID);
+        Bundle arguments = getArguments();
+        if(arguments != null && arguments.containsKey(REQUEST_CALLBACK_ID))
+        {
+            mRequestCallbackId = getArguments().getInt(REQUEST_CALLBACK_ID);
+        }
         
         LayoutInflater inflater = LayoutInflater.from(getActivity().getApplicationContext());
         View view = inflater.inflate(R.layout.customer_experience_data_consent_dialog_fragment, null);

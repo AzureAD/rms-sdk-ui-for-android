@@ -19,9 +19,6 @@ package com.microsoft.rightsmanagement.sampleapp;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-
-
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -31,11 +28,11 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-
 import com.microsoft.aad.adal.Logger;
 import com.microsoft.rightsmanagement.UserPolicy;
 import com.microsoft.rightsmanagement.sampleapp.MsipcTaskFragment.TaskStatus;
 import com.microsoft.rightsmanagement.sampleapp.TextEditorFragment.TextEditorMode;
+import com.microsoft.rightsmanagement.ui.CompletionCallback;
 import com.microsoft.rightsmanagement.ui.CustomerExperienceDataConsentDialogFragment;
 
 /**
@@ -44,7 +41,8 @@ import com.microsoft.rightsmanagement.ui.CustomerExperienceDataConsentDialogFrag
 public class MainActivity extends FragmentActivity implements TextEditorFragment.TextEditorFragmentEventListener,
         MsipcTaskFragment.TaskEventCallback, ProgressDialogFragment.ProgressDialogEventListener
 {
-    private static final String DISPLAY_EXPERIENCE_DATA_CONSENT_DIALOG = "DisplayExperienceDataConsentDialog";
+    private static final String SETTING_EXPERIENCE_DATA_CONSENT_DIALOG = "SETTING_EXPERIENCE_DATA_CONSENT_DIALOG";
+    private static final String EXPERIENCE_DATA_CONSENT_DIALOG_FRAG_TRANS_NAME = "EXPERIENCE_DATA_CONSENT_DIALOG_FRAG_TRANS_NAME";
     private MsipcTaskFragment mMsipcTaskFragment;
     private TextEditorFragment mTextEditorFragment;
     private Uri mUriOfFilePendingConsumption;
@@ -207,14 +205,29 @@ public class MainActivity extends FragmentActivity implements TextEditorFragment
             }
             else if (action.compareTo(Intent.ACTION_MAIN) == 0)
             {
+                // Show Log dialog only on first launch
+                showCustomerExperienceDataConsentDialogFragmentIfNeeded(new CompletionCallback<Void>()
+                {
+                    
+                    @Override
+                    public void onSuccess(Void item)
+                    {
+                        setToShowCustomerExperienceDataConsentDialogFragmentAgainOnStart(false);
+                    }
+                    
+                    @Override
+                    public void onCancel()
+                    {
+                        setToShowCustomerExperienceDataConsentDialogFragmentAgainOnStart(true);
+                        finish();
+                    }
+                });
                 createTextEditorFragment(TextEditorMode.NotEnforced, null);
             }
             else
             {
                 throw new RuntimeException("shouldn't reach here");
             }
-            // Show Log dialog only on first launch
-            showCustomerExperienceDataConsentDialogFragment(fragmentManager);
         }
     }
 
@@ -238,19 +251,36 @@ public class MainActivity extends FragmentActivity implements TextEditorFragment
         // handle pending uri
         if (mUriOfFilePendingConsumption != null)
         {
-            try
+         // Show Log dialog only on first launch
+            showCustomerExperienceDataConsentDialogFragmentIfNeeded(new CompletionCallback<Void>()
             {
-                handleUriInput(mUriOfFilePendingConsumption);
-            }
-            catch (FileNotFoundException e)
-            {
-                App.displayMessageDialog(getSupportFragmentManager(), e.getLocalizedMessage());
-            }
-            finally
-            {
-                // uri was handled. There is no pending uri now
-                mUriOfFilePendingConsumption = null;
-            }
+                
+                @Override
+                public void onSuccess(Void item)
+                {
+                    setToShowCustomerExperienceDataConsentDialogFragmentAgainOnStart(false);
+                    try
+                    {
+                        handleUriInput(mUriOfFilePendingConsumption);
+                    }
+                    catch (FileNotFoundException e)
+                    {
+                        App.displayMessageDialog(getSupportFragmentManager(), e.getLocalizedMessage());
+                    }
+                    finally
+                    {
+                        // uri was handled. There is no pending uri now
+                        mUriOfFilePendingConsumption = null;
+                    }
+                }
+                
+                @Override
+                public void onCancel()
+                {
+                    setToShowCustomerExperienceDataConsentDialogFragmentAgainOnStart(true);
+                    finish();
+                }
+            });
         }
     }
 
@@ -306,25 +336,38 @@ public class MainActivity extends FragmentActivity implements TextEditorFragment
             mMsipcTaskFragment.startContentConsumptionFromMyOwnProtectedTextFileFormat(inputStream);
         }
     }
-
+    
     /**
      * CustomerExperienceDataConsentDialogFragment dialog should be shown only once, This helper method decides if it
      * has already been displayed, If not then displays it
      * 
-     * @param fragmentManager
+     * @param completionCallback the completion callback
      */
-    private void showCustomerExperienceDataConsentDialogFragment(FragmentManager fragmentManager)
+    protected void showCustomerExperienceDataConsentDialogFragmentIfNeeded(CompletionCallback<Void> completionCallback)
     {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        boolean showDialog = preferences.getBoolean(DISPLAY_EXPERIENCE_DATA_CONSENT_DIALOG, true);
+        boolean showDialog = preferences.getBoolean(SETTING_EXPERIENCE_DATA_CONSENT_DIALOG, true);
         if (showDialog)
         {
-            CustomerExperienceDataConsentDialogFragment customerExperienceDataConsentDialogFragment =
-                    new CustomerExperienceDataConsentDialogFragment();
-            customerExperienceDataConsentDialogFragment.show(fragmentManager, TAG);
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putBoolean(DISPLAY_EXPERIENCE_DATA_CONSENT_DIALOG, false);
-            editor.commit();
+            CustomerExperienceDataConsentDialogFragment customerExperienceDataConsentDialogFragment = 
+                    CustomerExperienceDataConsentDialogFragment.newInstance(completionCallback);
+            customerExperienceDataConsentDialogFragment.show(getSupportFragmentManager(),
+                    EXPERIENCE_DATA_CONSENT_DIALOG_FRAG_TRANS_NAME);
+        }
+        else
+        {
+            completionCallback.onSuccess(null);
         }
     }
+    
+    /**
+     * Sets the SETTING_EXPERIENCE_DATA_CONSENT_DIALOG setting to true
+     */
+    protected void setToShowCustomerExperienceDataConsentDialogFragmentAgainOnStart(boolean showAgain)
+    {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(SETTING_EXPERIENCE_DATA_CONSENT_DIALOG, showAgain);
+        editor.commit();
+    }    
 }
