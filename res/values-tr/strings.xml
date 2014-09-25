@@ -68,8 +68,8 @@
 <string name="email_instruction_text">Kurumsal e-posta adresinizi girin</string>
 <string name="email_hint_text">birisi@example.com</string>
 <string name="continue_button_text">Devam</string>
-<string name="customer_experience_data_consent_dialog_header">RMS\'yi geliştir</string>
-<string name="customer_experience_data_consent_dialog_message">RMS\'nin geliştirilmesine yardımcı olması için bilgi gönderilsin mi? Bilgiler, sizi tanımlamak veya sizinle iletişim kurmak amacıyla kullanılmayacaktır.</string>
+<string name="customer_experience_data_consent_dialog_header">RMS'yi geliştir</string>
+<string name="customer_experience_data_consent_dialog_message">RMS'nin geliştirilmesine yardımcı olması için bilgi gönderilsin mi? Bilgiler, sizi tanımlamak veya sizinle iletişim kurmak amacıyla kullanılmayacaktır.</string>
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Evet</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Hayır, Teşekkürler</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Daha fazla bilgi edinin</string>

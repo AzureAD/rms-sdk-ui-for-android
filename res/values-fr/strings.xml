@@ -69,7 +69,7 @@
 <string name="email_hint_text">xyz@example.com</string>
 <string name="continue_button_text">Continuer</string>
 <string name="customer_experience_data_consent_dialog_header">Améliorer RMS</string>
-<string name="customer_experience_data_consent_dialog_message">Envoyer des informations pour contribuer à l\'amélioration de RMS ? Ces informations ne seront pas utilisées pour vous identifier ou vous contacter.</string>
+<string name="customer_experience_data_consent_dialog_message">Envoyer des informations pour contribuer à l'amélioration de RMS ? Ces informations ne seront pas utilisées pour vous identifier ou vous contacter.</string>
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Oui</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Non merci</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">En savoir plus</string>

@@ -45,7 +45,7 @@
 <string name="version_name">1.0.0.51970</string>
 <string name="owner_description_string">Полный доступ</string>
 <string name="view_description_string">Просмотр</string>
-<string name="edit_description_string">Изменение</string>
+<string name="edit_description_string">Правка</string>
 <string name="export_description_string">Сохранить как</string>
 <string name="extract_description_string">Копировать</string>
 <string name="print_description_string">Печать</string>
@@ -65,9 +65,9 @@
 <string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Справка&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Недопустимый адрес электронной почты</string>
 <string name="rms_logo_content_description">Службы Rights Management</string>
-<string name="email_instruction_text">Введите адрес электронной почты своей организации</string>
+<string name="email_instruction_text">Введите ваш адрес электронной почты в организации</string>
 <string name="email_hint_text">proverka@example.com</string>
-<string name="continue_button_text">Продолжить</string>
+<string name="continue_button_text">Далее</string>
 <string name="customer_experience_data_consent_dialog_header">Улучшить RMS</string>
 <string name="customer_experience_data_consent_dialog_message">Отправлять сведения для улучшения RMS? Они не будут использоваться для установления вашей личности или связи с вами.</string>
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Да</string>

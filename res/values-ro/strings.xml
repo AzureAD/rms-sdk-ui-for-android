@@ -28,7 +28,7 @@
 <string name="protection">Protecție</string>
 <string name="permissions">Permisiuni</string>
 <string name="your_permissions">Permisiuni</string>
-<string name="error_report_message">Ați depistat o problemă în SDK-ul Azure AD Rights Management. Ajutați-ne să îmbunătățim produsul trimițându-ne acest e-mail.</string>
+<string name="error_report_message">Ați depistat o problemă în SDK-ul Windows Azure AD Rights Management. Ajutați-ne să îmbunătățim produsul trimițându-ne acest e-mail.</string>
 <string name="policy_viewer_non_owner_content">Pentru acest fișier aveți următoarele permisiuni:</string>
 <string name="policy_viewer_owner_content">Pentru acest fișier ați setat următoarele permisiuni:</string>
 <string name="viewer">Vizualizator</string>
@@ -74,7 +74,7 @@
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Nu, mulțumesc</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Aflați mai multe</string>
 <string name="document_tracking_consent_message">Utilizarea documentelor care sunt protejate de Microsoft Rights Management poate fi urmărită de către expeditor și/sau de către administratorul IT al organizației sale</string>
-<string name="service_url_consent_messsage">Dacă faceți clic pe Accept, autorizați această aplicație să se conecteze la următoarele servicii:</string>
+<string name="service_url_consent_messsage">Dacă faceți clic pe Acceptare, autorizați această aplicație să se conecteze la următoarele servicii:</string>
 <string name="dont_show_again_checkbox_text">Nu mai afișați acest mesaj</string>
 <string name="cancel">Anulare</string>
 <string name="accept">Acceptare</string>

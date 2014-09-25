@@ -73,7 +73,7 @@
 <string name="customer_experience_data_consent_dialog_positive_button_txt">Igen</string>
 <string name="customer_experience_data_consent_dialog_negative_button_txt">Nem, köszönöm</string>
 <string name="customer_experience_data_consent_dialog_neutral_button_txt">Részletek</string>
-<string name="document_tracking_consent_message">A Microsoft tartalomvédelmi technológiájával védett dokumentumok használatát nyomon követheti a dokumentum küldője vagy az ő munkahelyének rendszergazdái.</string>
+<string name="document_tracking_consent_message">A Microsoft Rights Management által védett dokumentumok használatát nyomon követheti a dokumentum küldője vagy az ő munkahelyének rendszergazdái.</string>
 <string name="service_url_consent_messsage">Az Elfogadom gombra kattintva engedélyezi az alkalmazásnak az alábbi szolgáltatások elérését:</string>
 <string name="dont_show_again_checkbox_text">Ne jelenjen meg többé ez az üzenet</string>
 <string name="cancel">Mégse</string>
