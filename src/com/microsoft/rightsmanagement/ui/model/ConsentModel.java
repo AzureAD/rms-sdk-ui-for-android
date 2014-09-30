@@ -62,8 +62,7 @@ public class ConsentModel implements Parcelable
     {
         setConsentsToShow(consents);
         mUrlsForURLConsent = getUrlsToDisplay(consents);
-        mShowCheckBox = (mShowConsentForServiceURL) ? true : false; // Currently show checkbox only for ServiceURL
-                                                                    // Consent
+        mShowCheckBox = true;
     }
 
     /**
