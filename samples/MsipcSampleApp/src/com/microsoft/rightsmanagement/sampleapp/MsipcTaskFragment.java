@@ -381,21 +381,12 @@ public class MsipcTaskFragment extends Fragment
                 }
             }
         };
-        try
+        UserPolicy userPolicy = mUserPolicy;
+        if (userPolicy != null)
         {
-            UserPolicy userPolicy = mUserPolicy;
-            if (userPolicy != null)
-            {
-                UserPolicyViewerActivity.show(POLICY_VIEW_REQUEST, getActivity(), userPolicy, sSupportedRights,
-                        mUserPolicy.isIssuedToOwner() ? UserPolicyViewerActivityRequestOption.EDIT_ALLOWED
-                                : UserPolicyViewerActivityRequestOption.NONE,
-                        userPolicyViewerActivityCompletionCallback);
-            }
-        }
-        catch (InvalidParameterException e)
-        {
-            Logger.e(TAG, "Invalid Parameter", "", e);
-            updateTaskStatus(new TaskStatus(TaskState.Faulted, e.getLocalizedMessage(), true));
+            UserPolicyViewerActivity.show(POLICY_VIEW_REQUEST, getActivity(), userPolicy, sSupportedRights, mUserPolicy
+                    .isIssuedToOwner() ? UserPolicyViewerActivityRequestOption.EDIT_ALLOWED
+                    : UserPolicyViewerActivityRequestOption.NONE, userPolicyViewerActivityCompletionCallback);
         }
     }
 
@@ -705,15 +696,7 @@ public class MsipcTaskFragment extends Fragment
         if (mEmailId == null || mEmailId.isEmpty())
         {
             updateTaskStatus(new TaskStatus(TaskState.Starting, "Getting user's email id", false));
-            try
-            {
-                EmailActivity.show(EMAIL_INPUT_REQUEST, getActivity(), emailActivityCompletionCallback);
-            }
-            catch (InvalidParameterException e)
-            {
-                Logger.e(TAG, "Invalid Parameter", "", e);
-                updateTaskStatus(new TaskStatus(TaskState.Faulted, e.getLocalizedMessage(), true));
-            }
+            EmailActivity.show(EMAIL_INPUT_REQUEST, getActivity(), emailActivityCompletionCallback);
         }
         else
         {
@@ -881,15 +864,8 @@ public class MsipcTaskFragment extends Fragment
                 }
             }
         };
-        try
-        {
-            PolicyPickerActivity.show(POLICY_PICK_REQUEST, getActivity(), templateDescriptors,
+        PolicyPickerActivity.show(POLICY_PICK_REQUEST, getActivity(), templateDescriptors,
                     originalTemplateDescriptor, policyPickerActivityCompletionCallback);
-        }
-        catch (InvalidParameterException e)
-        {
-            updateTaskStatus(new TaskStatus(TaskState.Faulted, e.getLocalizedMessage(), true));
-        }
     }
 
     /**
@@ -1155,15 +1131,8 @@ public class MsipcTaskFragment extends Fragment
                         }
                     }
                 };
-                try
-                {
-                    // show the consent page
-                    ConsentActivity.show(CONSENT_REQUEST, getActivity(), consents, consentActivityCompletionCallback);
-                }
-                catch (InvalidParameterException e)
-                {
-                    updateTaskStatus(new TaskStatus(TaskState.Faulted, e.getLocalizedMessage(), true));
-                }
+                // show the consent page
+                ConsentActivity.show(CONSENT_REQUEST, getActivity(), consents, consentActivityCompletionCallback);
             }
         };
     }
