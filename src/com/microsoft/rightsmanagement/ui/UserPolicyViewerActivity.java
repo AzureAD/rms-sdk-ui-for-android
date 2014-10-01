@@ -24,7 +24,6 @@ import android.os.Parcelable;
 import android.support.v4.app.FragmentTransaction;
 import com.microsoft.rightsmanagement.ui.R;
 import com.microsoft.rightsmanagement.UserPolicy;
-import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.model.UserPolicyModel;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
@@ -136,7 +135,6 @@ public class UserPolicyViewerActivity extends BaseActivity implements
                             LinkedHashSet<String> supportedRights,
                             int policyViewerActivityRequestOption,
                             CompletionCallback<Integer> policyViewerActivityCompletionCallback)
-            throws InvalidParameterException
     {
         Logger.ms(TAG, "show");
         parentActivity = validateActivityInputParameter(parentActivity);
@@ -166,14 +164,11 @@ public class UserPolicyViewerActivity extends BaseActivity implements
      * @throws InvalidParameterException the invalid parameter exception
      */
     private static int validatePolicyViewerActivityRequestOption(int policyViewerActivityRequestOption)
-            throws InvalidParameterException
     {
         if (policyViewerActivityRequestOption < UserPolicyViewerActivityRequestOption.NONE
                 || policyViewerActivityRequestOption > UserPolicyViewerActivityRequestOption.EDIT_ALLOWED)
         {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter policyViewerActivityRequestOption", "", exception);
-            throw exception;
+            throw new IllegalArgumentException("invalid parameter policyViewerActivityRequestOption");
         }
         return policyViewerActivityRequestOption;
     }
@@ -183,15 +178,12 @@ public class UserPolicyViewerActivity extends BaseActivity implements
      * 
      * @param userPolicy the user policy
      * @return the user policy
-     * @throws InvalidParameterException the invalid parameter exception
      */
-    private static UserPolicy validateUserPolicyInputParameter(UserPolicy userPolicy) throws InvalidParameterException
+    private static UserPolicy validateUserPolicyInputParameter(UserPolicy userPolicy)
     {
         if (userPolicy == null)
         {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter userPolicy", "", exception);
-            throw exception;
+            throw new IllegalArgumentException("invalid parameter userPolicy");
         }
         return userPolicy;
     }

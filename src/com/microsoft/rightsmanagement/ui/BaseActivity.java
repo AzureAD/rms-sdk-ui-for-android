@@ -16,7 +16,6 @@
 
 package com.microsoft.rightsmanagement.ui;
 
-import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.utils.Helpers;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
 
@@ -66,15 +65,12 @@ abstract class BaseActivity extends FragmentActivity
      * 
      * @param activity the activity
      * @return the activity
-     * @throws InvalidParameterException the invalid parameter exception
      */
-    protected static Activity validateActivityInputParameter(Activity activity) throws InvalidParameterException
+    protected static Activity validateActivityInputParameter(Activity activity)
     {
         if (activity == null)
         {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter activity", "", exception);
-            throw exception;
+            throw new IllegalArgumentException("activity is null");
         }
         return activity;
     }
@@ -84,16 +80,12 @@ abstract class BaseActivity extends FragmentActivity
      * @param <T> the generic type
      * @param completionCallback the completion callback
      * @return the completion callback
-     * @throws InvalidParameterException the invalid parameter exception
      */
     protected static <T> CompletionCallback<T> validateCompletionCallbackInputParameter(CompletionCallback<T> completionCallback)
-            throws InvalidParameterException
     {
         if (completionCallback == null)
         {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter completionCallback", "", exception);
-            throw exception;
+            throw new IllegalArgumentException("invalid parameter completionCallback");
         }
         return completionCallback;
     }

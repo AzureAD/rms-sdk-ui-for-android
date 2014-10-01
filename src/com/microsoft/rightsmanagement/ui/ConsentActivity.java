@@ -29,7 +29,6 @@ import android.support.v4.app.FragmentTransaction;
 import com.microsoft.rightsmanagement.Consent;
 import com.microsoft.rightsmanagement.ConsentResult;
 import com.microsoft.rightsmanagement.ConsentType;
-import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.model.ConsentModel;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
@@ -115,13 +114,11 @@ public class ConsentActivity extends BaseActivity implements ConsentFragmentEven
      * @param parentActivity
      * @param consents - consents collection containing serverurlconsent or documentTrackingConsent
      * @param emailActivityCompletionCallback
-     * @throws InvalidParameterException
      */
     public static void show(int requestCode,
                             Activity parentActivity,
                             Collection<Consent> consents,
                             CompletionCallback<Collection<Consent>> consentActivityCompletionCallback)
-            throws InvalidParameterException
     {
         Logger.ms(TAG, "show");
         parentActivity = validateActivityInputParameter(parentActivity);
@@ -143,16 +140,12 @@ public class ConsentActivity extends BaseActivity implements ConsentFragmentEven
      * 
      * @param consents consent collection
      * @return validated consent collection
-     * @throws InvalidParameterException the invalid parameter exception
      */
     private static Collection<Consent> validateConsentInputParamter(Collection<Consent> consents)
-            throws InvalidParameterException
     {
         if (consents == null)
         {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "Invalid parameter consents", "", exception);
-            throw exception;
+            throw new IllegalArgumentException("Invalid parameter consents");
         }
         
         List<Consent> consentsToHandle = new ArrayList<Consent>();
@@ -167,10 +160,7 @@ public class ConsentActivity extends BaseActivity implements ConsentFragmentEven
         
         if(consentsToHandle.isEmpty())
         {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "Invalid parameter consents does not contain any consents this activity can process", "",
-                    exception);
-            throw exception;            
+            throw new IllegalArgumentException("Invalid parameter consents does not contain any consents this activity can process");
         }
         
         return consentsToHandle;

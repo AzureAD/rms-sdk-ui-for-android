@@ -28,7 +28,6 @@ import android.support.v4.app.FragmentTransaction;
 import com.microsoft.rightsmanagement.ui.PolicyPickerActivityResult.PolicyPickerActivityResultType;
 import com.microsoft.rightsmanagement.ui.R;
 import com.microsoft.rightsmanagement.TemplateDescriptor;
-import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.model.TemplateDescriptorModel;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
 import com.microsoft.rightsmanagement.ui.utils.Logger;
@@ -149,14 +148,12 @@ public class PolicyPickerActivity extends BaseActivity implements
      * @param templateDescriptorList the template descriptor list
      * @param originalTemplateDescriptor the original template descriptor
      * @param pickerCompletionCallback the picker completion callback
-     * @throws InvalidParameterException the invalid parameter exception
      */
     public static void show(int requestCode,
                             Activity parentActivity,
                             List<TemplateDescriptor> templateDescriptorList,
                             TemplateDescriptor originalTemplateDescriptor,
                             CompletionCallback<PolicyPickerActivityResult> pickerCompletionCallback)
-            throws InvalidParameterException
     {
         Logger.ms(TAG, "show");
         parentActivity = validateActivityInputParameter(parentActivity);
@@ -188,16 +185,12 @@ public class PolicyPickerActivity extends BaseActivity implements
      * 
      * @param templateDescriptorList the template descriptor list
      * @return the list
-     * @throws InvalidParameterException the invalid parameter exception
      */
     private static List<TemplateDescriptor> validateTemplateDescriptorListInputParameter(List<TemplateDescriptor> templateDescriptorList)
-            throws InvalidParameterException
     {
         if (templateDescriptorList == null)
         {
-            InvalidParameterException exception = new InvalidParameterException();
-            Logger.e(TAG, "invalid parameter templateDescriptorList", "", exception);
-            throw exception;
+            throw new IllegalArgumentException("invalid parameter templateDescriptorList");
         }
         return templateDescriptorList;
     }

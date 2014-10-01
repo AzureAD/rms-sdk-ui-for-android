@@ -23,8 +23,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 import com.microsoft.rightsmanagement.ui.CompletionCallback;
 import com.microsoft.rightsmanagement.ui.utils.CallbackManager;
 import com.microsoft.rightsmanagement.ui.utils.Helpers;
@@ -97,12 +95,10 @@ public class EmailActivity extends BaseActivity implements EmailFragment.EmailFr
      * @param requestCode the request code to be returned when activity completes
      * @param parentActivity the parent activity
      * @param emailActivityCompletionCallback the email activity completion callback
-     * @throws InvalidParameterException the invalid parameter exception
      */
     public static void show(int requestCode,
                             Activity parentActivity,
                             CompletionCallback<String> emailActivityCompletionCallback)
-            throws InvalidParameterException
     {
         Logger.ms(TAG, "show");
         parentActivity = validateActivityInputParameter(parentActivity);

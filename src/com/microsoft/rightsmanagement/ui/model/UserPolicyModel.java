@@ -30,7 +30,6 @@ import android.content.res.Resources.NotFoundException;
 import android.os.Parcel;
 import android.os.Parcelable;
 import com.microsoft.rightsmanagement.UserPolicy;
-import com.microsoft.rightsmanagement.exceptions.InvalidParameterException;
 
 /**
  * Models User Policy.
@@ -75,11 +74,10 @@ public class UserPolicyModel implements Parcelable
      * @param userPolicy the user policy
      * @param supportedRights rights to check access for and display
      * @param applicationContext the application context
-     * @throws InvalidParameterException the invalid parameter exception
      */
     public UserPolicyModel(UserPolicy userPolicy,
                            LinkedHashSet<String> supportedRights,
-                           Context applicationContext) throws InvalidParameterException
+                           Context applicationContext)
     {
         mName = userPolicy.getName();
         mDescription = userPolicy.getDescription();
@@ -213,10 +211,8 @@ public class UserPolicyModel implements Parcelable
      * @param userPolicy the user policy
      * @param supportedRights rights to check access for and display
      * @param applicationContext the application context
-     * @throws InvalidParameterException the invalid parameter exception
      */
     private void makeEffectiveRights(UserPolicy userPolicy, LinkedHashSet<String> supportedRights, Context applicationContext)
-            throws InvalidParameterException
     {
         mEffectiveViewableRights = new ArrayList<RightAccessCheckModel>();
         for (String right : supportedRights)
