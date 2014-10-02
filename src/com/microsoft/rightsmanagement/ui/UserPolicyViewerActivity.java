@@ -61,7 +61,7 @@ public class UserPolicyViewerActivity extends BaseActivity implements
         public static final int EDIT_POLICY = 1;
         public static final int NONE = 0;
     }
-    protected static final String RESULT_POLICY_VIEWER = "RESULT_POLICY_VIEWER";
+    private static final String RESULT_POLICY_VIEWER = "RESULT_POLICY_VIEWER";
     private static final String REQUEST_RESULT_POLICY_VIEWER_OPTIONS = "REQUEST_RESULT_POLICY_VIEWER_OPTIONS";
     private static final String REQUEST_RESULT_USER_POLICY_MODEL = "REQUEST_RESULT_USER_POLICY_MODEL";
     private static CallbackManager<Integer, Void> sCallbackManager = new CallbackManager<Integer, Void>();
