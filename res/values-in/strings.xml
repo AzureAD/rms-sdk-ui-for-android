@@ -61,8 +61,8 @@
 <string name="error_reporting_consent_request_string">Maaf. Terjadi masalah. Dapatkah Anda mengirimkan log kesalahan ini agar kami dapat memperbaiki masalah tersebut?</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Batal</string>
-<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Kebijakan&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Bantuan&lt;/a&gt;</string>
+<string name="privacy_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Kebijakan&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Bantuan&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Alamat surel tidak valid</string>
 <string name="rms_logo_content_description">Rights Management Services (Layanan Pengelolaan Hak)</string>
 <string name="email_instruction_text">Masukkan alamat surel organisasi Anda</string>

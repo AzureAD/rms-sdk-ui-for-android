@@ -61,8 +61,8 @@
 <string name="error_reporting_consent_request_string">ขออภัย มีข้อผิดพลาดเกิดขึ้น คุณสามารถส่งบันทึกข้อผิดพลาดมาให้เราเพื่อแก้ไขปัญหาดังกล่าวได้หรือไม่</string>
 <string name="error_reporting_consent_ok_button_string">ตกลง</string>
 <string name="error_reporting_consent_cancel_button_string">ยกเลิก</string>
-<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;ความเป็นส่วนตัว&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;วิธีใช้&lt;/a&gt;</string>
+<string name="privacy_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkId=317563\'&gt;ความเป็นส่วนตัว&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;วิธีใช้&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">ที่อยู่อีเมลไม่ถูกต้อง</string>
 <string name="rms_logo_content_description">บริการจัดการสิทธิ์</string>
 <string name="email_instruction_text">ป้อนที่อยู่อีเมลองค์กรของคุณ</string>

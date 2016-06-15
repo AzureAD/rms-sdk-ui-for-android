@@ -61,8 +61,8 @@
 <string name="error_reporting_consent_request_string">हमें खेद है. एक त्रुटि हुई. क्या आप हमें त्रुटि लॉग भेज सकते हैं, ताकि हम समस्या को ठीक कर सकें?</string>
 <string name="error_reporting_consent_ok_button_string">ठीक</string>
 <string name="error_reporting_consent_cancel_button_string">रद्द करें</string>
-<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;गोपनीयता&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;मदद&lt;/a&gt;</string>
+<string name="privacy_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkId=317563\'&gt;गोपनीयता&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;मदद&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">अमान्य ईमेल पता</string>
 <string name="rms_logo_content_description">अधिकार प्रबंधन सेवाएँ</string>
 <string name="email_instruction_text">अपना व्यावसायिक ईमेल पता दर्ज करें</string>

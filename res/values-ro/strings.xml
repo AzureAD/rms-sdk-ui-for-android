@@ -61,8 +61,8 @@
 <string name="error_reporting_consent_request_string">A apărut o eroare. Ne puteți trimite jurnalele de erori pentru a putea rezolva problema?</string>
 <string name="error_reporting_consent_ok_button_string">OK</string>
 <string name="error_reporting_consent_cancel_button_string">Anulare</string>
-<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Confidențialitate&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ajutor&lt;/a&gt;</string>
+<string name="privacy_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Confidențialitate&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ajutor&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Adresă de e-mail nevalidă</string>
 <string name="rms_logo_content_description">Rights Management Services</string>
 <string name="email_instruction_text">Introduceți adresa dvs. de e-mail din cadrul organizației</string>

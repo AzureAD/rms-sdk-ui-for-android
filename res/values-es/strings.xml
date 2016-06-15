@@ -61,8 +61,8 @@
 <string name="error_reporting_consent_request_string">Lo sentimos. Se ha producido un error. ¿Puede enviarnos los registros de errores para que podamos solucionar el problema?</string>
 <string name="error_reporting_consent_ok_button_string">Aceptar</string>
 <string name="error_reporting_consent_cancel_button_string">Cancelar</string>
-<string name="privacy_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacidad&lt;/a&gt;</string>
-<string name="help_hyperlink">&lt;a href=\'http://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ayuda&lt;/a&gt;</string>
+<string name="privacy_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkId=317563\'&gt;Privacidad&lt;/a&gt;</string>
+<string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ayuda&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Dirección de correo electrónico no válida</string>
 <string name="rms_logo_content_description">Rights Management Services</string>
 <string name="email_instruction_text">Escribir su dirección de correo electrónico de la organización</string>
