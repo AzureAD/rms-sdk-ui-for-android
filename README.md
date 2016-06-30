@@ -377,20 +377,8 @@ CompletionCallback<Integer> userPolicyViewerActivityCompletionCallback = new Com
     }
 ```    
 
-## License
+## We Value and Adhere to the Microsoft Open Source Code of Conduct
 
-Copyright © Microsoft Corporation, All Rights Reserved
-
-Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
-MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
-You may not use this file except in compliance with the License.
-See the license for specific language governing permissions and limitations.
-You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
-root directory of this project.
-
-THIS CODE IS PROVIDED AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS
-OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
-ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
-PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 
