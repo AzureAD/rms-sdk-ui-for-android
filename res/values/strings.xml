@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Help&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Invalid email address</string>
 <string name="rms_logo_content_description">Rights Management Services</string>
-<string name="email_instruction_text">Enter your organizational email address</string>
+<string name="email_instruction_text">Work or school account</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">Continue</string>
 <string name="customer_experience_data_consent_dialog_header">Improve RMS</string>
