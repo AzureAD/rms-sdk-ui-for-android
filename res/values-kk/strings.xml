@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Анықтама&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Қате электрондық пошта мекенжайы</string>
 <string name="rms_logo_content_description">Құқықтарды басқару қызметтері</string>
-<string name="email_instruction_text">Ұйымыңыздың электрондық пошта мекенжайын енгізіңіз</string>
+<string name="email_instruction_text">Жұмыс немесе оқу орны тіркелгісі</string>
 <string name="email_hint_text">tekseru@example.com</string>
 <string name="continue_button_text">Жалғастыру</string>
 <string name="customer_experience_data_consent_dialog_header">RMS жақсарту</string>

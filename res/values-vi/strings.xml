@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Trợ giúp&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Địa chỉ email không hợp lệ</string>
 <string name="rms_logo_content_description">Dịch vụ Quản lý Quyền</string>
-<string name="email_instruction_text">Nhập địa chỉ email tổ chức của bạn</string>
+<string name="email_instruction_text">Tài khoản cơ quan hoặc trường học</string>
 <string name="email_hint_text">ai_do@example.com</string>
 <string name="continue_button_text">Tiếp tục</string>
 <string name="customer_experience_data_consent_dialog_header">Cải thiện RMS</string>

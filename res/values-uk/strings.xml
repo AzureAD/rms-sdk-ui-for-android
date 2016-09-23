@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Довідка&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Недійсна адреса електронної пошти</string>
 <string name="rms_logo_content_description">Служба керування правами</string>
-<string name="email_instruction_text">Введіть адресу електронної пошти, отриману від організації</string>
+<string name="email_instruction_text">Робочий або навчальний обліковий запис</string>
 <string name="email_hint_text">abc@example.com</string>
 <string name="continue_button_text">Продовжити</string>
 <string name="customer_experience_data_consent_dialog_header">Удосконалення служби RMS</string>

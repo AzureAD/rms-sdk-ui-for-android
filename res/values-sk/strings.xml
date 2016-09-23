@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Pomocník&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Neplatná e-mailová adresa</string>
 <string name="rms_logo_content_description">Správa prístupových práv</string>
-<string name="email_instruction_text">Zadajte e-mailovú adresu pridelenú vašou organizáciou</string>
+<string name="email_instruction_text">Pracovné alebo školské konto</string>
 <string name="email_hint_text">meno@example.com</string>
 <string name="continue_button_text">Pokračovať</string>
 <string name="customer_experience_data_consent_dialog_header">Vylepšenie RMS</string>

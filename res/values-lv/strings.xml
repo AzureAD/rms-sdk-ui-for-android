@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Palīdzība&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Nederīga e-pasta adrese</string>
 <string name="rms_logo_content_description">Tiesību pārvaldības pakalpojums</string>
-<string name="email_instruction_text">Ievadiet uzņēmuma adresi</string>
+<string name="email_instruction_text">Darba vai mācību konts</string>
 <string name="email_hint_text">persona@example.com</string>
 <string name="continue_button_text">Turpināt</string>
 <string name="customer_experience_data_consent_dialog_header">Uzlabot lietojumprogrammu RMS</string>

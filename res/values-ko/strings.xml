@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;도움말&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">잘못된 전자 메일 주소</string>
 <string name="rms_logo_content_description">Rights Management 서비스</string>
-<string name="email_instruction_text">회사 전자 메일 주소 입력</string>
+<string name="email_instruction_text">회사 또는 학교 계정</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">계속</string>
 <string name="customer_experience_data_consent_dialog_header">RMS 개선</string>

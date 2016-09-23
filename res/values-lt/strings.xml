@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Žinynas&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Neteisingas el. pašto adresas</string>
 <string name="rms_logo_content_description">„Rights Management Services“</string>
-<string name="email_instruction_text">Įveskite organizacijos el. pašto adresą</string>
+<string name="email_instruction_text">Darbo arba mokymo įstaigos paskyra</string>
 <string name="email_hint_text">kazkas@example.com</string>
 <string name="continue_button_text">Tęsti</string>
 <string name="customer_experience_data_consent_dialog_header">Pagerinti RMS</string>

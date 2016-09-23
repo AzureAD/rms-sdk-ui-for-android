@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;मदद&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">अमान्य ईमेल पता</string>
 <string name="rms_logo_content_description">अधिकार प्रबंधन सेवाएँ</string>
-<string name="email_instruction_text">अपना व्यावसायिक ईमेल पता दर्ज करें</string>
+<string name="email_instruction_text">कार्यालय या स्कूल का खाता</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">जारी रखें</string>
 <string name="customer_experience_data_consent_dialog_header">RMS को बेहतर बनाएँ</string>

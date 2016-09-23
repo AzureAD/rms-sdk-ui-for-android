@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Βοήθεια&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Μη έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου</string>
 <string name="rms_logo_content_description">Υπηρεσίες διαχείρισης δικαιωμάτων</string>
-<string name="email_instruction_text">Εισαγάγετε την εταιρική διεύθυνση ηλεκτρονικού ταχυδρομείου σας</string>
+<string name="email_instruction_text">Εταιρικός ή σχολικός λογαριασμός</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">Συνέχεια</string>
 <string name="customer_experience_data_consent_dialog_header">Βελτίωση του RMS</string>

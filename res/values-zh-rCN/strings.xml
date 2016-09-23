@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;帮助&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">电子邮件地址无效</string>
 <string name="rms_logo_content_description">Rights Management Services</string>
-<string name="email_instruction_text">输入您组织的电子邮件地址</string>
+<string name="email_instruction_text">工作或学校帐户</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">继续</string>
 <string name="customer_experience_data_consent_dialog_header">改进 RMS</string>

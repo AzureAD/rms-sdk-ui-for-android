@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ohje&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Virheellinen sähköpostiosoite</string>
 <string name="rms_logo_content_description">Oikeuksienhallintapalvelut</string>
-<string name="email_instruction_text">Anna organisaatiosähköpostiosoitteesi</string>
+<string name="email_instruction_text">Työ- tai koulutili</string>
 <string name="email_hint_text">joku@example.com</string>
 <string name="continue_button_text">Jatka</string>
 <string name="customer_experience_data_consent_dialog_header">Paranna RMS:ää</string>

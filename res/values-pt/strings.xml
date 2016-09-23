@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ajuda&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Endereço de email inválido</string>
 <string name="rms_logo_content_description">Serviços de Gerenciamento de Direitos</string>
-<string name="email_instruction_text">Insira seu email empresarial</string>
+<string name="email_instruction_text">Conta corporativa ou de estudante</string>
 <string name="email_hint_text">nome@example.com</string>
 <string name="continue_button_text">Continuar</string>
 <string name="customer_experience_data_consent_dialog_header">Melhorar o RMS</string>

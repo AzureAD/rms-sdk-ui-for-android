@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Справка&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Недопустимый адрес электронной почты</string>
 <string name="rms_logo_content_description">Службы Rights Management</string>
-<string name="email_instruction_text">Введите ваш адрес электронной почты в организации</string>
+<string name="email_instruction_text">Рабочая или учебная учетная запись</string>
 <string name="email_hint_text">proverka@example.com</string>
 <string name="continue_button_text">Далее</string>
 <string name="customer_experience_data_consent_dialog_header">Улучшить RMS</string>

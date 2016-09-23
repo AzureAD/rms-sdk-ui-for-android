@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ajuda&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Endereço de correio eletrónico inválido</string>
 <string name="rms_logo_content_description">Serviços de Gestão de Direitos</string>
-<string name="email_instruction_text">Introduza o endereço de correio eletrónico da sua organização</string>
+<string name="email_instruction_text">Conta escolar ou profissional</string>
 <string name="email_hint_text">alguem@example.com</string>
 <string name="continue_button_text">Continuar</string>
 <string name="customer_experience_data_consent_dialog_header">Melhorar o RMS</string>

@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Помощ&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Невалиден имейл адрес</string>
 <string name="rms_logo_content_description">Услуги за управление на правата</string>
-<string name="email_instruction_text">Въведете организационния си имейл адрес</string>
+<string name="email_instruction_text">Служебен или учебен акаунт</string>
 <string name="email_hint_text">ime@example.com</string>
 <string name="continue_button_text">Продължи</string>
 <string name="customer_experience_data_consent_dialog_header">Подобряване на RMS</string>

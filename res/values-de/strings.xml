@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Hilfe&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Ungültige E-Mail-Adresse</string>
 <string name="rms_logo_content_description">Rechteverwaltungsdienste</string>
-<string name="email_instruction_text">Geben Sie Ihre geschäftliche E-Mail-Adresse ein.</string>
+<string name="email_instruction_text">Geschäfts- oder Schulkonto</string>
 <string name="email_hint_text">jemand@example.com</string>
 <string name="continue_button_text">Weiter</string>
 <string name="customer_experience_data_consent_dialog_header">Beitrag zur Verbesserung von RMS</string>

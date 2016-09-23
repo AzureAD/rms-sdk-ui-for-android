@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Ayuda&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Dirección de correo electrónico no válida</string>
 <string name="rms_logo_content_description">Rights Management Services</string>
-<string name="email_instruction_text">Escribir su dirección de correo electrónico de la organización</string>
+<string name="email_instruction_text">Cuenta profesional o educativa</string>
 <string name="email_hint_text">alguien@example.com</string>
 <string name="continue_button_text">Continuar</string>
 <string name="customer_experience_data_consent_dialog_header">Mejorar RMS</string>

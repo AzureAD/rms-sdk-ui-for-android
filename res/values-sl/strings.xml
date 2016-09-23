@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Pomoč&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Neveljaven e-poštni naslov</string>
 <string name="rms_logo_content_description">Storitve za upravljanje pravic</string>
-<string name="email_instruction_text">Vnesite e-poštni naslov organizacije</string>
+<string name="email_instruction_text">Službeni ali šolski račun</string>
 <string name="email_hint_text">nekdo@example.com</string>
 <string name="continue_button_text">Nadaljuj</string>
 <string name="customer_experience_data_consent_dialog_header">Izboljšajte RMS</string>

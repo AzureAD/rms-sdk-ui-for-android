@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Pomoć&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Adresa e-pošte nije valjana</string>
 <string name="rms_logo_content_description">Servisi za upravljanje pravima</string>
-<string name="email_instruction_text">Unesite svoju adresu e-pošte u tvrtki ili ustanovi</string>
+<string name="email_instruction_text">Račun tvrtke ili obrazovne ustanove</string>
 <string name="email_hint_text">netko@example.com</string>
 <string name="continue_button_text">Nastavi</string>
 <string name="customer_experience_data_consent_dialog_header">Poboljšanje RMS-a</string>

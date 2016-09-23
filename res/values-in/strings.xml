@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;Bantuan&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">Alamat surel tidak valid</string>
 <string name="rms_logo_content_description">Rights Management Services (Layanan Pengelolaan Hak)</string>
-<string name="email_instruction_text">Masukkan alamat surel organisasi Anda</string>
+<string name="email_instruction_text">Akun kerja atau sekolah</string>
 <string name="email_hint_text">seseorang@contoh.com</string>
 <string name="continue_button_text">Lanjutkan</string>
 <string name="customer_experience_data_consent_dialog_header">Sempurnakan RMS</string>

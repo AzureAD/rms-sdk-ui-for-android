@@ -65,7 +65,7 @@
 <string name="help_hyperlink">&lt;a href=\'https://go.microsoft.com/fwlink/?LinkID=324513\'&gt;說明&lt;/a&gt;</string>
 <string name="error_invalid_email_address_string">無效的電子郵件地址</string>
 <string name="rms_logo_content_description">Rights Management Services</string>
-<string name="email_instruction_text">請輸入您的組織電子郵件地址</string>
+<string name="email_instruction_text">工作或學校帳戶</string>
 <string name="email_hint_text">someone@example.com</string>
 <string name="continue_button_text">繼續</string>
 <string name="customer_experience_data_consent_dialog_header">改善 RMS</string>
