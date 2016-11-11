@@ -1,0 +1,41 @@
+<!--
+	Copyright © Microsoft Corporation, All Rights Reserved
+	
+	Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+	MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+	You may not use this file except in compliance with the License.
+	See the license for specific language governing permissions and limitations.
+	You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+	root directory of this project.
+	
+	THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+	OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+	ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+	PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_policy_viewer_base_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/user_policy_viewer_transparent_part"
+        android:layout_width="380dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/user_policy_viewer_container"
+        android:background="@null"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_policy_viewer_container"
+        android:layout_width="340dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

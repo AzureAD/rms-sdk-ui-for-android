@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "24.0.1"
+    compileOptions.encoding = 'windows-1252'
+
+    defaultConfig {
+        applicationId "com.microsoft.rightsmanagement.sampleapp"
+        minSdkVersion 15
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+configurations {
+    dependencies {
+        compile project(':azure-activedirectory-library-for-android')
+        compile project(':aria-android-java-sdk-release')
+        compile project(':RMSSDK-debug')
+        compile(project(':uilib')) {
+            compile.exclude module: 'support-v4'
+        }
+        compile 'com.android.support:support-v4:19.1.0'
+    }
+}

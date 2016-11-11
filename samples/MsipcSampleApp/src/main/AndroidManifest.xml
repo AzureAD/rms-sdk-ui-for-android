@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright © Microsoft Corporation, All Rights Reserved
+    
+    Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+    MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+    You may not use this file except in compliance with the License.
+    See the license for specific language governing permissions and limitations.
+    You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+    root directory of this project.
+    
+    THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+    OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+    ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+    PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.microsoft.rightsmanagement.sampleapp"
+    android:versionCode="2"
+    android:versionName="1.1"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.email.permission.READ_ATTACHMENT" />
+    <uses-permission android:name="com.android.permission.AUTHENTICATE_ACCOUNTS" />
+
+
+    <application
+        android:name="com.microsoft.rightsmanagement.sampleapp.App"
+        android:allowBackup="true"
+        android:description="@string/app_description"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon" >
+        <activity
+            android:name="com.microsoft.rightsmanagement.sampleapp.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!--
+    some  older versions of gmail use the mime type application/octet instead of
+                 application/octet-stream
+                -->
+
+                <data
+                    android:mimeType="application/octet"
+                    android:scheme="content" />
+                <data
+                    android:mimeType="application/octet-stream"
+                    android:scheme="content" />
+                <data
+                    android:pathPattern=".*\\.ptxt"
+                    android:scheme="http" />
+                <data
+                    android:pathPattern=".*\\.ptxt"
+                    android:scheme="https" />
+                <data
+                    android:pathPattern=".*\\.txt2"
+                    android:scheme="http" />
+                <data
+                    android:pathPattern=".*\\.txt2"
+                    android:scheme="https" />
+
+                <!-- Google default's mail attaches the file ending to the mime type -->
+                <data android:mimeType="application/ptxt" />
+                <data android:mimeType="application/txt2" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- catch all ptxt -->
+                <data
+                    android:host="*"
+                    android:mimeType="text/plain"
+                    android:pathPattern=".*\\.ptxt"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:mimeType="text/plain"
+                    android:pathPattern=".*\\.ptxt"
+                    android:scheme="content" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.ptxt"
+                    android:scheme="http" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.ptxt"
+                    android:scheme="https" />
+                <!-- catch all txt2 -->
+                <data
+                    android:host="*"
+                    android:mimeType="text/plain"
+                    android:pathPattern=".*\\.txt2"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:mimeType="text/plain"
+                    android:pathPattern=".*\\.txt2"
+                    android:scheme="content" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.txt2"
+                    android:scheme="http" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.txt2"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.microsoft.rightsmanagement.ui.EmailActivity"
+            android:exported="false"
+            android:theme="@style/Overlay"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.microsoft.rightsmanagement.ui.PolicyPickerActivity"
+            android:exported="false"
+            android:theme="@style/Overlay"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.microsoft.rightsmanagement.ui.UserPolicyViewerActivity"
+            android:exported="false"
+            android:theme="@style/Overlay"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.microsoft.rightsmanagement.ui.ConsentActivity"
+            android:exported="false"
+            android:theme="@style/Overlay"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.microsoft.aad.adal.AuthenticationActivity">
+        </activity>
+    </application>
+
+</manifest>

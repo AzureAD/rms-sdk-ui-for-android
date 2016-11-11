@@ -1,0 +1,48 @@
+<!--
+	Copyright © Microsoft Corporation, All Rights Reserved
+	
+	Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+	MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+	You may not use this file except in compliance with the License.
+	See the license for specific language governing permissions and limitations.
+	You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+	root directory of this project.
+	
+	THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+	OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+	ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+	PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_item_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp" >
+
+    <TextView
+        android:id="@+id/template_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/dark_grey"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <TextView
+        android:id="@+id/template_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+    
+</LinearLayout>

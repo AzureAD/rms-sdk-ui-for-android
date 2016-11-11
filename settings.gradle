@@ -1,0 +1,7 @@
+include ':uilib', ':RMSSDK-debug', ':aria-android-java-sdk-release'
+include ':MsipcSampleApp', ':azure-activedirectory-library-for-android'
+project(':RMSSDK-debug').projectDir = new File('external/RMSSDK-debug')
+project(':MsipcSampleApp').projectDir = new File('samples/MsipcSampleApp')
+project(':aria-android-java-sdk-release').projectDir = new File('external/aria-android-java-sdk-release')
+project(':azure-activedirectory-library-for-android').projectDir = new File('external/azure-activedirectory-library-for-android')
+

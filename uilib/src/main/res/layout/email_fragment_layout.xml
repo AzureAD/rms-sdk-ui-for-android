@@ -1,0 +1,144 @@
+<!--
+	Copyright © Microsoft Corporation, All Rights Reserved
+	
+	Licensed under MICROSOFT SOFTWARE LICENSE TERMS, 
+	MICROSOFT RIGHTS MANAGEMENT SERVICE SDK UI LIBRARIES;
+	You may not use this file except in compliance with the License.
+	See the license for specific language governing permissions and limitations.
+	You may obtain a copy of the license (RMS SDK UI libraries - EULA.DOCX) at the 
+	root directory of this project.
+	
+	THIS CODE IS PROVIDED *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS
+	OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION
+	ANY IMPLIED WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A
+	PARTICULAR PURPOSE, MERCHANTABILITY OR NON-INFRINGEMENT.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/email_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/rmsLogoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/rms_logo_content_description"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="0dp"
+        android:src="@drawable/rms_logo" />
+
+    <LinearLayout
+        android:id="@+id/emailIntructionAndErrorTextContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rmsLogoImageView"
+        android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="0dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/red"
+        android:visibility="gone" />
+        
+        <TextView
+            android:id="@+id/emailInstructionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/email_instruction_text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/userMailEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/emailIntructionAndErrorTextContainer"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/textinputborder"
+        android:hint="@string/email_hint_text"
+        android:inputType="textEmailAddress"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="8dp"
+		android:textStyle="italic" 
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/emailContinueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/userMailEditText"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/email_button_selector"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp"
+        android:text="@string/continue_button_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/privacyAndHelpContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/privacyHyperLinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/hyperlink_bg_selector"
+            android:padding="0dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="@color/royal_blue" />
+
+        <TextView
+            android:id="@+id/helpHyperLinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/hyperlink_bg_selector"
+            android:padding="0dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="@color/royal_blue" />
+    </LinearLayout>
+
+</RelativeLayout>

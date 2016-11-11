@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/samples/MsipcSampleApp/MsipcSampleApp.iml" filepath="$PROJECT_DIR$/samples/MsipcSampleApp/MsipcSampleApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/RMSSDK-debug/RMSSDK-debug.iml" filepath="$PROJECT_DIR$/external/RMSSDK-debug/RMSSDK-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/aria-android-java-sdk-release/aria-android-java-sdk-release.iml" filepath="$PROJECT_DIR$/external/aria-android-java-sdk-release/aria-android-java-sdk-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/azure-activedirectory-library-for-android/azure-activedirectory-library-for-android.iml" filepath="$PROJECT_DIR$/external/azure-activedirectory-library-for-android/azure-activedirectory-library-for-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rms-sdk-ui-for-android-github.iml" filepath="$PROJECT_DIR$/rms-sdk-ui-for-android-github.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uilib/uilib.iml" filepath="$PROJECT_DIR$/uilib/uilib.iml" />
+    </modules>
+  </component>
+</project>

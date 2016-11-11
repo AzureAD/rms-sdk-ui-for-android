@@ -25,7 +25,7 @@ You must have downloaded and/or installed following software
 * Git
 * Android SDK 
 * AVD image or device running (API level 15) or higher
-* Eclipse ADT (You may use any IDE, however this guidance assumes use of Eclipse ADT)
+* Android Studio
 
 ###Download
 
